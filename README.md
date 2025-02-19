@@ -5,30 +5,34 @@ This project is a simple PHP-based website that includes various sections such a
 
 ## Project Structure
 ```
-website-project
-├── assets
-│   ├── css
-│   │   ├── style.css
-│   │   └── responsive.css
-│   ├── js
-│   │   └── main.js
-│   └── img
-├── includes
-│   ├── header.php
-│   ├── footer.php
-│   ├── nav.php
-│   └── social-bar.php
-├── pages
-│   ├── accueil.php
-│   ├── apropos.php
-│   ├── actualite.php
-│   ├── domaine.php
-│   ├── service.php
-│   └── contact.php
-├── config
-│   └── database.php
-├── index.php
+projet-ahdlc/
+├── .htaccess                 # URL rewriting rules
+├── config/
+│   ├── config.php           # Global configuration
+│   └── database.php         # Database connection
+├── controllers/
+│   ├── HomeController.php
+│   ├── AboutController.php
+│   ├── NewsController.php
+│   ├── DomainController.php
+│   ├── ServiceController.php
+│   └── ContactController.php
+├── models/
+│   ├── User.php
+│   ├── News.php
+│   ├── Service.php
+│   └── Contact.php
+├── core/
+│   ├── App.php             # Application core class
+│   ├── Controller.php      # Base controller class
+│   ├── Database.php        # Database wrapper class
+│   └── Router.php          # URL routing class
+├── views/
+│   └── [existing structure]
+├── public/
+│   └── index.php           # Entry point
 └── README.md
+
 ```
 
 ## Setup Instructions
