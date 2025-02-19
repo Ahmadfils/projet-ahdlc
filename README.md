@@ -1,7 +1,4 @@
-# Project Title: Website Project
-
-## Description
-This project is a simple PHP-based website that includes various sections such as "Accueil," "À propos," "Actualité," and "Domaine." It features a dropdown menu for additional options and is designed to be responsive and user-friendly.
+# Project Title: AHDLC 
 
 ## Project Structure
 ```
