@@ -25,7 +25,7 @@ projet-ahdlc/
 │   ├── Database.php        # Database wrapper class
 │   └── Router.php          # URL routing class
 ├── views/
-│   └── [existing structure]
+│   └── Pages views for controllers
 ├── public/
 │   └── index.php           # Entry point
 └── README.md
@@ -37,7 +37,7 @@ projet-ahdlc/
 2. Navigate to the project directory.
 3. Ensure you have a local server environment (like XAMPP or MAMP) set up to run PHP.
 4. Place the project folder in the server's root directory (e.g., `htdocs` for XAMPP).
-5. Access the project via your web browser at `http://localhost/website-project`.
+5. Access the project via your web browser at `http://localhost/project-ahdlc`.
 
 ## Features
 - Responsive design with CSS for various screen sizes.
