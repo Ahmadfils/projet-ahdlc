@@ -25,7 +25,7 @@ projet-ahdlc/
 │   ├── Database.php        # Database wrapper class
 │   └── Router.php          # URL routing class
 ├── views/
-│   └── Pages views for controllers
+│   └── Pages view for controllers
 ├── public/
 │   └── index.php           # Entry point
 └── README.md
