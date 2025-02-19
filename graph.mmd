@@ -1,0 +1,61 @@
+```mermaid
+graph TB
+    User((User))
+
+    subgraph "Website System"
+        subgraph "Frontend Container"
+            WebUI["Web Interface<br>HTML/CSS/JS"]
+            
+            subgraph "View Components"
+                Pages["Page Views<br>PHP"]
+                SharedIncludes["Shared Components<br>PHP"]
+                Assets["Static Assets<br>CSS/JS"]
+            end
+            
+            subgraph "Page Components"
+                Home["Home Page<br>PHP"]
+                About["About Page<br>PHP"]
+                News["News Page<br>PHP"]
+                Contact["Contact Page<br>PHP"]
+                Services["Services Page<br>PHP"]
+                Domain["Domain Page<br>PHP"]
+            end
+        end
+        
+        subgraph "Backend Container"
+            WebServer["Web Server<br>Apache"]
+            DatabaseConn["Database Connection<br>PDO"]
+        end
+        
+        subgraph "Data Container"
+            MySQL[("Database<br>MySQL")]
+        end
+    end
+
+    %% User interactions
+    User -->|"Accesses website"| WebServer
+    WebServer -->|"Serves"| WebUI
+    
+    %% Frontend relationships
+    WebUI -->|"Includes"| Pages
+    WebUI -->|"Uses"| SharedIncludes
+    WebUI -->|"Loads"| Assets
+    
+    %% Page relationships
+    Pages -->|"Contains"| Home
+    Pages -->|"Contains"| About
+    Pages -->|"Contains"| News
+    Pages -->|"Contains"| Contact
+    Pages -->|"Contains"| Services
+    Pages -->|"Contains"| Domain
+    
+    %% Shared components relationships
+    SharedIncludes -->|"Provides header for"| Pages
+    SharedIncludes -->|"Provides footer for"| Pages
+    SharedIncludes -->|"Provides navigation for"| Pages
+    SharedIncludes -->|"Provides social bar for"| Pages
+    
+    %% Backend relationships
+    WebServer -->|"Connects via"| DatabaseConn
+    DatabaseConn -->|"Queries"| MySQL
+```
