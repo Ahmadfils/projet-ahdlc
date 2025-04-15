@@ -1,17 +1,29 @@
 <?php
-// Database configuration
-$host = 'localhost'; // Database host
-$dbname = 'your_database_name'; // Database name
-$username = 'your_username'; // Database username
-$password = 'your_password'; // Database password
+require_once 'config.php';
 
-try {
-    // Create a new PDO instance
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    // Set the PDO error mode to exception
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    // Handle connection error
-    echo "Connection failed: " . $e->getMessage();
+class Database
+{
+    private $host = DB_HOST;
+    private $user = DB_USER;
+    private $pass = DB_PASS;
+    private $dbname = DB_NAME;
+    private $dbh;
+    private $stmt;
+    private $error;
+
+    public function __construct()
+    {
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
+        $options = array(
+            PDO::ATTR_PERSISTENT => true,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        );
+
+        try {
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $options);
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            echo $this->error;
+        }
+    }
 }
-?>
