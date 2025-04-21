@@ -1,0 +1,590 @@
+/* Général */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1,
+h2,
+h3 {
+    color: #333;
+}
+
+/* Header et Menu */
+header {
+    background-color: #acc2cc;
+    padding: 20px 0;
+    color: white;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    position: relative;
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* Section Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 170, 255, 0.4);
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+}
+
+.banner-text p {
+    font-size: 18px;
+}
+
+/* Section Services */
+.services {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.services .qualities {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.services .quality {
+    width: 150px;
+    padding: 15px;
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-items: center;
+}
+
+.services .quality:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.services .quality i {
+    font-size: 25px;
+}
+
+.services .quality h3 {
+    margin-top: 8px;
+    color: #333;
+}
+
+/* Section Actualités */
+.actualites {
+    text-align: center;
+    padding: 40px;
+    background-color: #f0f8ff;
+}
+
+.actualites .news-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.actualites .news-item {
+    width: 15%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.actualites .news-item:hover {
+    background-color: #00aaff;
+    color: white;
+}
+
+.actualites .news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.actualites .voir-plus {
+    display: inline-block;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    width: 100px;
+    background-color: #00aaff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.voir-plus:hover {
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    opacity: 50%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+
+/* Section À Propos */
+.a-propos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #00aaff;
+    color: white;
+}
+
+.a-propos img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.a-propos div {
+    width: 50%;
+}
+
+.a-propos h1 {
+    font-size: 28px;
+}
+
+/* Section Domaines d'Intervention */
+.domaines-intervention {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.domaines-intervention .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.domaines-intervention .grid-item {
+    background-color: #00aaff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 300px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.domaines-intervention .grid-item:hover {
+    background-color: rgba(0, 170, 255, 0.6);
+}
+
+.grid-container div:nth-child(1) {
+    background-color: brown;
+    font-weight: bold;
+}
+
+.grid-container div:nth-child(2) {
+    background-color: rgb(238, 235, 35);
+    font-weight: bold;
+}
+
+.grid-container div:nth-child(3) {
+    background-color: rgb(0, 130, 139);
+    font-weight: bold;
+}
+
+.grid-container div:nth-child(4) {
+    background-color: rgb(0, 60, 255);
+    font-weight: bold;
+}
+
+.grid-container div:nth-child(5) {
+    background-color: #238f3a;
+    font-weight: bold;
+}
+
+.grid-container div:nth-child(6) {
+    background-color: #d80367;
+    font-weight: bold;
+}
+
+.grid-item img {
+    height: 80%;
+    width: 80%;
+    object-fit: contain;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(0, 26, 37);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+footer .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .footer-links li {
+    margin: 5px 0;
+}
+
+footer .footer-contact,
+footer .footer-links {
+    text-align: left;
+}
+
+footer .copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(0, 170, 255, 0.6);
+}
+
+footer h4 {
+    color: rgba(0, 170, 255, 0.6);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgba(0, 170, 255, 0.6);
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .services .qualities {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .quality {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .actualites .news-item {
+        width: 45%;
+    }
+
+    .domaines-intervention .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .a-propos {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .a-propos img {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .a-propos div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .banner-text h1 {
+        font-size: 28px;
+    }
+
+    .banner-text p {
+        font-size: 14px;
+    }
+
+    .actualites .news-item {
+        width: 100%;
+    }
+
+    .domaines-intervention .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+/* Style du menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    /* Initialement caché */
+    position: absolute;
+    background-color: #00aaff;
+    min-width: 160px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    padding: 10px 10px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Affichage du menu au survol */
+.dropdown:hover .dropdown-menu {
+    display: none;
+}
+
+/* Style du titre avec lignes de chaque côté */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #00aaff;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: #00aaff;
+    margin: 0 15px;
+    /* Espace entre le texte et les lignes */
+}
+
+/* Styles du menu toggle (menu burger) */
+.menu-toggle {
+    display: none;
+    /* Caché par défaut */
+    font-size: 20px;
+    cursor: pointer;
+    padding: 2px 5px;
+    background: #00aaff;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+nav.active {
+    display: flex !important;
+}
+
+/* Styles du menu en version mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        /* Affiche le menu burger */
+    }
+
+    nav {
+        display: none;
+        /* Cache le menu par défaut */
+        flex-direction: column;
+        background: #afc3ce;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li,
+    nav .dropdown {
+        width: 100%;
+        padding: 5px;
+        text-align: left;
+    }
+
+    nav ul li a {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        text-decoration: none;
+        color: #00aaff;
+    }
+
+    header nav ul li a:hover::after {
+        width: 0;
+    }
+
+    .dropdown-menu li a:hover {
+        color: #afc3ce;
+    }
+
+    .footer-content {
+        margin: 0px 10px;
+    }
+
+    /* Affichage du menu quand il est actif */
+    nav.active {
+        display: flex !important;
+    }
+}
+
+.icon img {
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (min-width: 769px) {
+    nav {
+        display: flex !important;
+        justify-content: center;
+        /* Centre le menu */
+        align-items: center;
+        position: static;
+        width: 100%;
+        background: none;
+        /* Rétablir l'arrière-plan par défaut */
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        width: auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+
+.banner-actualites {
+    background-image: url('images/Organisation humanitaire.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.banner-actualites::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}

@@ -2,9 +2,9 @@
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'ahdlc_db');
+define('DB_NAME', 'projet_ahdlc');
 
-define('BASEURL', 'http://localhost/projet-ahdlc');
+define('BASEURL', 'projet-ahdlc');
 
 // Pour le développement
 error_reporting(E_ALL);

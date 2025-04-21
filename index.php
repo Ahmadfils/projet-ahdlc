@@ -16,6 +16,7 @@ session_start();
 // Define the default controller and method
 $controllerName = 'HomeController';
 $methodName = 'index';
+$url = [];
 
 // Parse the URL
 if (isset($_GET['url'])) {
