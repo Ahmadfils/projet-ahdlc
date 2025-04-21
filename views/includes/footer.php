@@ -31,8 +31,9 @@
     </div>
     <p class="copyright">&copy; 2025 Action Humanitaire - Tous droits réservés</p>
 </footer>
-
+<script src="public/js/contact.js"></script>
 <script src="public/js/script.js"></script>
+
 </body>
 
 </html>

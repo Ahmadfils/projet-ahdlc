@@ -1,58 +1,73 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $data['title']; ?></title>
-    <link rel="stylesheet" href="<?php echo BASEURL; ?>/public/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-    <?php require_once 'includes/navigation.php'; ?>
-    
-    <div class="container">
-        <section class="contact-page">
-            <h1>Contactez-nous</h1>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Nos Coordonnées</h3>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>123 Rue Example, 75000 Paris</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <p>+33 1 23 45 67 89</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>contact@ahdlc.com</p>
-                    </div>
-                </div>
-                
-                <form class="contact-form" method="POST" action="">
-                    <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Sujet</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Envoyer</button>
-                </form>
+<?php
+require_once "views/includes/header.php";
+?>
+<link rel="stylesheet" href="public/css/contact.css">
+<!-- Section de contact -->
+<div class="contact-section">
+    <div class="contact-image"></div>
+
+    <div class="contact-form">
+        <h3>Envoyez-nous un message</h3>
+        <form>
+            <div class="input-icon">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Nom complet" required>
             </div>
-        </section>
+            <div class="input-icon">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Adresse e-mail" required>
+            </div>
+            <div class="input-icon">
+                <i class="fas fa-comment"></i>
+                <textarea placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Informations de contact -->
+<section class="infos-contact">
+    <h2>Nos coordonnées</h2>
+    <ul>
+        <li>Email : contact@actionhumanitaire.org</li>
+        <li>Tél : +257 22 22 22 22</li>
+        <li>Adresse : Bujumbura, Burundi</li>
+    </ul>
+</section>
+<section class="faq-section">
+    <h2>FAQ - Questions Fréquentes</h2>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Comment puis-je contacter votre équipe ?
+            <span class="faq-toggle-icon"><i class="fas fa-caret-up"></i> </i></span>
+        </div>
+        <div class="faq-answer">Vous pouvez nous contacter via le formulaire ci-dessus ou par email à
+            contact@notresite.com.</div>
     </div>
 
-    <?php require_once 'includes/footer.php'; ?>
-</body>
-</html>
+    <div class="faq-item">
+        <div class="faq-question">
+            Où êtes-vous situés ?
+            <span class="faq-toggle-icon"><i class="fas fa-caret-up"></i> </i></span>
+        </div>
+        <div class="faq-answer">Nous sommes basés à Bujumbura, Burundi, mais notre mission s'étend à travers tout le
+            pays.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">
+            Comment puis-je m'impliquer dans vos projets ?
+            <span class="faq-toggle-icon"><i class="fa-chevron-up"></i> </i></span>
+        </div>
+        <div class="faq-answer">Vous pouvez nous écrire via le formulaire de contact pour connaître les opportunités
+            de bénévolat ou de partenariat.</div>
+    </div>
+</section>
+
+<?php
+require_once "views/includes/footer.php";
+?>

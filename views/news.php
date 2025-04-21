@@ -1,29 +1,151 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $data['title']; ?></title>
-    <link rel="stylesheet" href="<?php echo BASEURL; ?>/public/css/style.css">
-</head>
-<body>
-    <?php require_once 'includes/navigation.php'; ?>
-    
-    <div class="container">
-        <section class="news-page">
-            <h1>Actualités</h1>
-            <div class="news-grid">
-                <article class="news-item">
-                    <img src="<?php echo BASEURL; ?>/public/images/news1.jpg" alt="Actualité 1">
-                    <h3>Titre de l'actualité 1</h3>
-                    <p>Lorem ipsum dolor sit amet...</p>
-                    <a href="#" class="read-more">Lire la suite</a>
-                </article>
-                <!-- Add more news items -->
-            </div>
-        </section>
+<?php
+require_once "views/includes/header.php";
+?>
+<link rel="stylesheet" href="public/css/news.css">
+<!-- Titre + recherche -->
+<section class="titre-recherche-container">
+    <h1>Actualités</h1>
+    <form class="recherche-form">
+        <input type="text" placeholder="Rechercher une actualité...">
+        <button type="submit">Rechercher</button>
+    </form>
+</section>
+
+<div class="filtres-container">
+    <button>Toutes</button>
+    <button>Tech</button>
+    <button>Business</button>
+    <button>Éducation</button>
+</div>
+
+<section class="news-grid">
+    <!-- Génération de 15 news -->
+    <!-- Tu peux répéter ce bloc en changeant le contenu -->
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
+    </div>
+    <div class="news-item">
+        <a href="details-news.html">
+            <img src="public/images/business.png" alt="Image actualité">
+            <h3>Titre de l’actualité</h3>
+            <p>Un résumé rapide de cette actualité...</p>
+        </a>
     </div>
 
-    <?php require_once 'includes/footer.php'; ?>
-</body>
-</html>
+</section>
+
+<!-- Pagination -->
+<div class="pagination">
+    <a href="#">&laquo;</a>
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">&raquo;</a>
+</div>
+
+<!-- Infos professionnelles -->
+<section class="infos-pro">
+    <p>© 2025 Inzuex - Tous droits réservés.</p>
+    <p>Contact : info@inzuex.com | Tél : +257 123 456 789</p>
+    <p>Adresse : Bujumbura, Burundi</p>
+</section>
+
+<!-- Footer -->
+<?php
+require_once "views/includes/footer.php";
+?>
