@@ -7,7 +7,7 @@ class HomeController extends Controller
         $this->userModel = $this->model('User');
     }
 
-    public function index()
+    public function index() 
     {
         $data = [
             'title' => 'Accueil',

@@ -193,10 +193,7 @@ body {
     font-size: 18px;
 }
 
-.faq-item.active .faq-toggle-icon i {
-    transform: rotate(180deg);
-    /* L'icône tourne à 180° lorsque la réponse est ouverte */
-}
+
 
 .faq-answer {
     margin-top: 10px;
@@ -244,12 +241,7 @@ body {
     font-size: 18px;
 }
 
-.faq-item.active .faq-toggle-icon i {
-    content: "\f078";
-    /* change l'icône en chevron-down (font awesome unicode) */
-    transform: rotate(180deg);
-    /* L'icône tourne à 180° lorsque la réponse est ouverte */
-}
+
 
 .faq-answer {
     margin-top: 10px;

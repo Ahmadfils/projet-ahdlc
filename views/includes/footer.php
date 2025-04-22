@@ -33,6 +33,7 @@
 </footer>
 <script src="public/js/contact.js"></script>
 <script src="public/js/script.js"></script>
+<script src="about.js"></script>
 
 </body>
 

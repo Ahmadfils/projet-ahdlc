@@ -1,6 +1,7 @@
 <?php
 require_once "views/includes/header.php";
 ?>
+
 <section class="banner">
     <img src="public/images/autism.png" alt="Bannière">
     <div class="overlay"></div>

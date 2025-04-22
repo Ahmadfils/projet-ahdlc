@@ -1,40 +1,88 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $data['title']; ?></title>
-    <link rel="stylesheet" href="<?php echo BASEURL; ?>/public/css/style.css">
-</head>
-<body>
-    <?php require_once 'includes/navigation.php'; ?>
-    
-    <div class="container">
-        <section class="about-page">
-            <h1>À propos de AHDLC</h1>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="<?php echo BASEURL; ?>/public/images/about.jpg" alt="À propos">
-                </div>
-                <div class="about-text">
-                    <h2>Notre Histoire</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    
-                    <h2>Notre Mission</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    
-                    <h2>Nos Valeurs</h2>
-                    <ul>
-                        <li>Professionnalisme</li>
-                        <li>Innovation</li>
-                        <li>Engagement</li>
-                        <li>Excellence</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+<?php
+require_once "views/includes/header.php";
+?>
+<link rel="stylesheet" href="public/css/about.css">
+<!-- Présentation -->
+<section class="presentation">
+    <div class="presentation-text">
+        <h1>Action Humanitaire</h1>
+        <p>
+            Action Humanitaire est une organisation dédiée à apporter une aide essentielle aux populations
+            vulnérables.
+            Notre mission est d'améliorer la vie des personnes en détresse à travers des projets concrets et
+            durables.
+        </p>
     </div>
+    <div class="presentation-img">
+        <img src="public/images/group.png" alt="Présentation">
+    </div>
+</section>
 
-    <?php require_once 'includes/footer.php'; ?>
-</body>
-</html>
+<!-- Historique -->
+<section class="historique">
+    <h2>Historique</h2>
+    <p>
+        Depuis notre création en 2010, nous avons œuvré dans plusieurs régions pour soutenir les communautés
+        défavorisées
+        à travers des campagnes de santé, d’éducation et de développement rural. Notre engagement est profondément
+        enraciné
+        dans la solidarité et l’empathie.
+    </p>
+</section>
+
+<!-- Mission (Roadmap) -->
+<section class="mission">
+    <h2>Notre Mission</h2>
+    <div class="roadmap">
+        <div class="step">
+            <div class="icon">🤝</div>
+            <p>Soutenir les populations vulnérables</p>
+        </div>
+        <div class="arrow">➡️</div>
+        <div class="step">
+            <div class="icon">🏥</div>
+            <p>Améliorer l'accès aux soins</p>
+        </div>
+        <div class="arrow">➡️</div>
+        <div class="step">
+            <div class="icon">📚</div>
+            <p>Renforcer l’éducation des enfants</p>
+        </div>
+    </div>
+</section>
+
+<!-- Vision -->
+<section class="vision">
+    <h2>Notre Vision</h2>
+    <p>
+        Nous rêvons d’un monde où chaque personne a accès à une vie digne, des opportunités d’éducation et des soins
+        essentiels.
+        Nous croyons qu’avec une action collective, le changement est possible.
+    </p>
+</section>
+
+<!-- Projets -->
+<section class="projets">
+    <h2>Nos Projets</h2>
+    <div class="projets-list">
+        <div class="projet-item">
+            <img src="public/images/group.png" alt="Projet 1">
+            <p>Campagne de vaccination en milieu rural</p>
+        </div>
+        <div class="projet-item">
+            <img src="public/images/group.png" alt="Projet 2">
+            <p>Construction de puits d'eau potable</p>
+        </div>
+        <div class="projet-item">
+            <img src="public/images/group.png" alt="Projet 3">
+            <p>Distribution de fournitures scolaires</p>
+        </div>
+        <div class="projet-item">
+            <img src="pubblic/images/group.png" alt="Projet 4">
+            <p>Appui aux orphelinats locaux</p>
+        </div>
+    </div>
+</section>
+<?php
+require_once "views/includes/footer.php";
+?>

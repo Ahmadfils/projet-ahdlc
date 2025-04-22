@@ -17,18 +17,18 @@
         </div>
         <nav id="nav-menu">
             <ul>
-                <li><a href="home.html">Accueil</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="new.html">Actualités</a></li>
+                <li><a href="home">Accueil</a></li>
+                <li><a href="about">À propos</a></li>
+                <li><a href="news">Actualités</a></li>
                 <li class="dropdown">
                     <a href="#">Domaines d'intervention</a>
                     <ul class="dropdown-menu">
-                        <li><a href="action.html">Actions humanitaires</a></li>
-                        <li><a href="adaptation.html">Adaptation</a></li>
-                        <li><a href="employabilite.html">Employabilité des jeunes et des femmes</a></li>
-                        <li><a href="developpement.html">Développement communautaire</a></li>
-                        <li><a href="domaine.html">Domaines transversaux</a></li>
-                        <li><a href="integration.html">Intégration</a></li>
+                        <li><a href="action">Actions humanitaires</a></li>
+                        <li><a href="adaptation">Adaptation</a></li>
+                        <li><a href="employabilite">Employabilité des jeunes et des femmes</a></li>
+                        <li><a href="developpement">Développement communautaire</a></li>
+                        <li><a href="domaine">Domaines transversaux</a></li>
+                        <li><a href="integration">Intégration</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -38,7 +38,7 @@
                         <li><a href="#">Service 2</a></li>
                     </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </header>

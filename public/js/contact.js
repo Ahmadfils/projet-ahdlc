@@ -1,42 +1,30 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
-
+  
     faqItems.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active');
-
-            // Ferme les autres si on veut un comportement accordéon
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                }
-            });
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-toggle-icon i');
+  
+      item.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+  
+        // Ferme tous les autres
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            otherItem.querySelector('.faq-answer').style.display = 'none';
+            const otherIcon = otherItem.querySelector('.faq-toggle-icon i');
+            otherIcon.className = 'fa-solid fa-chevron-right';
+          }
         });
-    });
-});
-
-const faqItems1 = document.querySelectorAll('.faq-item');
-
-faqItems1.forEach(item => {
-    item.addEventListener('click', () => {
+  
+        // Toggle current item
         item.classList.toggle('active');
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.faq-toggle-icon i');
-
-        // Toggle the answer display
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-
-        // Change the icon to chevron-down (or caret-up) based on the state
-        if (item.classList.contains('active')) {
-            icon.classList.remove('fa-caret-right');
-            icon.classList.add('fa-chevron-down');
-        } else {
-            icon.classList.remove('fa-chevron-down');
-            icon.classList.add('fa-caret-right');
-        }
+        answer.style.display = isActive ? 'none' : 'block';
+        icon.className = isActive ? 'fa-solid fa-chevron-right' : 'fa-solid fa-chevron-down';
+      });
     });
-});
-
-
-
+  });
+  
+  
