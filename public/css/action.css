@@ -1,0 +1,128 @@
+/* Général */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Page article humanitaire */
+.main-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+.article-container {
+    flex: 1 1 70%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.article-content h1 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.article-content p {
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+/* Aside articles récents */
+.article-aside {
+    flex: 1 1 25%;
+    max-height: 700px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.article-aside h3 {
+    font-size: 24px;
+    color: #00aaff;
+    margin-bottom: 20px;
+}
+
+.article-aside-item {
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.article-aside-item:hover {
+    transform: scale(1.02);
+}
+
+.article-aside-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.article-aside-item-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation boutons */
+.article-navigation {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.article-navigation button {
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.article-navigation button:hover {
+    background-color: #0077cc;
+}
+
+@media (max-width: 768px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .article-aside {
+        max-height: none;
+        order: -1;
+    }
+}
