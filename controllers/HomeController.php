@@ -9,12 +9,11 @@ class HomeController extends Controller
 
     public function index() 
     {
-        $data = $this->settingModel;
-        $data->getAll();
-         foreach ($data as $value) {
+        $data = $this->settingModel->getAll();
+         foreach ($data as $row) {
              
          }
-        $this->view('home', $value);
+        $this->view('home', $row);
     }
 
     public function about()
