@@ -1,20 +1,20 @@
 <?php
 class HomeController extends Controller
 {
-    protected $userModel;
+    protected $settingModel;
     public function __construct()
     {
-        $this->userModel = $this->model('User');
+        $this->settingModel = $this->model('Settings');
     }
 
     public function index() 
     {
-        $data = [
-            'title' => 'Accueil',
-            'description' => 'Action Humanitaire pour le développement et la lutte contre le chômage'
-        ];
-
-        $this->view('home', $data);
+        $data = $this->settingModel;
+        $data->getAll();
+         foreach ($data as $value) {
+             
+         }
+        $this->view('home', $value);
     }
 
     public function about()
