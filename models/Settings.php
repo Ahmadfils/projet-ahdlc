@@ -1,26 +1,41 @@
-<?php  
+<?php
 
-class Settings {
+class Settings
+{
 	private $db;
 
-	public function _construct(){
-		$this->db = New Database;
+	public function __construct()
+	{
+		$this->db = new Database;
 	}
 
-	public function get($data){
-		$this->db->query("SELECT * FROM tbl_page_setting WHERE cle = :cle");
+	public function getSettingById($data)
+	{
+		$this->db->query('SELECT * FROM tbl_page_setting WHERE cle = :cle');
 		$this->db->bind('cle', $data['cle']);
-        return $this->db->single();
+		return $this->db->single();
 	}
 
-	public function getAll(){
-		$this->db->query("SELECT cle, valeur FROM tbl_page_setting");
+	public function getAllSettings()
+	{
+		$this->db->query('SELECT cle, valeur, description FROM tbl_page_setting');
 
-		return $this->db->resultSet();
+		$results = $this->db->resultSet();
+
+		$settings = [];
+
+        foreach ($results as $row) {
+        $settings[$row->cle] = $row->valeur;
+        }
+
+        return $settings;
 	}
 
-	public function add($data){
-		$this->db->query("INSERT INTO tbl_page_setting (cle, valeur, description) VALUES (:cle, :valeur, :description)");
+	public function addSetting($data)
+	{
+		$this->db->query('INSERT INTO tbl_page_setting 
+			            (cle, valeur, description) 
+			             VALUES (:cle, :valeur, :description)');
 		$this->db->bind(':id', $data['id']);
 		$this->db->bind(':cle', $data['cle']);
 		$this->db->bind(':valeur', $data['valeur']);
@@ -28,13 +43,13 @@ class Settings {
 
 		if ($this->db->execute()) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
-
 	}
 
-	public function update($data){
+	public function updateSetting($data)
+	{
 		$this->db->query("UPDATE tbl_page_setting  SET 
 			              cle = :cle, 
 			              valeur = :valeur, 
@@ -47,18 +62,19 @@ class Settings {
 
 		if ($this->db->execute()) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}
 
-	public function delete($id){
+	public function deleteSetting($id)
+	{
 		$this->db->query("DELETE FROM tbl_page_setting WHERE id = :id");
 		$this->db->bind(':id', $id);
 
-        if ($this->db->execute()) {
+		if ($this->db->execute()) {
 			return true;
-		}else{
+		} else {
 			return false;
 		}
 	}

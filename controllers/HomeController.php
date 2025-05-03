@@ -1,7 +1,8 @@
 <?php
 class HomeController extends Controller
 {
-    protected $settingModel;
+    private $settingModel;
+
     public function __construct()
     {
         $this->settingModel = $this->model('Settings');
@@ -9,11 +10,12 @@ class HomeController extends Controller
 
     public function index() 
     {
-        $data = $this->settingModel->getAll();
-         foreach ($data as $row) {
-             
-         }
-        $this->view('home', $row);
+        $settings = $this->settingModel->getAllSettings();
+        
+        $data = [
+              'description' => $settings['site_intro'] ?? ''
+           ];
+         $this->view('home', $data);
     }
 
     public function about()

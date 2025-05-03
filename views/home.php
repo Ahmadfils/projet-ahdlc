@@ -6,7 +6,7 @@ require_once "views/includes/header.php";
     <img src="public/images/autism.png" alt="Bannière">
     <div class="overlay"></div>
     <div class="banner-text">
-        <h1>Bienvenue sur Action Humanitaire</h1>
+        <h1><?php echo $data['description']; ?></h1>
         <p>Une initiative pour le développement et la lutte contre le chômage.</p>
     </div>
 </section>

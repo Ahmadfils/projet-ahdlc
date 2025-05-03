@@ -1,5 +1,7 @@
 <?php
-require_once 'config/database.php';
+require_once 'core/Database.php';
+require_once 'core/App.php';
+require_once 'core/Controller.php';
 
 // Autoload classes
 spl_autoload_register(function ($class_name) {
