@@ -1,6 +1,3 @@
-<?php
-require_once "views/includes/header.php";
-?>
 
 <div class="main-wrapper">
     <!-- Article principal -->
@@ -60,7 +57,3 @@ require_once "views/includes/header.php";
     <button><i class="fas fa-arrow-left"></i> Article précédent</button>
     <button>Article suivant <i class="fas fa-arrow-right"></i></button>
 </div>
-
-<?php
-require_once "views/includes/footer.php";
-?>

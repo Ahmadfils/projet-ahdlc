@@ -16,19 +16,19 @@ require_once "views/includes/header.php";
     <p>Découvrez nos valeurs et engagements</p>
     <div class="qualities">
         <div class="quality">
-            <i class="icon"><img src="public/images/engagement.png" alt=""></i>
+            <i class="icon"><img src="public/images/<?php echo $data['image_qualite1']; ?>" alt=""></i>
             <h3>Engagement</h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="public/images/collaboration.png" alt=""></i>
+            <i class="icon"><img src="public/images/<?php echo $data['image_qualite2']; ?>" alt=""></i>
             <h3>Solidarité</h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="public/images/networking.png" alt=""></i>
+            <i class="icon"><img src="public/images/<?php echo $data['image_qualite3']; ?>" alt=""></i>
             <h3>Transparence</h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="public/images/innovation.png" alt=""></i>
+            <i class="icon"><img src="public/images/<?php echo $data['image_qualite4']; ?>" alt=""></i>
             <h3>Innovation</h3>
         </div>
     </div>
@@ -38,36 +38,14 @@ require_once "views/includes/header.php";
     <h2 class="section-title">Actualités</h2>
     <p>Les dernières nouvelles et mises à jour</p>
     <div class="news-container">
+     <?php 
+       foreach ($data['news'] as $new):
+     ?>
         <div class="news-item">
-            <img src="public/images/business.png" alt="News 1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eligendi deleniti nemo soluta
-                ullam odit odio optio? Excepturi praesentium modi sed consequuntur possimus saepe quasi dignissimos
-                ipsam, consequatur sequi quia!</p>
+            <img src="public/images/<?php echo $new->image_banner; ?>" alt="">
+            <p><?php echo $new->intro; ?></p>
         </div>
-        <div class="news-item">
-            <img src="public/images/group.png" alt="News 2">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eligendi deleniti nemo soluta
-                ullam odit odio optio? Excepturi praesentium modi sed consequuntur possimus saepe quasi dignissimos
-                ipsam, consequatur sequi quia!</p>
-        </div>
-        <div class="news-item">
-            <img src="public/images/world.png" alt="News 3">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eligendi deleniti nemo soluta
-                ullam odit odio optio? Excepturi praesentium modi sed consequuntur possimus saepe quasi dignissimos
-                ipsam, consequatur sequi quia!</p>
-        </div>
-        <div class="news-item">
-            <img src="public/images/humanitarian.png" alt="News 4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eligendi deleniti nemo soluta
-                ullam odit odio optio? Excepturi praesentium modi sed consequuntur possimus saepe quasi dignissimos
-                ipsam, consequatur sequi quia!</p>
-        </div>
-        <div class="news-item">
-            <img src="public/images/helping.png" alt="News 5">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eligendi deleniti nemo soluta
-                ullam odit odio optio? Excepturi praesentium modi sed consequuntur possimus saepe quasi dignissimos
-                ipsam, consequatur sequi quia!</p>
-        </div>
+      <?php endforeach; ?>
     </div>
     <a href="#" class="voir-plus">Voir plus</a>
 </section>
@@ -122,6 +100,3 @@ require_once "views/includes/header.php";
         </div>
     </div>
 </section>
-<?php
-require_once "views/includes/footer.php";
-?>

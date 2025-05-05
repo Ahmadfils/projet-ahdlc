@@ -1,6 +1,4 @@
-<?php
-require_once "views/includes/header.php";
-?>
+
 <link rel="stylesheet" href="public/css/news.css">
 <!-- Titre + recherche -->
 <section class="titre-recherche-container">
@@ -21,112 +19,17 @@ require_once "views/includes/header.php";
 <section class="news-grid">
     <!-- Génération de 15 news -->
     <!-- Tu peux répéter ce bloc en changeant le contenu -->
+    <?php 
+       foreach ($data['news'] as $new):
+     ?>
     <div class="news-item">
         <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
+            <img src="public/images/<?php echo $new->image_banner; ?>" alt="Image actualité">
+            <h3><?php echo $new->titre; ?></h3>
+            <p><?php echo $new->intro; ?></p>
         </a>
     </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/business.png" alt="Image actualité">
-            <h3>Titre de l’actualité</h3>
-            <p>Un résumé rapide de cette actualité...</p>
-        </a>
-    </div>
-
+    <?php endforeach; ?>
 </section>
 
 <!-- Pagination -->

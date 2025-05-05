@@ -8,21 +8,36 @@ class News{
         $this->db = new Database;
     }
 
-    public function getNews()
+    public function getAllNews($data)
     {
-        $this->db->query("SELECT * FROM news");
+      
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC");
+        $this->db->bind(':id', $data['id']);
         return $this->db->resultSet();
     }
 
-    public function getNew($data){
-        $this->db->query("SELECT * FROM news WHERE id = :id");
+    public function getLatestNews(){
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = 1 ORDER BY date_publication DESC limit 5");
+        //$this->db->bind(':id', $data['id']);
+        //$this->db->bind(':limite', $data['limite']);
+        return $this->db->resultSet();
+    }
+
+    public function getNewById($data){
+        $this->db->query("SELECT * FROM tbl_new WHERE id = :id");
+        $this->db->bind(':id', $data['id']);
+        $this->db->single();
+    }
+
+    public function getNewByCategory($data){
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id");
         $this->db->bind(':id', $data['id']);
         $this->db->single();
     }
 
     public function addNews($data)
     {
-        $this->db->query('INSERT INTO news 
+        $this->db->query('INSERT INTO tbl_new 
                         (titre, 
                          cat_id, 
                          intro, 
@@ -44,7 +59,7 @@ class News{
     } 
 
     public function deleteNew($data){
-        $this->db->query("DELETE FROM news WHERE id = :id");
+        $this->db->query("DELETE FROM tbl_new WHERE id = :id");
         $this->db->bind(':id', $data['id']);
 
         if ($this->db->execute()) {
