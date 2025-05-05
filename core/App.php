@@ -7,6 +7,7 @@ class App
 
     public function __construct()
     {
+        $url = $this->parseUrl();
 
         // Charger les settings globaux
         require_once 'Init.php';
@@ -15,8 +16,6 @@ class App
         $db = new Database;
 
         Init::loadSettings($db);
-
-        $url = $this->parseUrl();
 
         if (file_exists('../controllers/' . ucfirst($url[0]) . 'Controller.php')) {
             $this->controller = ucfirst($url[0]) . 'Controller';
