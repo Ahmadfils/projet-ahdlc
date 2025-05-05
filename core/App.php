@@ -7,6 +7,15 @@ class App
 
     public function __construct()
     {
+
+        // Charger les settings globaux
+        require_once 'Init.php';
+        require_once 'Database.php';
+
+        $db = new Database;
+
+        Init::loadSettings($db);
+
         $url = $this->parseUrl();
 
         if (file_exists('../controllers/' . ucfirst($url[0]) . 'Controller.php')) {
