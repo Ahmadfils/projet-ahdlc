@@ -3,16 +3,15 @@ class Init
 {
     public static $settings = [];
 
-    public static function loadSettings($db)
+    public static function loadSettings()
     {
-        require_once '../models/Settings.php';
-        $settingModel = new Settings($db);
-        // Récupérer tous les paramètres de la base de données
-        self::$settings = $settingModel->getAllSettings();
-    }
+        require_once 'Database.php';
+        $db = new Database();
+        $db->query("SELECT * FROM tbl_page_setting");
+        $results = $db->resultSet();
 
-    public static function get($key)
-    {
-        return self::$settings[$key] ?? null;
+        foreach ($results as $row) {
+            self::$settings[$row->cle] = $row->valeur;
+        }
     }
 }

@@ -18,17 +18,17 @@ class Settings
 
 	public function getAllSettings()
 	{
-		$this->db->query('SELECT cle, valeur, description FROM tbl_page_setting');
+		$this->db->query('SELECT * FROM tbl_page_setting');
 
 		$results = $this->db->resultSet();
 
 		$settings = [];
 
-        foreach ($results as $row) {
-        $settings[$row->cle] = $row->valeur;
-        }
+		foreach ($results as $row) {
+			$settings[$row->cle] = $row->valeur;
+		}
 
-        return $settings;
+		return $settings;
 	}
 
 	public function addSetting($data)

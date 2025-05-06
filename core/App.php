@@ -11,9 +11,6 @@ class App
 
         // Charger les settings globaux
         require_once 'Init.php';
-        require_once 'Database.php';
-
-        $db = new Database;
 
         Init::loadSettings($db);
 
