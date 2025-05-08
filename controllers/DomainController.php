@@ -5,30 +5,9 @@ class DomainController extends Controller {
             'title' => 'Nos Domaines',
             'description' => 'Découvrez nos domaines d\'expertise'
         ];
+        $this->view('includes/header', $data);
         $this->view('domain', $data);
+        $this->view('includes/footer', $data);
     }
 
-    public function action() {
-        $data = [
-            'title' => 'Actions',
-            'description' => 'Nos actions'
-        ];
-        $this->view('domain/action', $data);
-    }
-
-    public function adaptation() {
-        $data = [
-            'title' => 'Adaptations',
-            'description' => 'Nos adaptations'
-        ];
-        $this->view('domain/adaptation', $data);
-    }
-
-    public function employabilite() {
-        $data = [
-            'title' => 'Adaptations',
-            'description' => 'Nos adaptations'
-        ];
-        $this->view('domain/employabilite', $data);
-    }
 }
