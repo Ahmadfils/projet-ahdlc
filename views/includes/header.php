@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Action Humanitaire</title>
-    <link rel="shortcut icon" href="public/images/<pre>
-<?php
-print_r(Init::$settings);
-?>
-</pre>" type="image/x-icon">
+    <link rel="shortcut icon" href="views/public/images/<?php echo AppConfig::$settings['favicon'];?>" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="public/css/styles.css">
 </head>

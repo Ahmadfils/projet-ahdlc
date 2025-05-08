@@ -27,8 +27,8 @@ class HomeController extends Controller
               'image_qualite4' => $settings['image_qualite4'] ?? '',
               'news'=> $news
            ];
-
-         $this->view('home', $data);
+          
+          $this->view('home', $data);
           $this->view('includes/footer', $data);
     }
 

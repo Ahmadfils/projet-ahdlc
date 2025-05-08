@@ -1,7 +1,10 @@
 <?php
 require_once 'core/Database.php';
-require_once 'core/App.php';
+require_once 'core/AppConfig.php';
+require_once 'core/Router.php';
 require_once 'core/Controller.php';
+
+AppConfig::loadSettings();
 
 // Autoload classes
 spl_autoload_register(function ($class_name) {

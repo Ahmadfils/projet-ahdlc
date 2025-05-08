@@ -23,4 +23,12 @@ class DomainController extends Controller {
         ];
         $this->view('domain/adaptation', $data);
     }
+
+    public function employabilite() {
+        $data = [
+            'title' => 'Adaptations',
+            'description' => 'Nos adaptations'
+        ];
+        $this->view('domain/employabilite', $data);
+    }
 }

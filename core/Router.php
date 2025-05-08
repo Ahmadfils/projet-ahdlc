@@ -9,6 +9,8 @@ class Router
     {
         $url = $this->getUrl();
 
+         
+
         if (isset($url[0]) && file_exists('../controllers/' . ucwords($url[0]) . 'Controller.php')) {
             $this->currentController = ucwords($url[0]) . 'Controller';
             unset($url[0]);

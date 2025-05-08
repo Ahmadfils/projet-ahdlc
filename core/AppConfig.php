@@ -1,5 +1,5 @@
 <?php
-class Init
+class AppConfig
 {
     public static $settings = [];
 
@@ -9,7 +9,7 @@ class Init
         $db = new Database();
         $db->query("SELECT * FROM tbl_page_setting");
         $results = $db->resultSet();
-
+        $settings = [];
         foreach ($results as $row) {
             self::$settings[$row->cle] = $row->valeur;
         }
