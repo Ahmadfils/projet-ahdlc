@@ -1,12 +1,9 @@
-<?php
-require_once "views/includes/header.php";
-?>
 
 <section class="banner">
     <img src="public/images/autism.png" alt="Bannière">
     <div class="overlay"></div>
     <div class="banner-text">
-        <h1><?php echo $data['description']; ?></h1>
+        <h1><?php echo AppConfig::$settings['home_banner_intro']; ?></h1>
         <p>Une initiative pour le développement et la lutte contre le chômage.</p>
     </div>
 </section>
@@ -16,20 +13,20 @@ require_once "views/includes/header.php";
     <p>Découvrez nos valeurs et engagements</p>
     <div class="qualities">
         <div class="quality">
-            <i class="icon"><img src="public/images/<?php echo $data['image_qualite1']; ?>" alt=""></i>
-            <h3>Engagement</h3>
+            <i class="icon"><img src="public/images/<?php echo AppConfig::$settings['image_qualite1']; ?>" alt=""></i>
+            <h3><?php echo AppConfig::$settings['home_quality_caption1']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="public/images/<?php echo $data['image_qualite2']; ?>" alt=""></i>
-            <h3>Solidarité</h3>
+            <i class="icon"><img src="public/images/<?php echo AppConfig::$settings['image_qualite2']; ?>" alt=""></i>
+            <h3><?php echo AppConfig::$settings['home_quality_caption2']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="public/images/<?php echo $data['image_qualite3']; ?>" alt=""></i>
-            <h3>Transparence</h3>
+            <i class="icon"><img src="public/images/<?php echo AppConfig::$settings['image_qualite3']; ?>" alt=""></i>
+            <h3><?php echo AppConfig::$settings['home_quality_caption3']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="public/images/<?php echo $data['image_qualite4']; ?>" alt=""></i>
-            <h3>Innovation</h3>
+            <i class="icon"><img src="public/images/<?php echo AppConfig::$settings['image_qualite4']; ?>" alt=""></i>
+            <h3><?php echo AppConfig::$settings['home_quality_caption4']; ?></h3>
         </div>
     </div>
 </section>
@@ -54,18 +51,7 @@ require_once "views/includes/header.php";
     <img src="public/images/happy.png" alt="À Propos">
     <div>
         <h1>À Propos de Nous</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, laboriosam expedita.
-            Quae, ex ratione dolore culpa quod perferendis nostrum,
-            vitae quibusdam, temporibus nobis hic sed voluptatibus obcaecati assumenda autem. Hic.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, laboriosam expedita.
-            Quae, ex ratione dolore culpa quod perferendis nostrum,
-            vitae quibusdam, temporibus nobis hic sed voluptatibus obcaecati assumenda autem. Hic.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, laboriosam expedita.
-            Quae, ex ratione dolore culpa quod perferendis nostrum,
-            vitae quibusdam, temporibus nobis hic sed voluptatibus obcaecati assumenda autem. Hic.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, laboriosam expedita.
-            Quae, ex ratione dolore culpa quod perferendis nostrum,
-            vitae quibusdam, temporibus nobis hic sed voluptatibus obcaecati assumenda autem. Hic.
+        <p><?php echo AppConfig::$settings['home_about_caption'] ?>
         </p>
     </div>
 </section>

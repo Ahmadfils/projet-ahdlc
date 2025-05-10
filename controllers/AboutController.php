@@ -5,7 +5,9 @@ class AboutController extends Controller {
             'title' => 'À propos',
             'description' => 'En savoir plus sur AHDLC'
         ];
+
         $this->view('includes/header', $data);
         $this->view('about', $data);
+        $this->view('includes/footer', $data);
     }
 }

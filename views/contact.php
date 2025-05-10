@@ -1,8 +1,3 @@
-<?php
-require_once "views/includes/header.php";
-?>
-<link rel="stylesheet" href="public/css/contact.css">
-<!-- Section de contact -->
 <div class="contact-section">
     <div class="contact-image"></div>
 
@@ -67,7 +62,3 @@ require_once "views/includes/header.php";
             de bénévolat ou de partenariat.</div>
     </div>
 </section>
-
-<?php
-require_once "views/includes/footer.php";
-?>

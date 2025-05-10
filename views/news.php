@@ -1,6 +1,3 @@
-
-<link rel="stylesheet" href="public/css/news.css">
-<!-- Titre + recherche -->
 <section class="titre-recherche-container">
     <h1>Actualités</h1>
     <form class="recherche-form">
@@ -19,16 +16,16 @@
 <section class="news-grid">
     <!-- Génération de 15 news -->
     <!-- Tu peux répéter ce bloc en changeant le contenu -->
-    <?php 
-       foreach ($data['news'] as $new):
-     ?>
-    <div class="news-item">
-        <a href="details-news.html">
-            <img src="public/images/<?php echo $new->image_banner; ?>" alt="Image actualité">
-            <h3><?php echo $new->titre; ?></h3>
-            <p><?php echo $new->intro; ?></p>
-        </a>
-    </div>
+    <?php
+    foreach ($data['news'] as $new):
+    ?>
+        <div class="news-item">
+            <a href="details-news.html">
+                <img src="public/images/<?php echo $new->image_banner; ?>" alt="Image actualité">
+                <h3><?php echo $new->titre; ?></h3>
+                <p><?php echo $new->intro; ?></p>
+            </a>
+        </div>
     <?php endforeach; ?>
 </section>
 

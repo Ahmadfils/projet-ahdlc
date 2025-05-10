@@ -17,14 +17,7 @@ class HomeController extends Controller
         $news = $this->newModel->getLatestNews();
         
         $data = [
-              'description' => $settings['site_intro'] ?? '',
-              'favicon' => $settings['favicon'] ?? '',
-              'home_title' => $settings['home_title'] ?? '',
-              'home_apropos' => $settings['home_apropos'] ?? '',
-              'image_qualite1' => $settings['image_qualite1'] ?? '',
-              'image_qualite2' => $settings['image_qualite2'] ?? '',
-              'image_qualite3' => $settings['image_qualite3'] ?? '',
-              'image_qualite4' => $settings['image_qualite4'] ?? '',
+              'style' => "styles.css",
               'news'=> $news
            ];
           $this->view('includes/header', $data);

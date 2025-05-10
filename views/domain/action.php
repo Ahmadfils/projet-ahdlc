@@ -1,27 +1,22 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $data['title']; ?></title>
-    <link rel="stylesheet" href="<?php echo BASEURL; ?>/public/css/style.css">
-</head>
-<body>
-    <?php require_once 'includes/navigation.php'; ?>
-    
-    <div class="container">
-        <section class="action-page">
-            <h1>Nos Actions</h1>
-            <div class="action-grid">
-                <div class="action-item">
-                    <h3>Action 1</h3>
-                    <p>Description de l'action...</p>
-                </div>
-                <!-- Add more action items -->
-            </div>
-        </section>
+<!-- Projets -->
+<section class="projets">
+    <h2>Nos Projets</h2>
+    <div class="projets-list">
+        <div class="projet-item">
+            <img src="public/images/helping.png" alt="Projet 1">
+            <p>Campagne de vaccination en milieu rural</p>
+        </div>
+        <div class="projet-item">
+            <img src="public/images/group.png" alt="Projet 2">
+            <p>Construction de puits d'eau potable</p>
+        </div>
+        <div class="projet-item">
+            <img src="public/images/helping.png" alt="Projet 3">
+            <p>Distribution de fournitures scolaires</p>
+        </div>
+        <div class="projet-item">
+            <img src="public/images/group.png" alt="Projet 4">
+            <p>Appui aux orphelinats locaux</p>
+        </div>
     </div>
-
-    <?php require_once 'includes/footer.php'; ?>
-</body>
-</html>
+</section>

@@ -1,9 +1,9 @@
-<?php
-require_once "views/includes/header.php";
-?>
 <link rel="stylesheet" href="public/css/about.css">
 <!-- Présentation -->
 <section class="presentation">
+    <div class="presentation-img">
+        <img src="public/images/group.png" alt="">
+    </div>
     <div class="presentation-text">
         <h1>Action Humanitaire</h1>
         <p>
@@ -12,9 +12,6 @@ require_once "views/includes/header.php";
             Notre mission est d'améliorer la vie des personnes en détresse à travers des projets concrets et
             durables.
         </p>
-    </div>
-    <div class="presentation-img">
-        <img src="public/images/group.png" alt="Présentation">
     </div>
 </section>
 
@@ -61,29 +58,6 @@ require_once "views/includes/header.php";
     </p>
 </section>
 
-<!-- Projets -->
-<section class="projets">
-    <h2>Nos Projets</h2>
-    <div class="projets-list">
-        <div class="projet-item">
-            <img src="public/images/helping.png" alt="Projet 1">
-            <p>Campagne de vaccination en milieu rural</p>
-        </div>
-        <div class="projet-item">
-            <img src="public/images/group.png" alt="Projet 2">
-            <p>Construction de puits d'eau potable</p>
-        </div>
-        <div class="projet-item">
-            <img src="public/images/helping.png" alt="Projet 3">
-            <p>Distribution de fournitures scolaires</p>
-        </div>
-        <div class="projet-item">
-            <img src="public/images/group.png" alt="Projet 4">
-            <p>Appui aux orphelinats locaux</p>
-        </div>
-    </div>
-</section>
-
 <section class="dual-column-section">
     <div class="left-column">
         <div class="item">
@@ -100,10 +74,29 @@ require_once "views/includes/header.php";
         </div>
     </div>
     <div class="right-column">
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 1">
+            <p>Lorem ipsum dolor sit amet, item 1 description.</p>
+        </div>
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 2">
+            <p>Consectetur adipiscing elit, item 2 description.</p>
+        </div>
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 3">
+            <p>Sed do eiusmod tempor, item 3 description.</p>
+        </div>
+    </div>
+    <div class="">
         <h2>À propos de cette section</h2>
-        <p>Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.</p>
+        <p>
+            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
+            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
+            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
+            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
+            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
+            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
+            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
+        </p>
     </div>
 </section>
-<?php
-require_once "views/includes/footer.php";
-?>
