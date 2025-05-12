@@ -41,7 +41,7 @@
    <section class="cta-section">
         <h2>Pas encore inscrit ?</h2>
         <p>Rejoignez notre communauté et accédez à nos services d’accompagnement.</p>
-        <a href="register.php">S'inscrire</a>
+        <a href="auth">S'inscrire</a>
     </section>
 
 <!-- Footer -->

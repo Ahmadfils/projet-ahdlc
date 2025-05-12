@@ -1,4 +1,5 @@
 <footer>
+     <h2>ACTION HUMANITAIRE POUR LE DEVELOPPEMENT ET LA LUTTE CONTRE LE CHOMAGE </h2>
     <div class="footer-content">
         <div class="footer-links">
             <h4>Navigation</h4>
@@ -9,11 +10,14 @@
             </ul>
         </div>
         <div class="footer-links">
-            <h4>Nos Services</h4>
+            <h4>Domaines d'intervention</h4>
             <ul>
-                <li><a href="#">Service 1</a></li>
-                <li><a href="#">Service 2</a></li>
-                <li><a href="#">Service 2</a></li>
+                <li><a href="action">Actions humanitaires</a></li>
+                <li><a href="adataption">Adaptation climatique</a></li>
+                <li><a href="employabilite">Employabilité des jeunes et des femmes</a></li>
+                <li><a href="developpement">Développement communautaire</a></li>
+                <li><a href="domaine">Domaines transversaux</a></li>
+                <li><a href="integration">Intégration</a></li>
             </ul>
         </div>
         <div class="footer-links">
@@ -26,9 +30,11 @@
             </ul>
         </div>
         <div class="footer-contact">
-            <h4>Contact</h4>
+            <h4>Contact & Adresse</h4>
             <p>Email : <?php echo AppConfig::$settings['website_email']; ?></p>
             <p>Téléphone : <?php echo AppConfig::$settings['phone_number'] ?></p>
+            <p>Adresse :  <?php echo AppConfig::$settings['adresse_physique'] ?></p>
+            <p>Burundi, Gitega</p>
         </div>
     </div>
     <p class="copyright">&copy; 2025 Action Humanitaire - Tous droits réservés</p>

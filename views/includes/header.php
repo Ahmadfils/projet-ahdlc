@@ -12,9 +12,9 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <div class="navbar">
         <div class="navbar-logo">
-            <a href="#"><img src="public/images/logo_ahdlc.png" alt="Logo"></a>
+            <a href="home"><img src="public/images/<?php echo AppConfig::$settings['site_logo']; ?>" alt="Logo"></a>
         </div>
     
         <div class="navbar-language-dropdown">
@@ -32,7 +32,7 @@
 
             </div>
         </div>
-    </nav>
+    </div>
     <header>
         <div class="menu-toggle" id="menu-toggle">
             ☰
@@ -46,7 +46,7 @@
                     <a href="#">Domaines d'intervention</a>
                     <ul class="dropdown-menu">
                         <li><a href="action">Actions humanitaires</a></li>
-                        <li><a href="adaptation">Adaptation</a></li>
+                        <li><a href="adaptation">Adaptation climatique</a></li>
                         <li><a href="employabilite">Employabilité des jeunes et des femmes</a></li>
                         <li><a href="developpement">Développement communautaire</a></li>
                         <li><a href="domaine">Domaines transversaux</a></li>

@@ -314,7 +314,7 @@ footer .copyright {
     color: rgba(0, 170, 255, 0.6);
 }
 
-footer h4 {
+footer h1,footer h2,footer h3,footer h4 {
     color: rgba(0, 170, 255, 0.6);
 }
 
@@ -567,42 +567,19 @@ nav.active {
 }
 
 
-
-.banner-actualites {
-    background-image: url('images/Organisation humanitaire.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    height: 400px;
-    width: 100%;
-}
-
-.banner-actualites::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
 /* ------ NavBAR -------*/
 
 .navbar {
     background-color: white;
-    padding: 10px 30px;
+    padding: 5px 5px;
     display: flex;
-    justify-content: space-between; /* Aligne le logo à gauche et le dropdown à droite */
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère pour la navbar */
-    height: 60px; /* Hauteur fixe pour la navbar */
+    justify-content: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    height: 50px;
   }
 
   .navbar-logo img {
-    height: 40px; /* Ajustez la taille de votre logo */
+    height: 50px; 
     width: auto;
     display: block; /* Enlève l'espace en dessous de l'image si c'est un lien */
   }
@@ -624,10 +601,10 @@ nav.active {
   }
 
   .language-selected img {
-    width: 24px; /* Taille du drapeau/logo de la langue actuelle */
+    width: 24px; 
     height: auto;
     margin-right: 8px;
-    border-radius: 3px; /* Coins arrondis pour les drapeaux */
+    border-radius: 3px; 
   }
 
   .language-selected .arrow-down {
@@ -635,18 +612,18 @@ nav.active {
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #333; /* Couleur de la flèche */
+    border-top: 5px solid #333; 
     margin-left: 8px;
   }
 
   .dropdown-content {
-    display: none; /* Caché par défaut */
+    display: none; 
     position: absolute;
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1; /* S'assure qu'il est au-dessus des autres éléments */
-    right: 0; /* Aligne le dropdown à droite du bouton */
+    z-index: 1; 
+    right: 0; 
     border-radius: 4px;
     padding: 5px 0;
   }
@@ -655,13 +632,13 @@ nav.active {
     color: black;
     padding: 10px 15px;
     text-decoration: none;
-    display: flex; /* Utilise flex pour aligner le logo et le texte */
+    display: flex; 
     align-items: center;
     font-size: 15px;
   }
 
   .dropdown-content a img {
-    width: 20px; /* Taille des drapeaux dans le dropdown */
+    width: 20px; 
     height: auto;
     margin-right: 10px;
     border-radius: 3px;
@@ -671,12 +648,12 @@ nav.active {
     background-color: #f1f1f1;
   }
 
-  /* Affiche le dropdown au survol du conteneur .navbar-language-dropdown */
+  
   .navbar-language-dropdown:hover .dropdown-content {
     display: block;
   }
 
-  /* Optionnel: style au survol du bouton pour indiquer l'interaction */
+  
   .navbar-language-dropdown:hover .language-selected {
     background-color: #f9f9f9;
   }
@@ -926,12 +903,12 @@ nav.active {
     color: #555;
 }
 
-/* Harmonisation des espacements avec la page Employabilité */
+/* Harmonisation des espacements avec la page Employabilité 
 section {
     padding: 40px 20px;
     margin-right: 40px;
     margin-left: 40px;
-}
+}*/
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -1199,15 +1176,6 @@ section {
 
 /* ----------  NEWS CSS -----------*/
 
-/* Général */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-/* Titre et barre de recherche */
 .titre-recherche-container {
     background: url('../img/vector-blue.svg') center/cover no-repeat;
     background-color: rgba(0, 170, 255, 0.2);
@@ -1471,6 +1439,7 @@ body {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     max-width: 600px;
     margin: 0 auto 60px auto;
+    
 }
 
 .demande-form h2 {
@@ -1523,3 +1492,61 @@ body {
         padding: 20px;
     }
 }
+
+/*------------ Article ------------*/
+.details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .details-container img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .details-container h2 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+    color: #003366;
+  }
+  
+  .details-container .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .details-container .content {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .retour-btn {
+    display: inline-block;
+    margin: 30px 0;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .retour-btn:hover {
+    background-color: #0077cc;
+  }
+  
+  .footer {
+    background-color: #003344;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
