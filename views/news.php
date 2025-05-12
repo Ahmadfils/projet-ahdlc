@@ -38,11 +38,10 @@
     <a href="#">&raquo;</a>
 </div>
 
-<!-- Infos professionnelles -->
-<section class="infos-pro">
-    <p>© 2025 Inzuex - Tous droits réservés.</p>
-    <p>Contact : info@inzuex.com | Tél : +257 123 456 789</p>
-    <p>Adresse : Bujumbura, Burundi</p>
-</section>
+   <section class="cta-section">
+        <h2>Pas encore inscrit ?</h2>
+        <p>Rejoignez notre communauté et accédez à nos services d’accompagnement.</p>
+        <a href="register.php">S'inscrire</a>
+    </section>
 
 <!-- Footer -->

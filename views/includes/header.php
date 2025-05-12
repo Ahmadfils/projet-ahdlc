@@ -14,9 +14,9 @@
 <body>
     <nav class="navbar">
         <div class="navbar-logo">
-            <a href="#"><img src="https://via.placeholder.com/150x50.png?text=VotreLogo" alt="Logo de l'entreprise"></a>
+            <a href="#"><img src="public/images/logo_ahdlc.png" alt="Logo"></a>
         </div>
-
+    
         <div class="navbar-language-dropdown">
             <button class="language-selected">
                 <img src="https://flagcdn.com/16x12/fr.png" alt="Français"> <span>FR</span>
