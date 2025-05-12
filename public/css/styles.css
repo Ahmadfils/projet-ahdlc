@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.8;
 }
 
 h1,
@@ -15,8 +16,9 @@ h3 {
 /* Header et Menu */
 header {
     background-color: #acc2cc;
-    padding: 20px 0;
+    padding: 10px 0;
     color: white;
+    margin-top: 50px;
 }
 
 header nav ul {
@@ -314,7 +316,10 @@ footer .copyright {
     color: rgba(0, 170, 255, 0.6);
 }
 
-footer h1,footer h2,footer h3,footer h4 {
+footer h1,
+footer h2,
+footer h3,
+footer h4 {
     color: rgba(0, 170, 255, 0.6);
 }
 
@@ -571,25 +576,37 @@ nav.active {
 
 .navbar {
     background-color: white;
-    padding: 5px 5px;
+    padding: 5px 0;
     display: flex;
-    justify-content: center; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 50px;
-  }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
 
-  .navbar-logo img {
-    height: 50px; 
+}
+
+.navbar-logo img {
+    height: 45px;
     width: auto;
-    display: block; /* Enlève l'espace en dessous de l'image si c'est un lien */
-  }
+    display: block;
+    margin-right: 20px;
+    /* Enlève l'espace en dessous de l'image si c'est un lien */
+}
 
-  .navbar-language-dropdown {
-    position: relative; /* Nécessaire pour positionner le contenu du dropdown */
-    display: inline-block; /* Permet au dropdown de s'aligner correctement */
-  }
+.navbar-language-dropdown {
+    position: relative;
+    /* Nécessaire pour positionner le contenu du dropdown */
+    display: inline-block;
+    /* Permet au dropdown de s'aligner correctement */
+}
 
-  .language-selected {
+.language-selected {
     background-color: transparent;
     color: #333;
     padding: 8px 12px;
@@ -598,65 +615,65 @@ nav.active {
     cursor: pointer;
     display: flex;
     align-items: center;
-  }
+}
 
-  .language-selected img {
-    width: 24px; 
+.language-selected img {
+    width: 24px;
     height: auto;
     margin-right: 8px;
-    border-radius: 3px; 
-  }
+    border-radius: 3px;
+}
 
-  .language-selected .arrow-down {
+.language-selected .arrow-down {
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #333; 
+    border-top: 5px solid #333;
     margin-left: 8px;
-  }
+}
 
-  .dropdown-content {
-    display: none; 
+.dropdown-content {
+    display: none;
     position: absolute;
     background-color: white;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1; 
-    right: 0; 
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
     border-radius: 4px;
     padding: 5px 0;
-  }
+}
 
-  .dropdown-content a {
+.dropdown-content a {
     color: black;
     padding: 10px 15px;
     text-decoration: none;
-    display: flex; 
+    display: flex;
     align-items: center;
     font-size: 15px;
-  }
+}
 
-  .dropdown-content a img {
-    width: 20px; 
+.dropdown-content a img {
+    width: 20px;
     height: auto;
     margin-right: 10px;
     border-radius: 3px;
-  }
+}
 
-  .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: #f1f1f1;
-  }
+}
 
-  
-  .navbar-language-dropdown:hover .dropdown-content {
+
+.navbar-language-dropdown:hover .dropdown-content {
     display: block;
-  }
+}
 
-  
-  .navbar-language-dropdown:hover .language-selected {
+
+.navbar-language-dropdown:hover .language-selected {
     background-color: #f9f9f9;
-  }
+}
 
 
 
@@ -903,12 +920,6 @@ nav.active {
     color: #555;
 }
 
-/* Harmonisation des espacements avec la page Employabilité 
-section {
-    padding: 40px 20px;
-    margin-right: 40px;
-    margin-left: 40px;
-}*/
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -938,11 +949,11 @@ section {
 /* Contact Section - Deux colonnes */
 .contact-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 40px 40px 60px;
     background-color: white;
     border-radius: 10px;
-    margin: 0 auto 60px;
+    margin: 30px auto 60px;
     max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -951,7 +962,6 @@ section {
 .contact-image {
     flex: 1 1 50%;
     background-image: url('../images/helping.png');
-    /* Remplacer par l'image réelle */
     background-size: cover;
     background-position: center;
     min-height: 400px;
@@ -988,8 +998,11 @@ section {
 }
 
 .input-icon input,
-.input-icon textarea {
-    padding: 12px 12px 12px 40px;
+.input-icon textarea,
+.demande-form input,
+.demande-form textarea,
+.demande-form select {
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
@@ -1013,7 +1026,8 @@ section {
     transition: background-color 0.3s;
 }
 
-.contact-form button:hover {
+.contact-form button:hover,
+.demande-form button:hover {
     background-color: #0077cc;
 }
 
@@ -1350,7 +1364,7 @@ section {
 }
 
 
-/* ----------  EMPLOYABILITE CSS -----------*/
+/* ----------  DOMAIN D'INTERVENTION CSS -----------*/
 
 .container {
     max-width: 1200px;
@@ -1377,7 +1391,7 @@ section {
 .card {
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.3s;
 }
@@ -1433,19 +1447,22 @@ section {
 
 /* Formulaire de demande */
 .demande-form {
+    flex: 1 1 50%;
     background-color: #fff;
+    flex-wrap: nowrap;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
     margin: 0 auto 60px auto;
-    
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .demande-form h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #004b8d;
+    color: #00aaff;
 }
 
 .demande-form form {
@@ -1454,18 +1471,8 @@ section {
     gap: 15px;
 }
 
-.demande-form input,
-.demande-form textarea,
-.demande-form select {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 15px;
-    width: 100%;
-}
-
 .demande-form button {
-    background-color: #0073aa;
+    background-color: #00aaff;
     color: #fff;
     padding: 12px;
     border: none;
@@ -1474,9 +1481,6 @@ section {
     cursor: pointer;
 }
 
-.demande-form button:hover {
-    background-color: #005b88;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -1500,34 +1504,34 @@ section {
     padding: 0 20px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .details-container img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-container img {
     width: 100%;
     max-height: 350px;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
-  }
-  
-  .details-container h2 {
+}
+
+.details-container h2 {
     font-size: 28px;
     margin: 20px 0 10px;
-    color: #003366;
-  }
-  
-  .details-container .date {
+    color: #00aaff;
+}
+
+.details-container .date {
     font-size: 14px;
     color: #888;
     margin-bottom: 20px;
-  }
-  
-  .details-container .content {
+}
+
+.details-container .content {
     font-size: 18px;
     line-height: 1.6;
-  }
-  
-  .retour-btn {
+}
+
+.retour-btn {
     display: inline-block;
     margin: 30px 0;
     padding: 10px 20px;
@@ -1536,17 +1540,16 @@ section {
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s;
-  }
-  
-  .retour-btn:hover {
+}
+
+.retour-btn:hover {
     background-color: #0077cc;
-  }
-  
-  .footer {
+}
+
+.footer {
     background-color: #003344;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-  }
-  
+}
