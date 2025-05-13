@@ -1,5 +1,5 @@
 <footer>
-     <h2>ACTION HUMANITAIRE POUR LE DEVELOPPEMENT ET LA LUTTE CONTRE LE CHOMAGE </h2>
+    <h2>ACTION HUMANITAIRE POUR LE DEVELOPPEMENT ET LA LUTTE CONTRE LE CHOMAGE </h2>
     <div class="footer-content">
         <div class="footer-links">
             <h4>Navigation</h4>
@@ -33,8 +33,8 @@
             <h4>Contact & Adresse</h4>
             <p>Email : <?php echo AppConfig::$settings['website_email']; ?></p>
             <p>Téléphone : <?php echo AppConfig::$settings['phone_number'] ?></p>
-            <p>Adresse :  <?php echo AppConfig::$settings['adresse_physique'] ?></p>
-            <p>Burundi, Gitega</p>
+            <p>Adresse : <?php echo AppConfig::$settings['adresse_physique'] ?></p>
+            <p>Gitega, Burundi</p>
         </div>
     </div>
     <p class="copyright">&copy; 2025 Action Humanitaire - Tous droits réservés</p>

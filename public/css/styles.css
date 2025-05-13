@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    line-height: 1.8;
 }
 
 h1,
@@ -788,6 +787,13 @@ nav.active {
     padding: 40px 20px;
 }
 
+.projets h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #005577;
+    margin-bottom: 20px;
+}
+
 .projets .liste-projets {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -803,6 +809,7 @@ nav.active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 .projet-item img {
@@ -811,7 +818,7 @@ nav.active {
     object-fit: cover;
 }
 
-.projet-item .desc {
+.projet-item p {
     padding: 15px;
     font-size: 16px;
     line-height: 1.6;

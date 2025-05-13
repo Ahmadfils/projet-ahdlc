@@ -5,15 +5,12 @@
         <h3>Envoyez-nous un message</h3>
         <form>
             <div class="input-icon">
-                <i class="fas fa-user"></i>
                 <input type="text" placeholder="Nom complet" required>
             </div>
             <div class="input-icon">
-                <i class="fas fa-envelope"></i>
                 <input type="email" placeholder="Adresse e-mail" required>
             </div>
             <div class="input-icon">
-                <i class="fas fa-comment"></i>
                 <textarea placeholder="Votre message" required></textarea>
             </div>
             <button type="submit">Envoyer</button>
@@ -21,17 +18,13 @@
     </div>
 </div>
 
-
-
-<!-- Informations de contact -->
-<section class="infos-contact">
+<section class="infos-pro">
     <h2>Nos coordonnées</h2>
-    <ul>
-        <li>Email : contact@actionhumanitaire.org</li>
-        <li>Tél : +257 22 22 22 22</li>
-        <li>Adresse : Bujumbura, Burundi</li>
-    </ul>
+    <p>© 2025 Inzuex - Tous droits réservés.</p>
+    <p>Contact : info@inzuex.com | Tél : +257 123 456 789</p>
+    <p>Adresse : Bujumbura, Burundi</p>
 </section>
+
 <section class="faq-section">
     <h2>FAQ - Questions Fréquentes</h2>
 

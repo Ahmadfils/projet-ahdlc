@@ -1,4 +1,3 @@
-
 <div class="main-wrapper">
     <!-- Article principal -->
     <div class="article-container">

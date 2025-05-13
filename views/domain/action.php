@@ -20,3 +20,33 @@
         </div>
     </div>
 </section>
+
+<section class="dual-column-section">
+    <div class="left-column">
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 1">
+            <p>Lorem ipsum dolor sit amet, item 1 description.</p>
+        </div>
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 2">
+            <p>Consectetur adipiscing elit, item 2 description.</p>
+        </div>
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 3">
+            <p>Sed do eiusmod tempor, item 3 description.</p>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 4">
+            <p>Ut enim ad minim veniam, item 4 description.</p>
+        </div>
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 5">
+            <p>Quis nostrud exercitation ullamco laboris, item 5 description.</p>
+        </div>
+        <div class="item">
+            <img src="public/images/world.png" alt="Item 6">
+            <p>Nisi ut aliquip ex ea commodo consequat, item 6 description.</p>
+        </div>
+</section>
