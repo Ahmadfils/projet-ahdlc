@@ -5,7 +5,7 @@
         <img src="public/images/group.png" alt="">
     </div>
     <div class="presentation-text">
-        <h1>Action Humanitaire</h1>
+        <h2>Action Humanitaire</h2>
         <p>
             Action Humanitaire est une organisation dédiée à apporter une aide essentielle aux populations
             vulnérables.
@@ -19,6 +19,18 @@
 <section class="historique">
     <h2>Historique</h2>
     <p>
+        Depuis notre création en 2010, nous avons œuvré dans plusieurs régions pour soutenir les communautés
+        défavorisées
+        à travers des campagnes de santé, d’éducation et de développement rural. Notre engagement est profondément
+        enraciné
+        dans la solidarité et l’empathie.
+
+        Depuis notre création en 2010, nous avons œuvré dans plusieurs régions pour soutenir les communautés
+        défavorisées
+        à travers des campagnes de santé, d’éducation et de développement rural. Notre engagement est profondément
+        enraciné
+        dans la solidarité et l’empathie.
+
         Depuis notre création en 2010, nous avons œuvré dans plusieurs régions pour soutenir les communautés
         défavorisées
         à travers des campagnes de santé, d’éducation et de développement rural. Notre engagement est profondément
@@ -87,16 +99,5 @@
             <p>Sed do eiusmod tempor, item 3 description.</p>
         </div>
     </div>
-    <div class="">
-        <h2>À propos de cette section</h2>
-        <p>
-            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
-            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
-            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
-            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
-            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
-            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
-            Cette colonne peut contenir une description, une image ou tout autre contenu complémentaire.
-        </p>
-    </div>
+
 </section>

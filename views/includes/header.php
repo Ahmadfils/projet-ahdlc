@@ -16,7 +16,7 @@
         <div class="navbar-logo">
             <a href="home"><img src="public/images/<?php echo AppConfig::$settings['site_logo']; ?>" alt="Logo"></a>
         </div>
-    
+
         <div class="navbar-language-dropdown">
             <button class="language-selected">
                 <img src="https://flagcdn.com/16x12/fr.png" alt="Français"> <span>FR</span>
