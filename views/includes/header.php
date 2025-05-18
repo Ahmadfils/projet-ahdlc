@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo AppConfig::$settings['home_title']; ?></title>
-    <link rel="shortcut icon" href="public/images/<?php echo AppConfig::$settings['favicon']; ?>" type="image/x-icon">
+    <title><?php echo Init::$settings['home_title']; ?></title>
+    <link rel="shortcut icon" href="public/images/<?php echo Init::$settings['favicon']; ?>" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="public/css/styles.css">
 
@@ -14,7 +14,7 @@
 <body>
     <div class="navbar">
         <div class="navbar-logo">
-            <a href="home"><img src="public/images/<?php echo AppConfig::$settings['site_logo']; ?>" alt="Logo"></a>
+            <a href="home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo"></a>
         </div>
 
         <div class="navbar-language-dropdown">
