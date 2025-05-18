@@ -26,19 +26,19 @@ if(!isset($_SESSION['user'])) {
 
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/ionicons.min.css">
-	<link rel="stylesheet" href="css/datepicker3.css">
-	<link rel="stylesheet" href="css/all.css">
-	<link rel="stylesheet" href="css/select2.min.css">
-	<link rel="stylesheet" href="css/dataTables.bootstrap.css">
-	<link rel="stylesheet" href="css/jquery.fancybox.css">
-	<link rel="stylesheet" href="css/AdminLTE.min.css">
-	<link rel="stylesheet" href="css/_all-skins.min.css">
-	<link rel="stylesheet" href="css/on-off-switch.css"/>
-	<link rel="stylesheet" href="css/summernote.css">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="views/admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="views/admin/css/font-awesome.min.css">
+	<link rel="stylesheet" href="views/admin/css/ionicons.min.css">
+	<link rel="stylesheet" href="views/admin/css/datepicker3.css">
+	<link rel="stylesheet" href="views/admin/css/all.css">
+	<link rel="stylesheet" href="views/admin/css/select2.min.css">
+	<link rel="stylesheet" href="views/admin/css/dataTables.bootstrap.css">
+	<link rel="stylesheet" href="views/admin/css/jquery.fancybox.css">
+	<link rel="stylesheet" href="views/admin/css/AdminLTE.min.css">
+	<link rel="stylesheet" href="views/admin/css/_all-skins.min.css">
+	<link rel="stylesheet" href="views/admin/css/on-off-switch.css"/>
+	<link rel="stylesheet" href="views/admin/css/summernote.css">
+	<link rel="stylesheet" href="views/admin/style.css">
 
 </head>
 
