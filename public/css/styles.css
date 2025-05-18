@@ -716,13 +716,17 @@ nav.active {
 
 .presentation-text p,
 .historique p,
-.item p {
+.item p,
+.a-propos p,
+.banner-text p
+ {
     font-size: 20px;
     line-height: 1.8;
     text-align: justify;
 }
 
-.vision p {
+.vision p,.services p,
+.actualites p {
     font-size: 20px;
     line-height: 1.8;
 }
