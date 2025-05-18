@@ -1,5 +1,5 @@
 <?php
-class AppConfig
+class Init
 {
     public static $settings = [];
 

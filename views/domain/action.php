@@ -18,6 +18,10 @@
                 locales.
             </p>
         </div>
+        <div class="article-navigation">
+          <button><i class="fas fa-arrow-left"></i> Article précédent</button>
+          <button>Article suivant <i class="fas fa-arrow-right"></i></button>
+        </div>
     </div>
 
     <!-- Aside avec articles récents -->
@@ -51,8 +55,3 @@
     </aside>
 </div>
 
-<!-- Navigation entre articles -->
-<div class="article-navigation">
-    <button><i class="fas fa-arrow-left"></i> Article précédent</button>
-    <button>Article suivant <i class="fas fa-arrow-right"></i></button>
-</div>
