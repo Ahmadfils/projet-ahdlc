@@ -4,7 +4,8 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'ahdlc');
 
-define('BASEURL', 'http://localhost/projet-ahdlc');
+define('BASE_URL', 'http://localhost/projet-ahdlc/');
+define("ADMIN_URL", BASE_URL . "admin" . "/");
 
 // Pour le développement
 error_reporting(E_ALL);

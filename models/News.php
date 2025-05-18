@@ -17,7 +17,7 @@ class News{
     }
 
     public function getLatestNews(){
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = 1 ORDER BY date_publication DESC limit 5");
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = 1 ORDER BY date_publication DESC limit 6");
         //$this->db->bind(':id', $data['id']);
         //$this->db->bind(':limite', $data['limite']);
         return $this->db->resultSet();

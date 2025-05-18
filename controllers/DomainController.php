@@ -6,7 +6,7 @@ class DomainController extends Controller {
             'description' => 'Découvrez nos domaines d\'expertise'
         ];
         $this->view('includes/header', $data);
-        $this->view('domain', $data);
+        $this->view('domain/domaine', $data);
         $this->view('includes/footer', $data);
     }
 
