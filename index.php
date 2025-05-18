@@ -4,7 +4,7 @@ require_once 'core/Init.php';
 require_once 'core/Router.php';
 require_once 'core/Controller.php';
 
-AppConfig::loadSettings();
+Init::loadSettings();
 
 // Autoload classes
 spl_autoload_register(function ($class_name) {

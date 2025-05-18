@@ -1,4 +1,3 @@
-// js/about.js
 
 // Mettre en surbrillance le lien actif dans le menu (optionnel si fait en HTML)
 document.addEventListener("DOMContentLoaded", () => {
