@@ -23,17 +23,17 @@
         <div class="footer-links">
             <h4>Réseaux sociaux</h4>
             <ul>
-                <li><a href="<?php echo AppConfig::$settings['linkedin_link']; ?>">Linkedin</a></li>
-                <li><a href="<?php echo AppConfig::$settings['twitter_link']; ?>">Twitter</a></li>
-                <li><a href="<?php echo AppConfig::$settings['instagram_link']; ?>">Instagram</a></li>
-                <li><a href="<?php echo AppConfig::$settings['facebook_link']; ?>">Facebook</a></li>
+                <li><a href="<?php echo Init::$settings['linkedin_link']; ?>">Linkedin</a></li>
+                <li><a href="<?php echo Init::$settings['twitter_link']; ?>">Twitter</a></li>
+                <li><a href="<?php echo Init::$settings['instagram_link']; ?>">Instagram</a></li>
+                <li><a href="<?php echo Init::$settings['facebook_link']; ?>">Facebook</a></li>
             </ul>
         </div>
         <div class="footer-contact">
             <h4>Contact & Adresse</h4>
-            <p>Email : <?php echo AppConfig::$settings['website_email']; ?></p>
-            <p>Téléphone : <?php echo AppConfig::$settings['phone_number'] ?></p>
-            <p>Adresse : <?php echo AppConfig::$settings['adresse_physique'] ?></p>
+            <p>Email : <?php echo Init::$settings['website_email']; ?></p>
+            <p>Téléphone : <?php echo Init::$settings['phone_number'] ?></p>
+            <p>Adresse : <?php echo Init::$settings['adresse_physique'] ?></p>
             <p>Gitega, Burundi</p>
         </div>
     </div>

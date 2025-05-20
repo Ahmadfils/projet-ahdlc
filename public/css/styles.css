@@ -314,6 +314,7 @@ footer .copyright {
     margin-top: 20px;
     font-size: 14px;
     color: rgba(0, 170, 255, 0.6);
+    line-height: 1.8;
 }
 
 footer h1,
@@ -726,7 +727,8 @@ nav.active {
 }
 
 .vision p,.services p,
-.actualites p {
+.actualites p,
+.domaines-intervention p{
     font-size: 20px;
     line-height: 1.8;
 }
