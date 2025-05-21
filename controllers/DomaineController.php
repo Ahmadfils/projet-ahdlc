@@ -1,5 +1,5 @@
 <?php
-class DomainController extends Controller {
+class DomaineController extends Controller {
     public function index() {
         $data = [
             'title' => 'Nos Domaines',
