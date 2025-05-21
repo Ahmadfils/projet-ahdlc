@@ -13,6 +13,7 @@ class News{
       
         $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC");
         $this->db->bind(':id', $data['id']);
+        
         return $this->db->resultSet();
     }
 

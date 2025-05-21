@@ -4,6 +4,8 @@ require_once 'core/Init.php';
 require_once 'core/Router.php';
 require_once 'core/Controller.php';
 
+session_start();
+
 Init::loadSettings();
 
 // Autoload classes
@@ -14,9 +16,6 @@ spl_autoload_register(function ($class_name) {
         require_once 'core/' . $class_name . '.php';
     }
 });
-
-// Start the session
-session_start();
 
 // Define the default controller and method
 $controllerName = 'HomeController';

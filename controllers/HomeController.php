@@ -17,21 +17,10 @@ class HomeController extends Controller
         $news = $this->newModel->getLatestNews();
         
         $data = [
-              'style' => "styles.css",
               'news'=> $news
            ];
           $this->view('includes/header', $data);
           $this->view('home', $data);
           $this->view('includes/footer', $data);
-    }
-
-    public function about()
-    {
-        $data = [
-            'title' => 'À propos de nous',
-            'description' => 'En savoir plus sur notre organisation'
-        ];
-
-        $this->view('about', $data);
     }
 }

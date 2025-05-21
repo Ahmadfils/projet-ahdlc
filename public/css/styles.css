@@ -1700,3 +1700,61 @@ nav.active {
         order: -1;
     }
 }
+
+/*-------------Details CSS-------------*/
+
+.details-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .details-container img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .details-container h2 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+    color: #003366;
+  }
+  
+  .details-container .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .details-container .content {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .retour-btn {
+    display: inline-block;
+    margin: 30px 0;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .retour-btn:hover {
+    background-color: #0077cc;
+  }
+  
+  .footer {
+    background-color: #003344;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
