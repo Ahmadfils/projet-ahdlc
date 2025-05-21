@@ -60,27 +60,27 @@
     <h2 class="section-title">Domaines d'Intervention</h2>
     <p>Nos domaines clés d'action</p>
     <div class="grid-container">
-        <div class="grid-item" data-url="action_humanitaire.html">
+        <div class="grid-item" data-url="action">
             <h2>Actions humanitaires</h2>
             <img src="public/images/group.png" alt="">
         </div>
-        <div class="grid-item" data-url="adaptation.html">
+        <div class="grid-item" data-url="adaptation">
             <h2>Adaptation</h2>
             <img src="public/images/Tiny house-rafiki.png" alt="">
         </div>
-        <div class="grid-item" data-url="action_humanitaire.html">
+        <div class="grid-item" data-url="employabilite">
             <h2>Employabilité des jeunes et des femmes</h2>
             <img src="public/images/Back to school-rafiki.png" alt="">
         </div>
-        <div class="grid-item" data-url="action_humanitaire.html">
+        <div class="grid-item" data-url="developpement">
             <h2>Développement communautaire</h2>
             <img src="public/images/Emancipation of women-bro.png" alt="">
         </div>
-        <div class="grid-item" data-url="domaine_trans.html">
+        <div class="grid-item" data-url="domaine">
             <h2>Domaines transversaux</h2>
             <img src="public/images/helping.png" alt="">
         </div>
-        <div class="grid-item" data-url="action_humanitaire.html">
+        <div class="grid-item" data-url="integration">
             <h2>Intégration</h2>
             <img src="public/images/business.png" alt="">
         </div>

@@ -1750,11 +1750,4 @@ nav.active {
   .retour-btn:hover {
     background-color: #0077cc;
   }
-  
-  .footer {
-    background-color: #003344;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
+ 

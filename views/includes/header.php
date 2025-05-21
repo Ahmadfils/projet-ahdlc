@@ -12,32 +12,14 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="navbar-logo">
-            <a href="home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo"></a>
-        </div>
-
-        <div class="navbar-language-dropdown">
-            <button class="language-selected">
-                <img src="https://flagcdn.com/16x12/fr.png" alt="Français"> <span>FR</span>
-                <span class="arrow-down"></span>
-            </button>
-            <div class="dropdown-content">
-                <a href="#fr">
-                    <img src="https://flagcdn.com/16x12/fr.png" srcset="https://flagcdn.com/32x24/gb.png 2x, https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="Français"> <span>Français</span>
-                </a>
-                <a href="#en">
-                    <img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x, https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="English"> <span>English</span>
-                </a>
-
-            </div>
-        </div>
-    </div>
     <header>
         <div class="menu-toggle" id="menu-toggle">
             ☰
         </div>
         <nav id="nav-menu">
+            <div class="navbar-logo">
+               <a href="home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo"></a>
+            </div>
             <ul>
                 <li><a href="home">Accueil</a></li>
                 <li><a href="about">À propos</a></li>

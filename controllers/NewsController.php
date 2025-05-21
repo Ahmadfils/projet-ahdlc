@@ -16,4 +16,5 @@ class NewsController extends Controller {
         $this->view('news', $data);
         $this->view('includes/footer', $data);
     }
+
 }
