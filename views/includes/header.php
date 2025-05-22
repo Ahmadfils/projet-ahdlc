@@ -18,7 +18,9 @@
         </div>
         <nav id="nav-menu">
             <div class="navbar-logo">
-               <a href="home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo"></a>
+               <a href="<?php BASE_URL ?>/home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo">
+               <span class="logo-title">AHDLC</span></a>
+
             </div>
             <ul>
                 <li><a href="home">Accueil</a></li>

@@ -1,3 +1,4 @@
+<?php require_once "views/includes/header.php"; ?>
 <section class="titre-recherche-container">
     <h1>Actualités</h1>
     <form class="recherche-form">
@@ -20,7 +21,7 @@
     foreach ($data['news'] as $new):
     ?>
         <div class="news-item">
-            <a href="news/post/<?php echo $new->id;?>">
+            <a href="post/<?php echo $new->id;?>">
                 <img src="public/images/<?php echo $new->image_banner; ?>" alt="Image actualité">
                 <h3><?php echo $new->titre; ?></h3>
                 <p><?php echo $new->intro; ?></p>
@@ -44,4 +45,4 @@
         <a href="auth">S'inscrire</a>
     </section>
 
-<!-- Footer -->
+<?php require_once "views/includes/footer.php;" ?>

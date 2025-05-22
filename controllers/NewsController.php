@@ -17,4 +17,14 @@ class NewsController extends Controller {
         $this->view('includes/footer', $data);
     }
 
+    public function post($id){
+  
+        $post = $this->newModel->getNewById(["id" => $id]);
+        $data = [
+         "post" => $post
+        ];
+
+         $this->views("post", $data);
+    }
+
 }

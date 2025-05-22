@@ -27,13 +27,13 @@ class News{
     public function getNewById($data){
         $this->db->query("SELECT * FROM tbl_new WHERE id = :id");
         $this->db->bind(':id', $data['id']);
-        $this->db->single();
+        return  $this->db->single();
     }
 
     public function getNewByCategory($data){
         $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id");
         $this->db->bind(':id', $data['id']);
-        $this->db->single();
+        return $this->db->single();
     }
 
     public function addNews($data)
