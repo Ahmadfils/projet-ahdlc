@@ -23,8 +23,9 @@ class NewsController extends Controller {
         $data = [
          'article' => $article
         ];
-      
+        $this->view('includes/header', $data);
         $this->view('article', $data);
+        $this->view('includes/footer', $data);
     }
 
 }

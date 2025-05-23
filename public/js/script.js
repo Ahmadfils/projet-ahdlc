@@ -58,3 +58,9 @@ document.querySelectorAll(".grid-item").forEach(div => {
     });
 });
 
+document.querySelectorAll(".news-item").forEach(div => {
+    div.addEventListener("click", function () {
+      window.location.href = this.getAttribute("data-url");
+    });
+});
+

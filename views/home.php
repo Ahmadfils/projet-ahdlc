@@ -38,13 +38,13 @@
      <?php 
        foreach ($data['news'] as $new):
      ?>
-        <div class="news-item">
+        <div class="news-item" data-url="<?php echo BASE_URL; ?>/news/post/<?php echo $new->id;?>">
             <img src="<?php echo BASE_URL; ?>/public/images/<?php echo $new->image_banner; ?>" alt="">
             <p><?php echo $new->intro; ?></p>
         </div>
       <?php endforeach; ?>
     </div>
-    <a href="#" class="voir-plus">Voir plus</a>
+    <a href="<?php echo BASE_URL; ?>/news" class="voir-plus">Voir plus</a>
 </section>
 
 <section class="a-propos">
@@ -60,23 +60,23 @@
     <h2 class="section-title">Domaines d'Intervention</h2>
     <p>Nos domaines clés d'action</p>
     <div class="grid-container">
-        <div class="grid-item" data-url="action">
+        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/action">
             <h2>Actions humanitaires</h2>
             <img src="<?php echo BASE_URL; ?>/public/images/group.png" alt="">
         </div>
-        <div class="grid-item" data-url="adaptation">
+        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/adaptation">
             <h2>Adaptation</h2>
             <img src="<?php echo BASE_URL; ?>/public/images/Tiny house-rafiki.png" alt="">
         </div>
-        <div class="grid-item" data-url="employabilite">
+        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/employabilite">
             <h2>Employabilité des jeunes et des femmes</h2>
             <img src="<?php echo BASE_URL; ?>/public/images/Back to school-rafiki.png" alt="">
         </div>
-        <div class="grid-item" data-url="developpement">
+        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/developpement">
             <h2>Développement communautaire</h2>
             <img src="<?php echo BASE_URL; ?>/public/images/Emancipation of women-bro.png" alt="">
         </div>
-        <div class="grid-item" data-url="domaine">
+        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/domaine">
             <h2>Domaines transversaux</h2>
             <img src="<?php echo BASE_URL; ?>/public/images/helping.png" alt="">
         </div>

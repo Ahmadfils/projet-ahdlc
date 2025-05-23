@@ -1,4 +1,4 @@
- <?php require_once "includes/header.php"; ?>
+ <?php //require_once "includes/header.php"; ?>
 
  <main class="details-container">
     <img src="<?php echo BASE_URL; ?>/public/images/world.png" alt="Image de l’actualité">
@@ -21,5 +21,5 @@
 
    <?php 
     endforeach; 
-    require_once "includes/footer.php";
+    //require_once "includes/footer.php";
   ?>
