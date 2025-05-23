@@ -18,13 +18,14 @@ class NewsController extends Controller {
     }
 
     public function post($id){
-  
-        $post = $this->newModel->getNewById(["id" => $id]);
+        
+        $article = $this->newModel->getNewById(["id" => $id]);
         $data = [
-         "post" => $post
+         'article' => $article
         ];
 
-         $this->views("post", $data);
+        $this->view('includes/header', $data);
+        $this->view('article', $data);
     }
 
 }

@@ -21,7 +21,7 @@
     foreach ($data['news'] as $new):
     ?>
         <div class="news-item">
-            <a href="post/<?php echo $new->id;?>">
+            <a href="news/post/<?php echo $new->id;?>">
                 <img src="public/images/<?php echo $new->image_banner; ?>" alt="Image actualité">
                 <h3><?php echo $new->titre; ?></h3>
                 <p><?php echo $new->intro; ?></p>
