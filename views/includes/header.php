@@ -18,23 +18,23 @@
         </div>
         <nav id="nav-menu">
             <div class="navbar-logo">
-               <a href="<?php BASE_URL ?>/home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo">
+               <a href="<?php echo BASE_URL; ?>/home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo">
                <span class="logo-title">AHDLC</span></a>
 
             </div>
             <ul>
-                <li><a href="home">Accueil</a></li>
-                <li><a href="about">À propos</a></li>
-                <li><a href="news">Actualités</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/home">Accueil</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/about">À propos</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/news">Actualités</a></li>
                 <li class="dropdown">
                     <a href="#">Domaines d'intervention</a>
                     <ul class="dropdown-menu">
-                        <li><a href="action">Actions humanitaires</a></li>
-                        <li><a href="adaptation">Adaptation climatique</a></li>
-                        <li><a href="employabilite">Employabilité des jeunes et des femmes</a></li>
-                        <li><a href="developpement">Développement communautaire</a></li>
-                        <li><a href="domaine">Domaines transversaux</a></li>
-                        <li><a href="integration">Intégration</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/action">Actions humanitaires</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/adaptation">Adaptation climatique</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/employabilite">Employabilité des jeunes et des femmes</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/developpement">Développement communautaire</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/domaine">Domaines transversaux</a></li>
+                        <li><a href="<?php echo BASE_URL; ?>/integration">Intégration</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -44,7 +44,7 @@
                         <li><a href="#">Service 2</a></li>
                     </ul>
                 </li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
