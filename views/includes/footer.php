@@ -4,20 +4,21 @@
         <div class="footer-links">
             <h4>Navigation</h4>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/home">Accueil</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/about">À propos</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/contact">Contact</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/news">Actualites</a></li>
             </ul>
         </div>
         <div class="footer-links">
             <h4>Domaines d'intervention</h4>
             <ul>
-                <li><a href="action">Actions humanitaires</a></li>
-                <li><a href="adataption">Adaptation climatique</a></li>
-                <li><a href="employabilite">Employabilité des jeunes et des femmes</a></li>
-                <li><a href="developpement">Développement communautaire</a></li>
-                <li><a href="domaine">Domaines transversaux</a></li>
-                <li><a href="integration">Intégration</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/action">Actions humanitaires</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/adataption">Adaptation climatique</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/employabilite">Employabilité des jeunes et des femmes</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/developpement">Développement communautaire</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/domaine">Domaines transversaux</a></li>
+                <li><a href="<?php echo BASE_URL; ?>/integration">Intégration</a></li>
             </ul>
         </div>
         <div class="footer-links">

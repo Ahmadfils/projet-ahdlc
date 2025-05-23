@@ -10,7 +10,7 @@
       <?php echo $article->content; ?>
     </p>
 
-    <a href="<?php echo BASE_URL; ?>news" class="retour-btn">← Retour aux actualités</a>
+    <a href="<?php echo BASE_URL; ?>/news" class="retour-btn">← Retour aux actualités</a>
  </main>
 
   <section class="cta-section">
@@ -19,4 +19,7 @@
         <a href="register.php">S'inscrire</a>
   </section>
 
-   <?php endforeach; ?>
+   <?php 
+    endforeach; 
+    require_once "includes/footer.php";
+  ?>
