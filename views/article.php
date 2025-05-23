@@ -1,6 +1,7 @@
- 
+ <?php require_once "includes/header.php"; ?>
+
  <main class="details-container">
-    <img src="images/world.png" alt="Image de l’actualité">
+    <img src="<?php echo BASE_URL; ?>/public/images/world.png" alt="Image de l’actualité">
     <?php foreach ($data as $article): ?>
 
     <h2><?php echo $article->titre; ?></h2>
@@ -9,7 +10,7 @@
       <?php echo $article->content; ?>
     </p>
 
-    <a href="<?php echo BASE_URL; ?>/news" class="retour-btn">← Retour aux actualités</a>
+    <a href="<?php echo BASE_URL; ?>news" class="retour-btn">← Retour aux actualités</a>
  </main>
 
   <section class="cta-section">
@@ -18,4 +19,4 @@
         <a href="register.php">S'inscrire</a>
   </section>
 
-     <?php endforeach; ?>
+   <?php endforeach; ?>

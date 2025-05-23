@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo Init::$settings['home_title']; ?></title>
-    <link rel="shortcut icon" href="public/images/<?php echo Init::$settings['favicon']; ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo BASE_URL; ?>/public/images/<?php echo Init::$settings['favicon']; ?>" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/styles.css">
 
 </head>
 
@@ -18,7 +18,7 @@
         </div>
         <nav id="nav-menu">
             <div class="navbar-logo">
-               <a href="<?php echo BASE_URL; ?>/home"><img src="public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo">
+               <a href="<?php echo BASE_URL; ?>/home"><img src="<?php echo BASE_URL; ?>/public/images/<?php echo Init::$settings['site_logo']; ?>" alt="Logo">
                <span class="logo-title">AHDLC</span></a>
 
             </div>
