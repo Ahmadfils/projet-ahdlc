@@ -1,4 +1,4 @@
-<?php require_once "views/includes/header.php"; ?>
+
 <section class="titre-recherche-container">
     <h1>Actualités</h1>
     <form class="recherche-form">
@@ -31,11 +31,17 @@
 </section>
 
 <!-- Pagination -->
+
 <div class="pagination">
     <a href="#">&laquo;</a>
-    <a href="#" class="active">1</a>
-    <a href="#">2</a>
-    <a href="#">3</a>
+     <?php
+      $n = $data['nombre_page']; 
+      $page = 1;
+      $i = 0;
+      while ( $i <= $n) {
+     ?>
+       <a href="#" class="active"><?php echo $page + $i; ?></a>
+     <?php $i++; } ?>
     <a href="#">&raquo;</a>
 </div>
 
@@ -44,5 +50,3 @@
         <p>Rejoignez notre communauté et accédez à nos services d’accompagnement.</p>
         <a href="auth">S'inscrire</a>
     </section>
-
-<?php require_once "views/includes/footer.php;" ?>

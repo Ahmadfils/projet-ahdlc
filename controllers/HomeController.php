@@ -14,7 +14,9 @@ class HomeController extends Controller
     public function index() 
     {
         $settings = $this->settingModel->getAllSettings();
-        $news = $this->newModel->getLatestNews();
+        $id = 1;
+        $lmt = 6;
+        $news = $this->newModel->getLatestNews(["id" => $id, "limite" => $lmt]);
         
         $data = [
               'news'=> $news

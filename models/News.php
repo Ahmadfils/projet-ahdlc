@@ -17,10 +17,18 @@ class News{
         return $this->db->resultSet();
     }
 
-    public function getLatestNews(){
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = 1 ORDER BY date_publication DESC limit 6");
-        //$this->db->bind(':id', $data['id']);
-        //$this->db->bind(':limite', $data['limite']);
+    public function getNewRows($data){
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC");
+        $this->db->bind(':id', $data['id']);
+
+        return $this->db->rowCount();
+    }
+
+    public function getLatestNews($data){
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC limit :limite");
+        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':limite', $data['limite']);
+        
         return $this->db->resultSet();
     }
 
