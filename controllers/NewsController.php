@@ -37,11 +37,22 @@ class NewsController extends Controller {
         $this->view('includes/footer', $data);
     }
 
-    /*public function page($id){
-        $nombre_item = 5;
-        $first_page = 1;
-        $id = 1
-        $news = $this->newModel->getAllNews(["id" => $id]);
+    /*public function page($page){
+       
+        $id = 1;
+        $effectif = 5;
+        $starting = ["page" => ($page - 1)*5];
+
+        $news = $this->newModel->getAllNews(["id" => $id, "starting" => $starting, "effectif" => $effectif]);
+
+        $data = [
+              'news'=> $news,
+              
+           ];
+
+        $this->view('includes/header', $data);
+        $this->view('news', $data);
+        $this->view('includes/footer', $data);
 
     }*/
 

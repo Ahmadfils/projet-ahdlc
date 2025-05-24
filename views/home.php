@@ -1,6 +1,6 @@
 
 <section class="banner">
-    <img src="<?php echo BASE_URL; ?>/public/images/autism.png" alt="Bannière">
+    <img src="<?php echo url('public/images/autism.png');?>" alt="Bannière">
     <div class="overlay"></div>
     <div class="banner-text">
         <h1><?php echo Init::$settings['home_banner_intro']; ?></h1>
@@ -13,19 +13,19 @@
     <p>Découvrez nos valeurs et engagements</p>
     <div class="qualities">
         <div class="quality">
-            <i class="icon"><img src="<?php echo BASE_URL; ?>/public/images/<?php echo Init::$settings['image_qualite1']; ?>" alt=""></i>
+            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite1']); ?>" alt=""></i>
             <h3><?php echo Init::$settings['home_quality_caption1']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="<?php echo BASE_URL; ?>/public/images/<?php echo Init::$settings['image_qualite2']; ?>" alt=""></i>
+            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite2']); ?>" alt=""></i>
             <h3><?php echo Init::$settings['home_quality_caption2']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="<?php echo BASE_URL; ?>/public/images/<?php echo Init::$settings['image_qualite3']; ?>" alt=""></i>
+            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite3']); ?>" alt=""></i>
             <h3><?php echo Init::$settings['home_quality_caption3']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="<?php echo BASE_URL; ?>/public/images/<?php echo Init::$settings['image_qualite4']; ?>" alt=""></i>
+            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite4']); ?>" alt=""></i>
             <h3><?php echo Init::$settings['home_quality_caption4']; ?></h3>
         </div>
     </div>
@@ -38,17 +38,17 @@
      <?php 
        foreach ($data['news'] as $new):
      ?>
-        <div class="news-item" data-url="<?php echo BASE_URL; ?>/news/post/<?php echo $new->id;?>">
-            <img src="<?php echo BASE_URL; ?>/public/images/<?php echo $new->image_banner; ?>" alt="">
+        <div class="news-item" data-url="<?php echo url('news/post/'.$new->id);?>">
+            <img src="<?php echo url('public/images/'.$new->image_banner); ?>" alt="">
             <p><?php echo $new->intro; ?></p>
         </div>
       <?php endforeach; ?>
     </div>
-    <a href="<?php echo BASE_URL; ?>/news" class="voir-plus">Voir plus</a>
+    <a href="<?php echo url('news')?>" class="voir-plus">Voir plus</a>
 </section>
 
 <section class="a-propos">
-    <img src="<?php echo BASE_URL; ?>/public/images/happy.png" alt="À Propos">
+    <img src="<?php echo url('public/images/happy.png')?>" alt="À Propos">
     <div>
         <h1>À Propos de Nous</h1>
         <p><?php echo Init::$settings['home_about_caption'] ?>
@@ -60,29 +60,29 @@
     <h2 class="section-title">Domaines d'Intervention</h2>
     <p>Nos domaines clés d'action</p>
     <div class="grid-container">
-        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/action">
+        <div class="grid-item" data-url="<?php echo url('action')?>">
             <h2>Actions humanitaires</h2>
-            <img src="<?php echo BASE_URL; ?>/public/images/group.png" alt="">
+            <img src="<?php echo url('public/images/group.png')?>" alt="">
         </div>
-        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/adaptation">
+        <div class="grid-item" data-url="<?php echo url('adaptation')?>">
             <h2>Adaptation</h2>
-            <img src="<?php echo BASE_URL; ?>/public/images/Tiny house-rafiki.png" alt="">
+            <img src="<?php echo url('public/images/Tiny house-rafiki.png')?>" alt="">
         </div>
-        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/employabilite">
+        <div class="grid-item" data-url="<?php echo url('employabilite')?>">
             <h2>Employabilité des jeunes et des femmes</h2>
-            <img src="<?php echo BASE_URL; ?>/public/images/Back to school-rafiki.png" alt="">
+            <img src="<?php echo url('public/images/Back to school-rafiki.png')?>" alt="">
         </div>
-        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/developpement">
+        <div class="grid-item" data-url="<?php echo url('developpement')?>">
             <h2>Développement communautaire</h2>
-            <img src="<?php echo BASE_URL; ?>/public/images/Emancipation of women-bro.png" alt="">
+            <img src="<?php echo url('public/images/Emancipation of women-bro.png')?>" alt="">
         </div>
-        <div class="grid-item" data-url="<?php echo BASE_URL; ?>/domaine">
+        <div class="grid-item" data-url="<?php echo url('domaine')?>">
             <h2>Domaines transversaux</h2>
-            <img src="<?php echo BASE_URL; ?>/public/images/helping.png" alt="">
+            <img src="<?php echo url('public/images/helping.png')?>" alt="">
         </div>
         <div class="grid-item" data-url="integration">
             <h2>Intégration</h2>
-            <img src="<?php echo BASE_URL; ?>/public/images/business.png" alt="">
+            <img src="<?php echo url('public/images/business.png')?>" alt="">
         </div>
     </div>
 </section>

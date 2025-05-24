@@ -11,8 +11,10 @@ class News{
     public function getAllNews($data)
     {
       
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC");
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :starting,:effectif");
         $this->db->bind(':id', $data['id']);
+        $this->db->bind(':starting', $data['starting']);
+        $this->db->bind(':effectif', $data['effectif']);
         
         return $this->db->resultSet();
     }
@@ -25,7 +27,7 @@ class News{
     }
 
     public function getLatestNews($data){
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC limit :limite");
+        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :limite");
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':limite', $data['limite']);
         

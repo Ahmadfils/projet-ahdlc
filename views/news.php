@@ -21,8 +21,8 @@
     foreach ($data['news'] as $new):
     ?>
         <div class="news-item">
-            <a href="<?php echo BASE_URL; ?>/news/post/<?php echo $new->id;?>">
-                <img src="public/images/<?php echo $new->image_banner; ?>" alt="Image actualité">
+            <a href="<?php echo url('news/post/'.$new->id);?>">
+                <img src="<?php echo url('public/images/'.$new->image_banner); ?>" alt="Image actualité">
                 <h3><?php echo $new->titre; ?></h3>
                 <p><?php echo $new->intro; ?></p>
             </a>
@@ -35,13 +35,18 @@
 <div class="pagination">
     <a href="#">&laquo;</a>
      <?php
+
       $n = $data['nombre_page']; 
       $page = 1;
       $i = 0;
       while ( $i <= $n) {
      ?>
-       <a href="#" class="active"><?php echo $page + $i; ?></a>
-     <?php $i++; } ?>
+       <a href="<?php //url('news?page='.$page + $i);?>" 
+          class="<?php// if($page > 1 && $i = $page - $i) echo "active"; ?>"><?php echo $page + $i; ?></a>
+    <?php 
+       $i++; 
+      }  
+    ?>
     <a href="#">&raquo;</a>
 </div>
 

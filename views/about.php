@@ -1,8 +1,8 @@
-<link rel="stylesheet" href="public/css/about.css">
+
 <!-- Présentation -->
 <section class="presentation">
     <div class="presentation-img">
-        <img src="public/images/group.png" alt="">
+        <img src="<?php echo url('public/images/group.png') ?>" alt="">
     </div>
     <div class="presentation-text">
         <h2>Action Humanitaire</h2>
@@ -73,29 +73,29 @@
 <section class="dual-column-section">
     <div class="left-column">
         <div class="item">
-            <img src="public/images/world.png" alt="Item 1">
+            <img src="<?php echo url('public/images/world.png') ?>" alt="Item 1">
             <p>Lorem ipsum dolor sit amet, item 1 description.</p>
         </div>
         <div class="item">
-            <img src="public/images/world.png" alt="Item 2">
+            <img src="<?php echo url('public/images/world.png') ?>" alt="Item 2">
             <p>Consectetur adipiscing elit, item 2 description.</p>
         </div>
         <div class="item">
-            <img src="public/images/world.png" alt="Item 3">
+            <img src="<?php echo url('public/images/world.png') ?>" alt="Item 3">
             <p>Sed do eiusmod tempor, item 3 description.</p>
         </div>
     </div>
     <div class="right-column">
         <div class="item">
-            <img src="public/images/world.png" alt="Item 1">
+            <img src="<?php echo url('public/images/world.png') ?>" alt="Item 1">
             <p>Lorem ipsum dolor sit amet, item 1 description.</p>
         </div>
         <div class="item">
-            <img src="public/images/world.png" alt="Item 2">
+            <img src="<?php echo url('public/images/world.png') ?>" alt="Item 2">
             <p>Consectetur adipiscing elit, item 2 description.</p>
         </div>
         <div class="item">
-            <img src="public/images/world.png" alt="Item 3">
+            <img src="<?php echo url('public/images/world.png') ?>" alt="Item 3">
             <p>Sed do eiusmod tempor, item 3 description.</p>
         </div>
     </div>

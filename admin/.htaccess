@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+  RewriteEnginre On
+  RewriteBase /ahdlc/admin/
+
+  RewriteCond %{REQUEST_FILENAME} -F [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^- [L]
+
+  RewriteRule ^ index.php?url=$1 [QSA,L]
+
+  <?IfModule>
