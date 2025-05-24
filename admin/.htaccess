@@ -1,11 +1,8 @@
-<IfModule mod_rewrite.c>
+
   RewriteEnginre On
-  RewriteBase /ahdlc/admin/
+  RewriteBase /projet-ahdlc/admin/
 
-  RewriteCond %{REQUEST_FILENAME} -F [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^- [L]
-
-  RewriteRule ^ index.php?url=$1 [QSA,L]
-
-  <?IfModule>
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  
+  RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
