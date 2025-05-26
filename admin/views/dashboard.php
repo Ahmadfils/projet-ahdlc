@@ -11,7 +11,7 @@
                 <div class="inner">
                   <h3><?php //echo $total_product; ?></h3>
 
-                  <p>Products</p>
+                  <p>Visiteurs</p>
                 </div>
                 <div class="icon">
                   <i class="ionicons ion-android-cart"></i>
@@ -26,7 +26,7 @@
                 <div class="inner">
                   <h3><?php //echo $total_order_pending; ?></h3>
 
-                  <p>Pending Orders</p>
+                  <p>Articles</p>
                 </div>
                 <div class="icon">
                   <i class="ionicons ion-clipboard"></i>
@@ -41,7 +41,7 @@
                 <div class="inner">
                   <h3><?php //echo $total_order_completed; ?></h3>
 
-                  <p>Completed Orders</p>
+                  <p>Categories</p>
                 </div>
                 <div class="icon">
                   <i class="ionicons ion-android-checkbox-outline"></i>
@@ -72,7 +72,7 @@
 				  <div class="inner">
 					<h3><?php //echo $total_order_complete_shipping_pending; ?></h3>
   
-					<p>Pending Shippings</p>
+					<p>FAQ</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-load-a"></i>
@@ -87,7 +87,7 @@
 				  <div class="inner">
 					<h3><?php //echo $total_customers; ?></h3>
   
-					<p>Active Customers</p>
+					<p>Projets</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-person-stalker"></i>
@@ -102,7 +102,7 @@
 				  <div class="inner">
 					<h3><?php //echo $total_subscriber; ?></h3>
   
-					<p>Subscriber</p>
+					<p>Domaines d'intervention</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-person-add"></i>
@@ -117,7 +117,7 @@
 				  <div class="inner">
 					<h3><?php //echo $available_shipping; ?></h3>
   
-					<p>Available Shippings</p>
+					<p>Utilisateurs</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-location"></i>
@@ -132,7 +132,7 @@
 				  <div class="inner">
 					<h3><?php //echo $total_top_category; ?></h3>
   
-					<p>Top Categories</p>
+					<p>Services</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-arrow-up-b"></i>
@@ -147,7 +147,7 @@
 				  <div class="inner">
 					<h3><?php //echo $total_mid_category; ?></h3>
   
-					<p>Mid Categories</p>
+					<p>Action</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-android-menu"></i>
@@ -162,7 +162,7 @@
 				  <div class="inner">
 					<h3><?php //echo $total_end_category; ?></h3>
   
-					<p>End Categories</p>
+					<p>Integration</p>
 				  </div>
 				  <div class="icon">
 					<i class="ionicons ion-arrow-down-b"></i>

@@ -30,7 +30,7 @@
 		<header class="main-header">
 
 			<a href="<?php echo adminUrl('dashboard')?>" class="logo">
-				<span class="logo-lg">AHDLC</span>
+				<span class="logo-lg">AHDLC - CMS</span>
 			</a>
 
 			<nav class="navbar navbar-static-top">
@@ -81,19 +81,19 @@
 					
 			        <li class="treeview">
 			          <a href="settings.php">
-			            <i class="fa fa-sliders"></i> <span>Categories</span>
+			            <i class="fa fa-tasks"></i> <span>Categories</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview">
 			          <a href="<?php echo adminUrl('article')?>">
-			            <i class="fa fa-sliders"></i> <span>Articles</span>
+			            <i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Articles</span>
 			          </a>
 			        </li>
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-cogs"></i>
+                            <i class="fa fa-cubes" aria-hidden="true"></i>
                             <span>Domaines d'intervention</span>
                             <span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
@@ -106,21 +106,24 @@
                             <li><a href="<?php echo adminUrl('developpement')?>"><i class="fa fa-circle-o"></i> Developpement communautaire</a></li>
                             <li><a href="<?php echo adminUrl('domaine')?>"><i class="fa fa-circle-o"></i> Domaines transversaux</a></li>
                             <li><a href="<?php echo adminUrl('integration')?>"><i class="fa fa-circle-o"></i> Integration</a></li>
-                           
                         </ul>
                     </li>
 
-
+                    <li class="treeview">
+                        <a href="<?php echo adminUrl('utilisateur')?>">
+                            <i class="fa fa-user-o"></i> <span>Utilisateurs</span>
+                        </a>
+                    </li>
                     <li class="treeview">
                         <a href="<?php echo adminUrl('visiteur')?>">
-                            <i class="fa fa-shopping-bag"></i> <span>Visiteurs</span>
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i> <span>Visiteurs</span>
                         </a>
                     </li>
 
 
                     <li class="treeview">
                         <a href="#">
-                            <i class="fa fa-cogs"></i>
+                            <i class="fa fa-bullhorn" aria-hidden="true"></i>
                             <span>Services</span>
                             <span class="pull-right-container">
 								<i class="fa fa-angle-left pull-right"></i>
@@ -128,7 +131,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="<?php echo adminUrl('service1')?>"><i class="fa fa-circle-o"></i> Service 1</a></li>
-                            <li><a href="<?php echo adminUrl('service2')?>"><i class="fa fa-circle-o"></i> Service 2 
+                            <li><a href="<?php echo adminUrl('service2')?>"><i class="fa fa-circle-o"></i> Service 2 </a></li>
                         </ul>
                     </li>
 
@@ -140,7 +143,7 @@
 
 			        <li class="treeview">
 			          <a href="<?php echo adminUrl('page')?>">
-			            <i class="fa fa-tasks"></i> <span>Page Settings</span>
+			            <i class="fa fa-window-restore" aria-hidden="true"></i> <span>Page Settings</span>
 			          </a>
 			        </li>
 
@@ -152,7 +155,7 @@
 
 			        <li class="treeview">
 			          <a href="<?php echo adminUrl('parametre')?>">
-			            <i class="fa fa-hand-o-right"></i> <span>Parametres</span>
+			             <i class="fa fa-cogs"></i> <span>Parametres</span>
 			          </a>
 			        </li>
 
