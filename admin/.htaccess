@@ -1,5 +1,5 @@
 
-  RewriteEnginre On
+  RewriteEngine On
   RewriteBase /projet-ahdlc/admin/
 
   RewriteCond %{REQUEST_FILENAME} !-d

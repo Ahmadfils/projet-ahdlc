@@ -1,6 +1,9 @@
 RewriteEngine On
 RewriteBase /projet-ahdlc/
 
+RewriteCond %{REQUEST_URI} ^/projet-ahdlc/admin [NC]
+RewriteRule ^ - [L]
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 
