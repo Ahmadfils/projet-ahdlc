@@ -5,16 +5,30 @@
 </section>
 <section class="content">
 <div class="row">
+	        <div class="col-lg-3 col-xs-6">
+				<!-- small box -->
+				<div class="small-box bg-teal">
+				  <div class="inner">
+					<h3><?php echo $data['user']; ?></h3>
+  
+					<p>Utilisateurs</p>
+				  </div>
+				  <div class="icon">
+					<i class="ionicons ion-person-add"></i>
+				  </div>
+				  
+				</div>
+		    </div>
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
               <div class="small-box bg-primary">
                 <div class="inner">
-                  <h3><?php //echo $total_product; ?></h3>
+                  <h3><?php echo $data['user']; ?></h3>
 
-                  <p><?php echo $data['user']; ?></p>
+                  <p>Visiteur</p>
                 </div>
                 <div class="icon">
-                  <i class="ionicons ion-android-cart"></i>
+                  <i class="ionicons ion-person-stalker"></i>
                 </div>
                 
               </div>
@@ -39,58 +53,27 @@
               <!-- small box -->
               <div class="small-box bg-green">
                 <div class="inner">
-                  <h3><?php //echo $total_order_completed; ?></h3>
+                  <h3><?php echo $data['category']; ?></h3>
 
-                  <p><?php echo $data['category']; ?></p>
+                  <p>Categories</p>
                 </div>
                 <div class="icon">
-                  <i class="ionicons ion-android-checkbox-outline"></i>
+                  <i class="ionicons ion-pricetags"></i>
                 </div>
                
               </div>
             </div>
-            <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-aqua">
-                <div class="inner">
-                  <h3><?php echo $dat['development']; ?></h3>
-
-                  <p>developpement communautaire</p>
-                </div>
-                <div class="icon">
-                  <i class="ionicons ion-checkmark-circled"></i>
-                </div>
-                
-              </div>
-            </div>
-			<!-- ./col -->
-			
-			<div class="col-lg-3 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-orange">
-				  <div class="inner">
-					<h3><?php echo $data['faq'];?></h3>
-  
-					<p>FAQ</p>
-				  </div>
-				  <div class="icon">
-					<i class="ionicons ion-load-a"></i>
-				  </div>
-				  
-				</div>
-			  </div>
-
+      
 			  <div class="col-lg-3 col-xs-6">
 				<!-- small box -->
 				<div class="small-box bg-red">
 				  <div class="inner">
-					<h3><?php echo $data['project']; ?></h3>
+					<h3><?php //echo $data['project']; ?></h3>
   
 					<p>Projets</p>
 				  </div>
 				  <div class="icon">
-					<i class="ionicons ion-person-stalker"></i>
+					<i class="ionicons ion-briefcase"></i>
 				  </div>
 				  
 				</div>
@@ -98,29 +81,14 @@
 
 			  <div class="col-lg-3 col-xs-6">
 				<!-- small box -->
-				<div class="small-box bg-yellow">
+				<div class="small-box bg-orange">
 				  <div class="inner">
-					<h3><?php echo $data['tranversaux']; ?></h3>
+					<h3><?php //echo $data['faq'];?></h3>
   
-					<p>Domaines d'intervention</p>
+					<p>FAQ</p>
 				  </div>
 				  <div class="icon">
-					<i class="ionicons ion-person-add"></i>
-				  </div>
-				  
-				</div>
-			  </div>
-
-			  <div class="col-lg-3 col-xs-6">
-				<!-- small box -->
-				<div class="small-box bg-teal">
-				  <div class="inner">
-					<h3><?php echo $data['user']; ?></h3>
-  
-					<p>Utilisateurs</p>
-				  </div>
-				  <div class="icon">
-					<i class="ionicons ion-location"></i>
+					<i class="ionicons ion-information"></i>
 				  </div>
 				  
 				</div>
@@ -135,7 +103,22 @@
 					<p>Services</p>
 				  </div>
 				  <div class="icon">
-					<i class="ionicons ion-arrow-up-b"></i>
+					<i class="ionicons ion-cash"></i>
+				  </div>
+				  
+				</div>
+			  </div>
+
+			  <div class="col-lg-3 col-xs-6">
+				<!-- small box -->
+				<div class="small-box bg-yellow">
+				  <div class="inner">
+					<h3><?php echo $data['transversaux']; ?></h3>
+  
+					<p>Domaines transversaux</p>
+				  </div>
+				  <div class="icon">
+					<i class="ionicons ion-shuffle"></i>
 				  </div>
 				  
 				</div>
@@ -150,7 +133,7 @@
 					<p>Action</p>
 				  </div>
 				  <div class="icon">
-					<i class="ionicons ion-android-menu"></i>
+					<i class="ionicons ion-checkmark-circled"></i>
 				  </div>
 				  
 				</div>
@@ -160,17 +143,32 @@
 				<!-- small box -->
 				<div class="small-box bg-maroon">
 				  <div class="inner">
-					<h3><?php echo $data['itegration']; ?></h3>
+					<h3><?php echo $data['integration']; ?></h3>
   
 					<p>Integration</p>
 				  </div>
 				  <div class="icon">
-					<i class="ionicons ion-arrow-down-b"></i>
+					<i class="ionicons ion-cube"></i>
 				  </div>
 				  
 				</div>
 			  </div>
 
+              <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-aqua">
+                <div class="inner">
+                  <h3><?php echo $data['development']; ?></h3>
+
+                  <p>Developpements communautaires</p>
+                </div>
+                <div class="icon">
+                  <i class="ionicons ion-man"></i>
+                </div>
+                
+              </div>
+            </div>
+			
 		  </div>
 		  
 </section>
