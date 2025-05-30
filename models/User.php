@@ -10,13 +10,19 @@ class User
 
     public function getUsers()
     {
-        $this->db->query("SELECT * FROM users");
+        $this->db->query("SELECT * FROM tbl_user");
         return $this->db->resultSet();
+    }
+
+    public function getUserRows()
+    {
+        $this->db->query("SELECT * FROM tbl_user");
+        return $this->db->rowCount();
     }
 
     public function addUser($data)
     {
-        $this->db->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
+        $this->db->query('INSERT INTO tbl_user (name, email, password) VALUES(:name, :email, :password)');
         $this->db->bind(':name', $data['name']);
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
@@ -30,7 +36,7 @@ class User
 
     public function findUserByEmail($email)
     {
-        $this->db->query('SELECT * FROM users WHERE email = :email');
+        $this->db->query('SELECT * FROM tbl_user WHERE email = :email');
         $this->db->bind(':email', $email);
 
         $row = $this->db->single();

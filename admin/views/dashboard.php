@@ -11,7 +11,7 @@
                 <div class="inner">
                   <h3><?php //echo $total_product; ?></h3>
 
-                  <p>Visiteurs</p>
+                  <p><?php echo $data['user']; ?></p>
                 </div>
                 <div class="icon">
                   <i class="ionicons ion-android-cart"></i>
@@ -24,7 +24,7 @@
               <!-- small box -->
               <div class="small-box bg-maroon">
                 <div class="inner">
-                  <h3><?php //echo $total_order_pending; ?></h3>
+                  <h3><?php echo $data['articles']; ?></h3>
 
                   <p>Articles</p>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="inner">
                   <h3><?php //echo $total_order_completed; ?></h3>
 
-                  <p>Categories</p>
+                  <p><?php echo $data['category']; ?></p>
                 </div>
                 <div class="icon">
                   <i class="ionicons ion-android-checkbox-outline"></i>
@@ -54,9 +54,9 @@
               <!-- small box -->
               <div class="small-box bg-aqua">
                 <div class="inner">
-                  <h3><?php //echo $total_shipping_completed; ?></h3>
+                  <h3><?php echo $dat['development']; ?></h3>
 
-                  <p>Completed Shipping</p>
+                  <p>developpement communautaire</p>
                 </div>
                 <div class="icon">
                   <i class="ionicons ion-checkmark-circled"></i>
@@ -70,7 +70,7 @@
 				<!-- small box -->
 				<div class="small-box bg-orange">
 				  <div class="inner">
-					<h3><?php //echo $total_order_complete_shipping_pending; ?></h3>
+					<h3><?php echo $data['faq'];?></h3>
   
 					<p>FAQ</p>
 				  </div>
@@ -85,7 +85,7 @@
 				<!-- small box -->
 				<div class="small-box bg-red">
 				  <div class="inner">
-					<h3><?php //echo $total_customers; ?></h3>
+					<h3><?php echo $data['project']; ?></h3>
   
 					<p>Projets</p>
 				  </div>
@@ -100,7 +100,7 @@
 				<!-- small box -->
 				<div class="small-box bg-yellow">
 				  <div class="inner">
-					<h3><?php //echo $total_subscriber; ?></h3>
+					<h3><?php echo $data['tranversaux']; ?></h3>
   
 					<p>Domaines d'intervention</p>
 				  </div>
@@ -115,7 +115,7 @@
 				<!-- small box -->
 				<div class="small-box bg-teal">
 				  <div class="inner">
-					<h3><?php //echo $available_shipping; ?></h3>
+					<h3><?php echo $data['user']; ?></h3>
   
 					<p>Utilisateurs</p>
 				  </div>
@@ -130,7 +130,7 @@
 				<!-- small box -->
 				<div class="small-box bg-olive">
 				  <div class="inner">
-					<h3><?php //echo $total_top_category; ?></h3>
+					<h3><?php echo '2'; ?></h3>
   
 					<p>Services</p>
 				  </div>
@@ -145,7 +145,7 @@
 				<!-- small box -->
 				<div class="small-box bg-blue">
 				  <div class="inner">
-					<h3><?php //echo $total_mid_category; ?></h3>
+					<h3><?php echo $data['action']; ?></h3>
   
 					<p>Action</p>
 				  </div>
@@ -160,7 +160,7 @@
 				<!-- small box -->
 				<div class="small-box bg-maroon">
 				  <div class="inner">
-					<h3><?php //echo $total_end_category; ?></h3>
+					<h3><?php echo $data['itegration']; ?></h3>
   
 					<p>Integration</p>
 				  </div>
