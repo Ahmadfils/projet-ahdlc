@@ -1,4 +1,4 @@
-
+ 
 <section class="content-header">
 	<div class="content-header-left">
 		<h1>View FAQs</h1>
@@ -56,8 +56,6 @@
 			</div>
 		</div>
 	</div>
-
-
 </section>
 
 

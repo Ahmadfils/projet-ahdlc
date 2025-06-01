@@ -73,20 +73,20 @@
       			<ul class="sidebar-menu">
 
 			        <li class="treeview">
-			          <a href="<?php echo adminUrl('dashboard')?>">
+			          <a href="<?php echo adminUrl('dashboard'); ?>">
 			            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
 			          </a>
 			        </li>
 
 					
 			        <li class="treeview">
-			          <a href="settings.php">
+			          <a href="<?php echo adminUrl('category'); ?>">
 			            <i class="fa fa-tasks"></i> <span>Categories</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview">
-			          <a href="<?php echo adminUrl('article')?>">
+			          <a href="<?php echo adminUrl('articles'); ?>">
 			            <i class="fa fa-newspaper-o" aria-hidden="true"></i> <span>Articles</span>
 			          </a>
 			        </li>
@@ -100,22 +100,22 @@
 							</span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="<?php echo adminUrl('action')?>"><i class="fa fa-circle-o"></i> Action  humanitaire</a></li>
-                            <li><a href="<?php echo adminUrl('adaptation')?>"><i class="fa fa-circle-o"></i> Adaptation climatique</a></li>
-                            <li><a href="<?php echo adminUrl('employabilite')?>"><i class="fa fa-circle-o"></i> Employabilite</a></li>
-                            <li><a href="<?php echo adminUrl('developpement')?>"><i class="fa fa-circle-o"></i> Developpement communautaire</a></li>
-                            <li><a href="<?php echo adminUrl('domaine')?>"><i class="fa fa-circle-o"></i> Domaines transversaux</a></li>
-                            <li><a href="<?php echo adminUrl('integration')?>"><i class="fa fa-circle-o"></i> Integration</a></li>
+                            <li><a href="<?php echo adminUrl('action');?>"><i class="fa fa-circle-o"></i> Action  humanitaire</a></li>
+                            <li><a href="<?php echo adminUrl('adaptation'); ?>"><i class="fa fa-circle-o"></i> Adaptation climatique</a></li>
+                            <li><a href="<?php echo adminUrl('employabilite'); ?>"><i class="fa fa-circle-o"></i> Employabilite</a></li>
+                            <li><a href="<?php echo adminUrl('developpement'); ?>"><i class="fa fa-circle-o"></i> Developpement communautaire</a></li>
+                            <li><a href="<?php echo adminUrl('domaine'); ?>"><i class="fa fa-circle-o"></i> Domaines transversaux</a></li>
+                            <li><a href="<?php echo adminUrl('integration'); ?>"><i class="fa fa-circle-o"></i> Integration</a></li>
                         </ul>
                     </li>
 
                     <li class="treeview">
-                        <a href="<?php echo adminUrl('utilisateur')?>">
+                        <a href="<?php echo adminUrl('utilisateurs'); ?>">
                             <i class="fa fa-user-o"></i> <span>Utilisateurs</span>
                         </a>
                     </li>
                     <li class="treeview">
-                        <a href="<?php echo adminUrl('visiteur')?>">
+                        <a href="<?php echo adminUrl('visiteurs'); ?>">
                             <i class="fa fa-user-circle-o" aria-hidden="true"></i> <span>Visiteurs</span>
                         </a>
                     </li>
@@ -130,31 +130,31 @@
 							</span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="<?php echo adminUrl('service1')?>"><i class="fa fa-circle-o"></i> Service 1</a></li>
-                            <li><a href="<?php echo adminUrl('service2')?>"><i class="fa fa-circle-o"></i> Service 2 </a></li>
+                            <li><a href="<?php echo adminUrl('service1'); ?>"><i class="fa fa-circle-o"></i> Service 1</a></li>
+                            <li><a href="<?php echo adminUrl('service2'); ?>"><i class="fa fa-circle-o"></i> Service 2 </a></li>
                         </ul>
                     </li>
 
 			      	<li class="treeview">
-			          <a href="<?php echo adminUrl('faq')?>">
+			          <a href="<?php echo adminUrl('faq'); ?>">
 			            <i class="fa fa-question-circle"></i> <span>FAQ</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview">
-			          <a href="<?php echo adminUrl('page')?>">
+			          <a href="<?php echo adminUrl('page'); ?>">
 			            <i class="fa fa-window-restore" aria-hidden="true"></i> <span>Page Settings</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview">
-			          <a href="<?php echo adminUrl('social-media')?>">
+			          <a href="<?php echo adminUrl('social-media'); ?>">
 			            <i class="fa fa-globe"></i> <span>Social Media</span>
 			          </a>
 			        </li>
 
 			        <li class="treeview">
-			          <a href="<?php echo adminUrl('parametre')?>">
+			          <a href="<?php echo adminUrl('settings'); ?>">
 			             <i class="fa fa-cogs"></i> <span>Parametres</span>
 			          </a>
 			        </li>

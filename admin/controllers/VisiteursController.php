@@ -1,12 +1,12 @@
 <?php 
  
- class FaqController extends Controller{
+ class VisiteursController extends Controller{
 
 
  	public function index(){
 
  	  $this->view('header','');
- 	  $this->view('faq','');
+ 	  $this->view('visiteurs','');
  	  $this->view('footer','');
  	}
  }

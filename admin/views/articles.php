@@ -1,10 +1,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View FAQs</h1>
+		<h1>View Article</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="" class="btn btn-primary btn-sm">Add FAQ</a>
+		<a href="" class="btn btn-primary btn-sm">Add Article</a>
 	</div>
 </section>
 
