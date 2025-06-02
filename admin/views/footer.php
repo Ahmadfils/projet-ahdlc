@@ -2,28 +2,28 @@
 
 	</div>
 
-	<script src="assets/js/jquery-2.2.4.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/jquery.dataTables.min.js"></script>
-	<script src="assets/js/dataTables.bootstrap.min.js"></script>
-	<script src="assets/js/select2.full.min.js"></script>
-	<script src="assets/js/jquery.inputmask.js"></script>
-	<script src="assets/js/jquery.inputmask.date.extensions.js"></script>
-	<script src="assets/js/jquery.inputmask.extensions.js"></script>
-	<script src="assets/js/moment.min.js"></script>
-	<script src="assets/js/bootstrap-datepicker.js"></script>
-	<script src="assets/js/icheck.min.js"></script>
-	<script src="assets/js/fastclick.js"></script>
-	<script src="assets/js/jquery.sparkline.min.js"></script>
-	<script src="assets/js/jquery.slimscroll.min.js"></script>
-	<script src="assets/js/jquery.fancybox.pack.js"></script>
-	<script src="assets/js/app.min.js"></script>
-	<script src="assets/js/jscolor.js"></script>
-	<script src="assets/js/on-off-switch.js"></script>
-    <script src="assets/js/on-off-switch-onload.js"></script>
-    <script src="assets/js/clipboard.min.js"></script>
-	<script src="assets/js/demo.js"></script>
-	<script src="assets/js/summernote.js"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery-2.2.4.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/bootstrap.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery.dataTables.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/dataTables.bootstrap.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/select2.full.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery.inputmask.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery.inputmask.date.extensions.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery.inputmask.extensions.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/moment.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/bootstrap-datepicker.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/icheck.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/fastclick.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery.sparkline.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery.slimscroll.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jquery.fancybox.pack.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/app.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/jscolor.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/on-off-switch.js') ?>"></script>
+    <script src="<?php echo adminUrl('assets/js/on-off-switch-onload.js') ?>"></script>
+    <script src="<?php echo adminUrl('assets/js/clipboard.min.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/demo.js') ?>"></script>
+	<script src="<?php echo adminUrl('assets/js/summernote.js') ?>"></script>
 
 	<script>
 		$(document).ready(function() {

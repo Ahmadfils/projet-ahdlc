@@ -6,7 +6,7 @@
  	public fucntion index(){
 
  	  $this->view('header','');
- 	  $this->view('settings','');
+ 	  $this->view('page','');
  	  $this->view('footer','');
  	}
  }

@@ -1,10 +1,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Article</h1>
+		<h1>Affichage Articles</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="" class="btn btn-primary btn-sm">Add Article</a>
+		<a href="<?php echo adminUrl('articles/add'); ?>" class="btn btn-primary btn-sm">Ajouter un Article</a>
 	</div>
 </section>
 
@@ -17,38 +17,30 @@
 						<thead>
 							<tr>
 								<th width="30">#</th>
-								<th width="100">Title</th>
+								<th width="80">Titre</th>
+								<th width="100">Intro</th>
+								<th width="50">Auteur</th>
+								<th width="50">Categorie</th>
+							    <th width="80">Date</th>
 								<th width="80">Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							
+							  <?php foreach ($data['articles'] as $row) {
+							  	 ?>
 								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
+									<td><?php echo $row->id; ?></td>
+									<td><?php echo $row->titre; ?></td>
+									<td><?php echo $row->intro; ?></td>
+									<td><?php echo $row->auteur; ?></td>
+									<td><?php echo $row->cat_name; ?></td>
+									<td><?php echo $row->updated_at; ?></td>
 									<td>										
 										<a href="" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
 									</td>
 								</tr>
-
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
-
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-									 <a href="" class="btn btn-primary btn-xs">Edit</a>
-									 <a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
+							  <?php } ?>
 															
 						</tbody>
 					</table>
@@ -66,10 +58,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <h4 class="modal-title" id="myModalLabel">Confirmation de la suppression</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
+                <p>Etes-vous sure a supprimer cet element</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

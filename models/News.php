@@ -8,6 +8,16 @@ class News{
         $this->db = new Database;
     }
 
+    public function getNews($data)
+    {
+      
+        $this->db->query("SELECT t1.id,titre,intro,t1.updated_at,auteur,cat_name 
+                          FROM tbl_new t1 JOIN tbl_new_category t2 ON t2.id = cat_id WHERE cat_id = :id 
+                          ORDER BY date_publication");
+        $this->db->bind(':id', $data['id']);
+        return $this->db->resultSet();
+    }
+
     public function getAllNews($data)
     {
       
