@@ -4,7 +4,7 @@
 		<h1>Ajouter un nouveau Article</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="product.php" class="btn btn-primary btn-sm">Voir Tous</a>
+		<a href="<?php echo adminUrl('article'); ?>" class="btn btn-primary btn-sm">Voir Tous</a>
 	</div>
 </section>
 
@@ -14,21 +14,20 @@
 	<div class="row">
 		<div class="col-md-12">
 
-			<!--<?php if($error_message): ?>
+			<?php if(isset($error_message) && !empty($error_message)): ?>
 			<div class="callout callout-danger">
-			
 			<p>
 			<?php echo $error_message; ?>
 			</p>
 			</div>
 			<?php endif; ?>
 
-			<?php if($success_message): ?>
+			<?php if(isset($success_message) && !empty($success_message)): ?>
 			<div class="callout callout-success">
 			
 			<p><?php echo $success_message; ?></p>
 			</div>
-			<?php endif; ?>-->
+			<?php endif; ?>
 
 			<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 
@@ -50,6 +49,13 @@
 									<option value="<?php echo $row->id; ?>"><?php echo $row->cat_name; ?></option>
 								<?php endforeach; ?>
 								</select>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Auteur <span>*</span></label>
+							<div class="col-sm-4">
+								<input type="text" name="auteur" class="form-control">
 							</div>
 						</div>
 				        
@@ -91,21 +97,21 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Contenus <span>*</span></label>
 							<div class="col-sm-8">
-								<textarea name="intro" class="form-control" cols="30" rows="10" id="editor1"></textarea>
+								<textarea name="contenus" class="form-control" cols="30" rows="10" id="editor1"></textarea>
 							</div>
 						</div>
-				
+
+                     
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
 								<button type="submit" class="btn btn-success pull-left" name="ajouter_article">Ajouter l'Article</button>
 							</div>
-						</div>
+						</div>	
 					</div>
 				</div>
 
 			</form>
-
 
 		</div>
 	</div>

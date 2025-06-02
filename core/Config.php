@@ -20,3 +20,6 @@ function url($path = ''){
 function adminUrl($path = ''){
 	return rtrim(ADMIN_URL, '/').'/'.ltrim($path);
 }
+
+$error_message = '';
+$success_message = '';

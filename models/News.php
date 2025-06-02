@@ -12,7 +12,7 @@ class News{
     {
       
         $this->db->query("SELECT t1.id,titre,intro,t1.updated_at,auteur,cat_name 
-                          FROM tbl_new t1 JOIN tbl_new_category t2 ON t2.id = cat_id WHERE cat_id = :id 
+                          FROM tbl_article t1 JOIN tbl_category t2 ON t2.id = cat_id WHERE cat_id = :id 
                           ORDER BY date_publication");
         $this->db->bind(':id', $data['id']);
         return $this->db->resultSet();
@@ -21,7 +21,7 @@ class News{
     public function getAllNews($data)
     {
       
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :starting,:effectif");
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :starting,:effectif");
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':starting', $data['starting']);
         $this->db->bind(':effectif', $data['effectif']);
@@ -30,14 +30,14 @@ class News{
     }
 
     public function getNewRows($data){
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC");
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id ORDER BY date_publication DESC");
         $this->db->bind(':id', $data['id']);
 
         return $this->db->rowCount();
     }
 
     public function getLatestNews($data){
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :limite");
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :limite");
         $this->db->bind(':id', $data['id']);
         $this->db->bind(':limite', $data['limite']);
         
@@ -45,20 +45,20 @@ class News{
     }
 
     public function getNewById($data){
-        $this->db->query("SELECT * FROM tbl_new WHERE id = :id");
+        $this->db->query("SELECT * FROM tbl_article WHERE id = :id");
         $this->db->bind(':id', $data['id']);
         return  $this->db->single();
     }
 
     public function getNewByCategory($data){
-        $this->db->query("SELECT * FROM tbl_new WHERE cat_id = :id");
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id");
         $this->db->bind(':id', $data['id']);
         return $this->db->single();
     }
 
-    public function addNews($data)
+    public function addArticle($data)
     {
-        $this->db->query('INSERT INTO tbl_new 
+        $this->db->query('INSERT INTO tbl_article 
                         (titre, 
                          cat_id, 
                          intro, 
@@ -80,7 +80,7 @@ class News{
     } 
 
     public function deleteNew($data){
-        $this->db->query("DELETE FROM tbl_new WHERE id = :id");
+        $this->db->query("DELETE FROM tbl_article WHERE id = :id");
         $this->db->bind(':id', $data['id']);
 
         if ($this->db->execute()) {
