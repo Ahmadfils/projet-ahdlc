@@ -14,18 +14,18 @@
 	<div class="row">
 		<div class="col-md-12">
 
-			<?php if(isset($error_message) && !empty($error_message)): ?>
+			<?php if(isset($data['error_message']) && !empty($data['error_message'])): ?>
 			<div class="callout callout-danger">
 			<p>
-			<?php echo $error_message; ?>
+			<?php echo $data['error_message']; ?>
 			</p>
 			</div>
 			<?php endif; ?>
 
-			<?php if(isset($success_message) && !empty($success_message)): ?>
+			<?php if(isset($data['success_message']) && !empty($data['success_message'])): ?>
 			<div class="callout callout-success">
 			
-			<p><?php echo $success_message; ?></p>
+			<p><?php echo $data['success_message']; ?></p>
 			</div>
 			<?php endif; ?>
 

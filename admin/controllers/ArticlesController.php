@@ -1,17 +1,22 @@
 <?php 
-require_once "../models/News.php";
-require_once "../models/Categories.php";
+require_once url('middleware/ErrorHandle.php');
+require_once url('models/News.php');
+require_once url('models/Categories.php');
 
  class ArticlesController extends Controller{
 
    private $newArticle;
+   private $categoryModel;
+   private $message;
 
-   public function __construct(){
+  public function __construct(){
 
    	$this->articleModel = new News();
    	$this->categoryModel = new Categories();
+    $this->message = new ErrorHandle();
 
-   }
+  }
+
  	public function index(){
     
     $articles = $this->articleModel->getNews(["id" => 1]);
@@ -32,22 +37,22 @@ require_once "../models/Categories.php";
      $valid =  1;
      if(empty($_POST['contenus'])){
       $valid =  0;
-      $error_message .= "Le contenu ne peut pas etre vide !<br>";
+      $this->message->getErrorMessage("Le contenu ne peut pas etre vide !<br>");
      }
 
      if(empty($_POST['titre'])){
       $valid =  0;
-      $error_message .= "Le titre ne peut pas etre vide !<br>";
+      $this->message->getErrorMessage("Le titre ne peut pas etre vide !<br>");
      }
 
      if(empty($_POST['auteur'])){
       $valid =  0;
-      $error_message .= "L'auteur ne peut pas etre vide !<br>";
+      $this->message->getErrorMessage("L'auteur ne peut pas etre vide !<br>");
      }
 
      if($_POST['categorie'] <= 0){
       $valid =  0;
-      $error_message .= "Veuillez choisir une categorie !<br>";
+      $this->message->getErrorMessage("Veuillez choisir une categorie !<br>");
      }
 
      $path = $_FILES['image_principale']['name'];
@@ -61,15 +66,16 @@ require_once "../models/Categories.php";
 
       if(in_array($extension_upload, $extension_autorisees)){
        $valid =  0;
-       $error_message .= "Le type du fichier est invalide !<br>";
+       $this->message->getErrorMessage("Le type du fichier est invalide !<br>") ;
       }else{
        $valid =  0;
-       $error_message .= "Veuillez televerser une image !<br>";
+       $this->message->getErrorMessage("Veuillez televerser une image !<br>");
       }
 
      }
 
        move_uploaded_file($path_tmp, url('public/images/').$nom_fichier);
+       
        if($valid == 1){
          $row = 
           [
@@ -77,16 +83,16 @@ require_once "../models/Categories.php";
            "cat_id" => $_POST['categorie'],
            "intro" => $_POST['intro'],
            "content" => $_POST['contenus'],
-           "image_banner" => $_POST['image_principale'],
+           "image_banner" => $nom_fichier,
            "auteur" => $_POST['auteur']
           ];
 
         $this->articleModel->addArticle($row);
      
         if(true){
-          $success_message.= 'Nouveau Article ajoute avec success !';
+          $this->message->getSuccessMessage("Nouveau Article ajoute avec success !");
          }else{
-           $error_message.= "Echec d'ajouter un Nouveau Article";
+           $this->message->getErrorMessage("Echec d'ajouter un Nouveau Article");
          }
        }
       
@@ -96,7 +102,9 @@ require_once "../models/Categories.php";
      $category = $this->categoryModel->getCategory();
      $data =
       [
-    	"category" => $category
+    	"category" => $category,
+      "error_message" => $this->error_message,
+      "success_message" => $this->success_message
       ];
 
 
