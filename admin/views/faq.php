@@ -16,40 +16,26 @@
 					<table id="example1" class="table table-bordered table-hover table-striped">
 						<thead>
 							<tr>
-								<th width="30">#</th>
-								<th width="100">Title</th>
-								<th width="80">Action</th>
+								<th width="20">#</th>
+								<th width="150">Questions</th>
+								<th width="200">Reponses</th>
+								<th width="30">Ordre d'affichage</th>
+								<th width="50">Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							
+							    <?php foreach ($data['faq'] as $row): ?>
 								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
+									<td> <?php echo $row->id; ?></td>
+									<td> <?php echo $row->reponse; ?></td>
+									<td> <?php echo $row->question; ?></td>
+									<td> <?php echo $row->ordre_affichage; ?></td>
 									<td>										
 										<a href="" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
 									</td>
 								</tr>
-
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
-
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-									 <a href="" class="btn btn-primary btn-xs">Edit</a>
-									 <a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
-															
+								<?php endforeach; ?>							
 						</tbody>
 					</table>
 				</div>
