@@ -17,39 +17,23 @@
 						<thead>
 							<tr>
 								<th width="30">#</th>
-								<th width="100">Title</th>
-								<th width="80">Action</th>
+								<th width="80">Image</th>
+								<th width="150">Nom de la categorie</th>
+								<th width="100">Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							
+							    <?php foreach ($data['category'] as $row): ?>
 								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
+									<td><?php echo $row->id; ?></td>
+									<td><?php echo $row->image; ?></td>
+									<td><?php echo $row->cat_name; ?></td>
 									<td>										
 										<a href="" class="btn btn-primary btn-xs">Edit</a>
 										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
 									</td>
 								</tr>
-
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
-
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-									 <a href="" class="btn btn-primary btn-xs">Edit</a>
-									 <a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
-															
+								<?php endforeach; ?>							
 						</tbody>
 					</table>
 				</div>
