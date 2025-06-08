@@ -15,9 +15,9 @@ class Faq{
   	return $this->db->resultSet();
   }
 
-  public function getCategoryRows(){
+  public function getFaqRows(){
 
-  	$this->db->query("SELECT * FROM tbl_category");
+  	$this->db->query("SELECT * FROM tbl_faq");
 
   	return $this->db->rowCount();
   }

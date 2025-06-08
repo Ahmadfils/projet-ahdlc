@@ -68,7 +68,7 @@
 				<!-- small box -->
 				<div class="small-box bg-red">
 				  <div class="inner">
-					<h3><?php //echo $data['project']; ?></h3>
+					<h3><?php echo 0 //$data['project']; ?></h3>
   
 					<p>Projets</p>
 				  </div>
@@ -83,7 +83,7 @@
 				<!-- small box -->
 				<div class="small-box bg-orange">
 				  <div class="inner">
-					<h3><?php //echo $data['faq'];?></h3>
+					<h3><?php echo $data['faq'];?></h3>
   
 					<p>FAQ</p>
 				  </div>

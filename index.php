@@ -5,6 +5,9 @@ require_once 'core/Database.php';
 require_once 'core/Init.php';
 require_once 'core/Router.php';
 require_once 'core/Controller.php';
+require_once 'core/functions.php';
+require_once 'core/CSRF_Protect.php';
+
 
 Init::loadSettings();
 

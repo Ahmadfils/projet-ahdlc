@@ -17,7 +17,7 @@
 						<thead>
 							<tr>
 								<th width="30">#</th>
-								<th width="80">Image</th>
+								<th width="50">Image</th>
 								<th width="150">Nom de la categorie</th>
 								<th width="100">Action</th>
 							</tr>
@@ -26,7 +26,8 @@
 							    <?php foreach ($data['category'] as $row): ?>
 								<tr>
 									<td><?php echo $row->id; ?></td>
-									<td><?php echo $row->image; ?></td>
+									<td style="width:30px;"><img style="width:50px;height:50px" src="<?php echo url('
+									public/images/'.$row->image); ?>"></td>
 									<td><?php echo $row->cat_name; ?></td>
 									<td>										
 										<a href="" class="btn btn-primary btn-xs">Edit</a>

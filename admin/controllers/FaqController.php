@@ -5,7 +5,7 @@
  private $faqModel;
 
     public function __construct(){
-       $this->faqModel = new Faq;
+       $this->faqModel = new Faq();
     }
 
     public function index()

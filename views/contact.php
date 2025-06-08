@@ -24,17 +24,17 @@
 
     <div class="contact-form">
         <h3>Envoyez-nous un message</h3>
-        <form>
+        <form method="POST" action="">
             <div class="input-icon">
-                <input type="text" placeholder="Nom complet" required>
+                <input type="text" placeholder="Nom complet" name="nom" required>
             </div>
             <div class="input-icon">
-                <input type="email" placeholder="Adresse e-mail" required>
+                <input type="email" placeholder="Adresse e-mail" name="email" required>
             </div>
             <div class="input-icon">
-                <textarea placeholder="Votre message" required></textarea>
+                <textarea placeholder="Votre message" name="message" required></textarea>
             </div>
-            <button type="submit">Envoyer</button>
+            <button type="submit" name="contact_form">Envoyer</button>
         </form>
     </div>
 </div>

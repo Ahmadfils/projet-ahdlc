@@ -2,6 +2,7 @@
 require_once "../models/News.php";
 require_once "../models/User.php";
 require_once "../models/Categories.php";
+require_once "../models/Faq.php";
 
 class AdminHomeController extends Controller{
  private $newModel;
@@ -10,6 +11,7 @@ public function __construct(){
  	$this->newModel = new News();
  	$this->userModel = new User();
  	$this->categoryModel = new Categories();
+ 	$this->faqModel = new Faq();
  }
 
  public function index(){
@@ -20,6 +22,7 @@ public function __construct(){
  	$integration = $this->newModel->getNewRows(['id'=>5]);
     $user = $this->userModel->getUserRows();
     $category = $this->categoryModel->getCategoryRows();
+    $faq = $faq = $this->faqModel->getFaqRows();
 
 
  	$data = 
@@ -30,7 +33,8 @@ public function __construct(){
  		"transversaux" => $tranversaux,
  		"integration" => $integration,
  		"user" => $user,
- 		"category" => $category
+ 		"category" => $category,
+ 		"faq"  => $faq  
  	];
 
     $this->view('header','');
