@@ -30,8 +30,8 @@
 									public/images/'.$row->image); ?>"></td>
 									<td><?php echo $row->cat_name; ?></td>
 									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="<?php echo adminUrl('category/edit/'.$row->id) ?>" class="btn btn-primary btn-xs">Edit</a>
+										<a href="<?php echo adminUrl('category/delete/'.$row->id) ?>" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
 									</td>
 								</tr>
 								<?php endforeach; ?>							

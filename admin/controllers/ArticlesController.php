@@ -114,9 +114,9 @@ require_once "../models/Categories.php";
      $category = $this->categoryModel->getCategory();
      $data =
       [
-    	"category" => $category,
-      "error_message" => $error,
-      "success_message" => $success
+    	'category' => $category,
+      'error_message' => $error,
+      'success_message' => $success
       ];
 
 
