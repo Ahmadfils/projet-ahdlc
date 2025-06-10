@@ -8,17 +8,17 @@ class News{
         $this->db = new Database;
     }
 
-    public function getNews($data)
+    public function getAllNews($data)
     {
       
-        $this->db->query("SELECT t1.id,titre,intro,t1.updated_at,auteur,cat_name 
-                          FROM tbl_article t1 JOIN tbl_category t2 ON t2.id = cat_id WHERE cat_id = :id 
+        $this->db->query("SELECT t1.id,titre,intro,t1.updated_at,auteur,cat_name,cat_domain,image_banner 
+                          FROM tbl_article t1 JOIN tbl_category t2 ON t2.id = cat_id WHERE cat_id = :cat_id 
                           ORDER BY date_publication");
-        $this->db->bind(':id', $data['id']);
+        $this->db->bind(':cat_id', $data['cat_id']);
         return $this->db->resultSet();
     }
 
-    public function getAllNews($data)
+    public function getNewsByCategory($data)
     {
       
         $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :starting,:effectif");
@@ -30,15 +30,15 @@ class News{
     }
 
     public function getNewRows($data){
-        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id ORDER BY date_publication DESC");
-        $this->db->bind(':id', $data['id']);
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id ORDER BY date_publication DESC");
+        $this->db->bind(':cat_id', $data['id']);
 
         return $this->db->rowCount();
     }
 
     public function getLatestNews($data){
-        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :limite");
-        $this->db->bind(':id', $data['id']);
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id ORDER BY date_publication DESC LIMIT :limite");
+        $this->db->bind(':cat_id', $data['cat_id']);
         $this->db->bind(':limite', $data['limite']);
         
         return $this->db->resultSet();
@@ -51,8 +51,8 @@ class News{
     }
 
     public function getNewByCategory($data){
-        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id");
-        $this->db->bind(':id', $data['id']);
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id");
+        $this->db->bind(':cat_id', $data['cat_id']);
         return $this->db->single();
     }
 

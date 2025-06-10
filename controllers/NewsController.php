@@ -8,8 +8,8 @@ class NewsController extends Controller {
     }
     public function index() {
         $id = 1;
-        $news = $this->newModel->getAllNews(["id" => $id]);
-        $newRows = $this->newModel->getNewRows(["id" => $id]);
+        $news = $this->newModel->getNewsByCategory(["cat_id" => $id]);
+        $newRows = $this->newModel->getNewRows(["cat_id" => $id]);
         
         $item_in_page = 5;
         $nombre_page = ceil($newRows/$item_in_page);

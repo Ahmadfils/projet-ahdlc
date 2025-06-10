@@ -4,7 +4,7 @@
 		<h1>View Category</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="" class="btn btn-primary btn-sm">Add Category</a>
+		<a href="<?php echo adminUrl('category/add') ?>" class="btn btn-primary btn-sm">Add Category</a>
 	</div>
 </section>
 
@@ -26,7 +26,7 @@
 							    <?php foreach ($data['category'] as $row): ?>
 								<tr>
 									<td><?php echo $row->id; ?></td>
-									<td style="width:30px;"><img style="width:50px;height:50px" src="<?php echo url('
+									<td><img style="width:50px;height:50px" src="<?php echo url('
 									public/images/'.$row->image); ?>"></td>
 									<td><?php echo $row->cat_name; ?></td>
 									<td>										

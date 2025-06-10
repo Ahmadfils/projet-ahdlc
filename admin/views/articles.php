@@ -17,10 +17,12 @@
 						<thead>
 							<tr>
 								<th width="30">#</th>
+								<th width="50">Image</th>
 								<th width="80">Titre</th>
 								<th width="100">Intro</th>
-								<th width="50">Auteur</th>
-								<th width="50">Categorie</th>
+								<th width="30">Auteur</th>
+								<th width="30">Categorie</th>
+								<th width="30">Domaine</th>
 							    <th width="80">Date</th>
 								<th width="80">Action</th>
 							</tr>
@@ -30,10 +32,12 @@
 							  	 ?>
 								<tr>
 									<td><?php echo $row->id; ?></td>
+									<td><img style="width:50px;height:50px" src="<?php echo url('public/images/'.$row->image_banner); ?>"></td>
 									<td><?php echo $row->titre; ?></td>
 									<td><?php echo $row->intro; ?></td>
 									<td><?php echo $row->auteur; ?></td>
 									<td><?php echo $row->cat_name; ?></td>
+									<td><?php echo $row->cat_domain; ?></td>
 									<td><?php echo $row->updated_at; ?></td>
 									<td>										
 										<a href="" class="btn btn-primary btn-xs">Edit</a>

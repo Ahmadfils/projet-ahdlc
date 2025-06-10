@@ -12,7 +12,7 @@
 </section>
 
 <section class="infos-pro">
-    <h2>Nos coordonnées</h2>
+    <h1>Nos coordonnées</h1>
     <p>© 2025 Inzuex - Tous droits réservés.</p>
     <p>Contact : info@inzuex.com | Tél : +257 123 456 789</p>
     <p>Adresse : Bujumbura, Burundi</p>
@@ -25,6 +25,9 @@
     <div class="contact-form">
         <h3>Envoyez-nous un message</h3>
         <form method="POST" action="">
+
+            <?php echo $data['$crsf_protect']; ?>
+
             <div class="input-icon">
                 <input type="text" placeholder="Nom complet" name="nom" required>
             </div>

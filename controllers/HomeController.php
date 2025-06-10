@@ -16,7 +16,7 @@ class HomeController extends Controller
         $settings = $this->settingModel->getAllSettings();
         $id = 1;
         $lmt = 6;
-        $news = $this->newModel->getLatestNews(["id" => $id, "limite" => $lmt]);
+        $news = $this->newModel->getLatestNews(["cat_id" => $id, "limite" => $lmt]);
         
         $data = [
               'news'=> $news

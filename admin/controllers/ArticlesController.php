@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 require_once "../models/News.php";
 require_once "../models/Categories.php";
 
@@ -16,7 +16,7 @@ require_once "../models/Categories.php";
 
  	public function index(){
     
-    $articles = $this->articleModel->getNews(["id" => 1]);
+    $articles = $this->articleModel->getAllNews(["cat_id" => 1]);
     $data =
       [
       "articles" => $articles
@@ -102,7 +102,7 @@ require_once "../models/Categories.php";
             $this->articleModel->addArticle($row);
      
             if(true){
-              $sucess .= "Nouveau Article ajoute avec success !";
+              $success .= "Nouveau Article ajoute avec success !";
             }else{
               $error .= "Echec d'ajouter un Nouveau Article";
              }

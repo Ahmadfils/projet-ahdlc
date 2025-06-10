@@ -7,7 +7,13 @@ require_once 'core/Router.php';
 require_once 'core/Controller.php';
 require_once 'core/functions.php';
 require_once 'core/CSRF_Protect.php';
+require_once 'core/PHPMailer/src/Exception.php';
+require_once 'core/PHPMailer/src/PHPMailer.php';
+require_once 'core/PHPMailer/src/SMTP.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 
 Init::loadSettings();
 

@@ -2,9 +2,12 @@
 class ContactController extends Controller
 {
     private $faqModel;
+    private $csrf;
 
     public function __construct(){
+
        $this->faqModel = $this->model('Faq');
+       $this->csrf = new CSRF_Protect();
     }
 
     public function index()
@@ -14,14 +17,15 @@ class ContactController extends Controller
            $name = htmlspecialchars(strip_tags($_POST['nom']));
            $email = strtolower(htmlspecialchars(strip_tags($_POST['email'])));
            $message = htmlspecialchars(strip_tags($_POST['message']));
-
+           
 
         } 
 
-
+        $crsf_protect = $this->csrf->echoInputField();
         $faq = $this->faqModel->getFaq();
         $data = [
-            'faq' => $faq 
+            'faq' => $faq,
+            'crsf_protect' => $crsf_protect 
         ];
 
         
