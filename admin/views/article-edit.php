@@ -14,30 +14,35 @@
 	<div class="row">
 		<div class="col-md-12">
 
-			<!--<?php if($error_message): ?>
+			<?php if($data['error_message']): ?>
 			<div class="callout callout-danger">
 			
 			<p>
-			<?php echo $error_message; ?>
+			<?php echo $data['error_message']; ?>
 			</p>
 			</div>
 			<?php endif; ?>
 
-			<?php if($success_message): ?>
+			<?php if($data['success_message']): ?>
 			<div class="callout callout-success">
 			
-			<p><?php echo $success_message; ?></p>
+			<p><?php echo $data['success_message']; ?></p>
 			</div>
-			<?php endif; ?>-->
+			<?php endif; ?>
 
 			<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-
+                <?php  foreach ($data['articles'] as $row) {
+                	$cat_id = $row->cat_id;
+                	$titre = $row->titre;
+                	$intro = $row->intro;
+                	$content  = $row->content;
+                } ?>
 				<div class="box box-info">
 					<div class="box-body">
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Titre de l'article <span>*</span></label>
 							<div class="col-sm-4">
-								<input type="text" name="titre" class="form-control">
+								<input type="text" name="titre" value="<?php echo $titre; ?>"class="form-control">
 							</div>
 						</div>	
 						
@@ -47,7 +52,10 @@
 								<select name="categorie" class="form-control select2 end-cat">
 								<option value="0">Selectionner une Categorie</option>
 								<?php foreach ($data['category'] as $row): ?>
-									<option value="<?php echo $row->id; ?>"><?php echo $row->cat_name; ?></option>
+									<option <?php  if($cat_id == $row->id) echo "selected"; ?>
+									  value="<?php echo $row->id; ?>">
+									  <?php echo $row->cat_name; ?>
+								    </option>
 								<?php endforeach; ?>
 								</select>
 							</div>
@@ -60,45 +68,29 @@
 							</div>
 						</div>
 
-						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Autres Images</label>
-							<div class="col-sm-4" style="padding-top:4px;">
-								<table id="ProductTable" style="width:100%;">
-			                        <tbody>
-			                            <tr>
-			                                <td>
-			                                    <div class="upload-btn">
-			                                        <input type="file" name="photo[]" style="margin-bottom:5px;">
-			                                    </div>
-			                                </td>
-			                                <td style="width:28px;"><a href="javascript:void()" class="Delete btn btn-danger btn-xs">X</a></td>
-			                            </tr>
-			                        </tbody>
-			                    </table>
-							</div>
-							<div class="col-sm-2">
-			                    <input type="button" id="btnAddNew" value="Add Item" style="margin-top: 5px;margin-bottom:10px;border:0;color: #fff;font-size: 14px;border-radius:3px;" class="btn btn-warning btn-xs">
-			                </div>
-						</div>
-						
+			
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Intro <span>*</span></label>
 							<div class="col-sm-8">
-								<textarea name="intro" class="form-control" cols="30" rows="6" id="editor2"></textarea>
+								<textarea name="intro" class="form-control" cols="30" rows="6" id="editor2">
+									<?php echo $intro; ?>
+								</textarea>
 							</div>
 						</div>
 
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Contenus <span>*</span></label>
 							<div class="col-sm-8">
-								<textarea name="intro" class="form-control" cols="30" rows="10" id="editor1"></textarea>
+								<textarea name="contenus" class="form-control" cols="30" rows="10" id="editor1">
+									<?php  echo $content; ?>
+								</textarea>
 							</div>
 						</div>
 				
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="ajouter_article">Ajouter l'Article</button>
+								<button type="submit" class="btn btn-success pull-left" name="edit_article">Confirmer</button>
 							</div>
 						</div>
 					</div>

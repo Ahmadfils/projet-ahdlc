@@ -7,8 +7,7 @@
 		<a href="<?php echo adminUrl('category'); ?>" class="btn btn-primary btn-sm">Voir Tous</a>
 	</div>
 </section>
-
-
+ 
 <section class="content">
 
 	<div class="row">
@@ -32,7 +31,7 @@
 			<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 
                 <?php foreach ($data['category'] as $row) {
-                	$nom_categorie = $row->cat_nom;
+                	$nom_categorie = $row->cat_name;
                 	$nom_dom = $row->cat_domain;
                 	$image = $row->image;
                 }  ?>
@@ -63,7 +62,7 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="ajouter_categorie">Ajouter la Categorie</button>
+								<button type="submit" class="btn btn-success pull-left" name="edit_category">Confirmer</button>
 							</div>
 						</div>	
 					</div>

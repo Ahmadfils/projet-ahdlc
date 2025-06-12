@@ -1,10 +1,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Affichage Articles</h1>
+		<h1>Vue Articles</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="<?php echo adminUrl('articles/add'); ?>" class="btn btn-primary btn-sm">Ajouter un Article</a>
+		<a href="<?php echo adminUrl('articles/add'); ?>" class="btn btn-primary btn-sm">Ajouter un nouveau Article</a>
 	</div>
 </section>
 
@@ -28,8 +28,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							  <?php foreach ($data['articles'] as $row) {
-							  	 ?>
+							  <?php foreach ($data['articles'] as $row) { ?>
 								<tr>
 									<td><?php echo $row->id; ?></td>
 									<td><img style="width:50px;height:50px" src="<?php echo url('public/images/'.$row->image_banner); ?>"></td>
@@ -40,8 +39,8 @@
 									<td><?php echo $row->cat_domain; ?></td>
 									<td><?php echo $row->updated_at; ?></td>
 									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="<?php echo adminUrl('articles/edit/'.$row->id); ?>" class="btn btn-primary btn-xs">Editer</a>
+										<a href="<?php echo adminUrl('articles/delete/'.$row->id); ?>" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Supprimer</a>  
 									</td>
 								</tr>
 							  <?php } ?>
@@ -65,7 +64,7 @@
                 <h4 class="modal-title" id="myModalLabel">Confirmation de la suppression</h4>
             </div>
             <div class="modal-body">
-                <p>Etes-vous sure a supprimer cet element</p>
+                <p>Etes-vous sure de supprimer cet element</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

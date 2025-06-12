@@ -110,7 +110,7 @@
                     </li>
 
                     <li class="treeview">
-                        <a href="<?php echo adminUrl('utilisateurs'); ?>">
+                        <a href="<?php echo adminUrl('users'); ?>">
                             <i class="fa fa-user-o"></i> <span>Utilisateurs</span>
                         </a>
                     </li>

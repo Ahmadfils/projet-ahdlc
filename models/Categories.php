@@ -20,7 +20,7 @@ class Categories{
     $this->db->query("SELECT * FROM tbl_category WHERE id = :id");
     $this->db->bind(':id', $data['id']);
     
-    return $this->db->single();
+    return $this->db->resultSet();
   }
 
   public function getCategoryRows(){
@@ -46,7 +46,7 @@ class Categories{
 
   public function editCategory($data){
 
-    $this->db->query("UPDATE tbl_category SET cat_domain = :cat_domain,cat_name = :cat_name,image = :image)
+    $this->db->query("UPDATE tbl_category SET cat_domain = :cat_domain,cat_name = :cat_name,image = :image
                       WHERE id = :id");
     $this->db->bind(':cat_domain', $data['cat_domain']);
     $this->db->bind(':cat_name', $data['cat_name']);

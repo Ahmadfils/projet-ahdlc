@@ -23,7 +23,7 @@
  	public function add(){
 
  	   $error = '';
-       $success = '';
+     $success = '';
 
      if(isset($_POST['ajouter_category'])){
 
@@ -129,7 +129,7 @@
           $path_tmp = $_FILES['image_dom']['tmp_name'];
           $nom_fichier = basename($path);
 
-          $target_dir = __DIR__ . '/public/images/';  
+          $target_dir = __DIR__ . '/../../public/images/';  
 
            if (!empty($path)) {
              $infosfichier = pathinfo($path);
@@ -165,15 +165,16 @@
                   [
                    "id" => $id,
                    "cat_domain" => $_POST['cat_dom'],
-                   "cat_name" => $_POST['nom_ca'],
-                   "image" => $nom_fichier,
+                   "cat_name" => $_POST['nom_cat'],
+                   "image" => $nom_fichier
                   ];
 
                $this->categoryModel->editCategory($row);
                
      
              if(true){
-               $success .= "Categorie edite avec success !";
+               $success .= "Categorie editee avec success !";
+               header('category');
              }else{
               $error .= "Echec d'editer la Categorie";
              }
@@ -183,6 +184,7 @@
       }
 
       $category = $this->categoryModel->getCategoryById(["id" => $id]);
+        
       $data = 
               [
               	"category" => $category,

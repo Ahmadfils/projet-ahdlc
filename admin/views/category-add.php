@@ -57,7 +57,7 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="ajouter_categorie">Ajouter la Categorie</button>
+								<button type="submit" class="btn btn-success pull-left" name="ajouter_category">Confirmer</button>
 							</div>
 						</div>	
 					</div>

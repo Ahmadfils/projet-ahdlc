@@ -4,7 +4,7 @@
 		<h1>Ajouter un nouveau Article</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="<?php echo adminUrl('article'); ?>" class="btn btn-primary btn-sm">Voir Tous</a>
+		<a href="<?php echo adminUrl('articles'); ?>" class="btn btn-primary btn-sm">Voir Tous</a>
 	</div>
 </section>
 
@@ -105,7 +105,7 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label"></label>
 							<div class="col-sm-6">
-								<button type="submit" class="btn btn-success pull-left" name="ajouter_article">Ajouter l'Article</button>
+								<button type="submit" class="btn btn-success pull-left" name="ajouter_article">Confirmer</button>
 							</div>
 						</div>	
 					</div>

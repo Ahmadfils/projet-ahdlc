@@ -1,10 +1,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View FAQs</h1>
+		<h1>Vue Utilisateurs</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="" class="btn btn-primary btn-sm">Add FAQ</a>
+		<a href="" class="btn btn-primary btn-sm">Ajouter un nouveau Utilisateur</a>
 	</div>
 </section>
 
@@ -17,38 +17,24 @@
 						<thead>
 							<tr>
 								<th width="30">#</th>
-								<th width="100">Title</th>
+								<th width="100">Email</th>
+								<th width="100">Role</th>
 								<th width="80">Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
+							<?php foreach ($data['user'] as $row): ?>
 
 								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
+									<td><?php echo $row->id; ?></td>
+									<td><?php echo $row->email; ?></td>
+									<td><?php echo $row->role; ?></td>
 									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+									 <a href="<?php echo adminUrl('users/edit/'.$row->id) ?>" class="btn btn-primary btn-xs">Editer</a>
+									 <a href="<?php echo adminUrl('users/delete/'.$row->id) ?>" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Supprimer</a>  
 									</td>
 								</tr>
-
-								<tr>
-									<td>34</td>
-									<td>NBHGHGGG</td>
-									<td>										
-									 <a href="" class="btn btn-primary btn-xs">Edit</a>
-									 <a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
-									</td>
-								</tr>
+							<?php endforeach; ?>
 															
 						</tbody>
 					</table>
@@ -66,10 +52,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <h4 class="modal-title" id="myModalLabel">Confirmation de la suppression</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
+                <p>Etes-vous sure de supprimer cet element</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

@@ -2,7 +2,8 @@
  require_once "../models/Faq.php";
 
  class FaqController extends Controller{
- private $faqModel;
+ 	
+    private $faqModel;
 
     public function __construct(){
        $this->faqModel = new Faq();

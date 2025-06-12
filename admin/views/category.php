@@ -1,10 +1,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View Category</h1>
+		<h1>Vue Category</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="<?php echo adminUrl('category/add') ?>" class="btn btn-primary btn-sm">Add Category</a>
+		<a href="<?php echo adminUrl('category/add') ?>" class="btn btn-primary btn-sm">Ajouter une nouvelle Categorie</a>
 	</div>
 </section>
 
@@ -19,6 +19,7 @@
 								<th width="30">#</th>
 								<th width="50">Image</th>
 								<th width="150">Nom de la categorie</th>
+								<th width="150">Domaine</th>
 								<th width="100">Action</th>
 							</tr>
 						</thead>
@@ -29,9 +30,10 @@
 									<td><img style="width:50px;height:50px" src="<?php echo url('
 									public/images/'.$row->image); ?>"></td>
 									<td><?php echo $row->cat_name; ?></td>
+									<td><?php echo $row->cat_domain; ?></td>
 									<td>										
-										<a href="<?php echo adminUrl('category/edit/'.$row->id) ?>" class="btn btn-primary btn-xs">Edit</a>
-										<a href="<?php echo adminUrl('category/delete/'.$row->id) ?>" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="<?php echo adminUrl('category/edit/'.$row->id) ?>" class="btn btn-primary btn-xs">Editer</a>
+										<a href="<?php echo adminUrl('category/delete/'.$row->id) ?>" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Supprimer</a>  
 									</td>
 								</tr>
 								<?php endforeach; ?>							
@@ -49,10 +51,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <h4 class="modal-title" id="myModalLabel">Confirmation de la suppression</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
+                <p>Etes-vous sure de supprimer cet element</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

@@ -47,7 +47,7 @@ class News{
     public function getNewById($data){
         $this->db->query("SELECT * FROM tbl_article WHERE id = :id");
         $this->db->bind(':id', $data['id']);
-        return  $this->db->single();
+        return  $this->db->resultSet();
     }
 
     public function getNewByCategory($data){
@@ -78,6 +78,31 @@ class News{
             return false;
         }
     } 
+
+     public function editArticle($data)
+    {
+        $this->db->query('INSERT INTO tbl_article 
+                        titre = :titre, 
+                         cat_id = :cat_id, 
+                         intro = :intro, 
+                         content = :content, 
+                         image_banner = :image_banner, 
+                         auteur = :auteur WHERE id = :id');
+        $this->db->bind(':titre', $data['titre']);
+        $this->db->bind(':cat_id', $data['cat_id']);
+        $this->db->bind(':intro', $data['intro']);
+        $this->db->bind(':content', $data['content']);
+        $this->db->bind(':image_banner', $data['image_banner']);
+        $this->db->bind(':auteur', $data['auteur']);
+        $this->db->bind(':id', $data['id']);
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
+
 
     public function deleteNew($data){
         $this->db->query("DELETE FROM tbl_article WHERE id = :id");

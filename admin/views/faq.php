@@ -1,10 +1,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>View FAQs</h1>
+		<h1>Vue FAQs</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="" class="btn btn-primary btn-sm">Add FAQ</a>
+		<a href="" class="btn btn-primary btn-sm">Ajouter un nouveau FAQ</a>
 	</div>
 </section>
 
@@ -31,8 +31,8 @@
 									<td> <?php echo $row->question; ?></td>
 									<td> <?php echo $row->ordre_affichage; ?></td>
 									<td>										
-										<a href="" class="btn btn-primary btn-xs">Edit</a>
-										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Delete</a>  
+										<a href="" class="btn btn-primary btn-xs">Editer</a>
+										<a href="#" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Supprimer</a>  
 									</td>
 								</tr>
 								<?php endforeach; ?>							
@@ -52,10 +52,10 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">Delete Confirmation</h4>
+                <h4 class="modal-title" id="myModalLabel">Confirmation de la suppression</h4>
             </div>
             <div class="modal-body">
-                <p>Are you sure want to delete this item?</p>
+                <p>Etes-vous sure de supprimer cet element</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
