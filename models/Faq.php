@@ -21,4 +21,33 @@ class Faq{
 
   	return $this->db->rowCount();
   }
+
+  public function editFaq($data){
+
+    $this->db->query("UPDATE tbl_faq SET
+                     question = :quest,
+                     reponse = :reponse WHERE id = :id");
+    $this->bind(':quest', $data['quest']);
+    $this->bind(':reponse', $data['reponse']);
+    $this->bind(':id', $data['id']);
+
+
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+  }
+
+  public function deleteFaq($data){
+
+    $this->db->query("DELETE FROM tbl_faq WHERE id = :id");
+    $this->db->bind(':id', $data['id']);
+
+    if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+  }
 }

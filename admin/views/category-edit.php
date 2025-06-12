@@ -1,7 +1,7 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Ajouter une nouvelle Categorie </h1>
+		<h1>Modification de la Categorie </h1>
 	</div>
 	<div class="content-header-right">
 		<a href="<?php echo adminUrl('category'); ?>" class="btn btn-primary btn-sm">Voir Tous</a>

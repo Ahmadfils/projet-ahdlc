@@ -35,9 +35,9 @@
                             
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1" data-toggle="tab">About Us</a></li>
+                        <li class="active"><a href="#tab_1" data-toggle="tab">A Propos</a></li>
                         <li><a href="#tab_2" data-toggle="tab">FAQ</a></li>
-                        <li><a href="#tab_4" data-toggle="tab">Contact</a></li>
+                        <li><a href="#tab_4" data-toggle="tab">Contacter Nous</a></li>
 
                     </ul>
 
@@ -216,5 +216,3 @@
     </div>
 
 </section>
-
-<?php require_once('footer.php'); ?>

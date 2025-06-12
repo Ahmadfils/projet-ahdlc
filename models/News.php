@@ -81,8 +81,8 @@ class News{
 
      public function editArticle($data)
     {
-        $this->db->query('INSERT INTO tbl_article 
-                        titre = :titre, 
+        $this->db->query('UPDATE tbl_article SET
+                         titre = :titre, 
                          cat_id = :cat_id, 
                          intro = :intro, 
                          content = :content, 

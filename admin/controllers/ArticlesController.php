@@ -203,14 +203,16 @@ require_once "../models/Categories.php";
      
             if(true){
               $success .= "Article edite avec success !";
+              //header('Location:'.adminUrl('articles'));
+              //exit;
             }else{
               $error .= "Echec d'ajouter un Nouveau Article";
              }
           }
 
       }
-       $par = ["cat_id" => 1, "id" => $id];
-       $articles = $this->articleModel->getNewById($par);
+       $parameter = ["id" => $id];
+       $articles = $this->articleModel->getNewById($parameter);
        $category = $this->categoryModel->getCategory();
        $data =
               [

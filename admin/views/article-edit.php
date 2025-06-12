@@ -1,10 +1,10 @@
 
 <section class="content-header">
 	<div class="content-header-left">
-		<h1>Ajouter un nouveau Article</h1>
+		<h1>Modification de l'Article</h1>
 	</div>
 	<div class="content-header-right">
-		<a href="product.php" class="btn btn-primary btn-sm">Voir Tous</a>
+		<a href="<?php echo adminUrl('articles') ?>" class="btn btn-primary btn-sm">Voir Tous</a>
 	</div>
 </section>
 
