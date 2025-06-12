@@ -6,20 +6,21 @@
 	<title>Admin Panel</title>
 
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="shortcut icon" href="<?php echo url('public/images/logo.png'); ?>" type="image/x-icon">
 
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/bootstrap.min.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/font-awesome.min.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/ionicons.min.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/datepicker3.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/all.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/select2.min.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/dataTables.bootstrap.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/jquery.fancybox.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/AdminLTE.min.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/_all-skins.min.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/on-off-switch.css') ?>"/>
-	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/summernote.css') ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('style.css') ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/bootstrap.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/font-awesome.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/ionicons.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/datepicker3.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/all.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/select2.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/dataTables.bootstrap.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/jquery.fancybox.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/AdminLTE.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/_all-skins.min.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/on-off-switch.css'); ?>"/>
+	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/summernote.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('style.css'); ?>">
 
 </head>
 

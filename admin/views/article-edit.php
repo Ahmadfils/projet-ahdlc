@@ -36,9 +36,13 @@
                 	$titre = $row->titre;
                 	$intro = $row->intro;
                 	$content  = $row->content;
+                	$image = $row->image_banner;
                 } ?>
+
+                
 				<div class="box box-info">
 					<div class="box-body">
+
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Titre de l'article <span>*</span></label>
 							<div class="col-sm-4">
@@ -67,7 +71,13 @@
 								<input type="file" name="image_principale">
 							</div>
 						</div>
-
+                            
+						<div class="form-group">
+							<label for="" class="col-sm-3 control-label">Existing Photo</label>
+							<div class="col-sm-9" style="padding-top:5px">
+								<img src="<?php echo url('public/images/'.$image); ?>" alt="Article Photo" style="width:400px; height: 300px;">
+							</div>
+				        </div>
 			
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Intro <span>*</span></label>
