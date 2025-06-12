@@ -143,11 +143,6 @@ require_once "../models/Categories.php";
       $error .= "Le titre ne peut pas etre vide !<br>";
      }
 
-     if(empty($_POST['auteur'])){
-      $valid =  0;
-      $error .= "L'auteur ne peut pas etre vide !<br>";
-     }
-
      if($_POST['categorie'] <= 0){
       $valid =  0;
       $error .= "Veuillez choisir une categorie !<br>";
@@ -196,7 +191,6 @@ require_once "../models/Categories.php";
              "intro" => $_POST['intro'],
              "content" => $_POST['contenus'],
              "image_banner" => $nom_fichier,
-             "auteur" => $_POST['auteur']
             ];
 
             $this->articleModel->editArticle($row);

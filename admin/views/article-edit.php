@@ -73,7 +73,7 @@
 						</div>
                             
 						<div class="form-group">
-							<label for="" class="col-sm-3 control-label">Image existing</label>
+							<label for="" class="col-sm-3 control-label">Existing Photo</label>
 							<div class="col-sm-9" style="padding-top:5px">
 								<img src="<?php echo url('public/images/'.$image); ?>" alt="Article Photo" style="width:400px; height: 300px;">
 							</div>
