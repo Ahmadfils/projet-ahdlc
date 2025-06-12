@@ -174,8 +174,8 @@
      
              if(true){
                $success .= "Categorie editee avec success !";
-               //header('Location:'.adminUrl('category'));
-               //exit;
+               header('Location:'.adminUrl('category'));
+               exit;
              }else{
               $error .= "Echec d'editer la Categorie";
              }

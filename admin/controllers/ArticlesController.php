@@ -228,5 +228,19 @@ require_once "../models/Categories.php";
       $this->view('footer','');
   }
 
+  public function delete($id){
+
+    $this->articleModel->deleteArticle($id);
+    $this->article->execute();
+
+    if(true){
+      $success .= "Nouveau Article ajoute avec success !";
+      header('Location:'.adminUrl('articles'));
+    }else{
+        $error .= "Echec d'ajouter un Nouveau Article";
+      }
+
+  }
+
 
 }
