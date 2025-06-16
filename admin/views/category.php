@@ -34,7 +34,7 @@
 									<td><?php echo $row->cat_domain; ?></td>
 									<td>										
 										<a href="<?php echo adminUrl('category/edit/'.$row->id) ?>" class="btn btn-primary btn-xs">Editer</a>
-										<a href="<?php echo adminUrl('category/delete/'.$row->id) ?>" class="btn btn-danger btn-xs" data-href="" data-toggle="modal" data-target="#confirm-delete">Supprimer</a>  
+										<a href="#" class="btn btn-danger btn-xs" data-href="<?php echo adminUrl('category/delete/'.$row->id) ?>" data-toggle="modal" data-target="#confirm-delete">Supprimer</a>  
 									</td>
 								</tr>
 								<?php endforeach; ?>							

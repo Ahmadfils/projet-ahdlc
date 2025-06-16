@@ -60,10 +60,10 @@ class Categories{
     }
   }
 
-  public function deleteCategory($data){
+  public function deleteCategory($id){
 
     $this->db->query("DELETE FROM tbl_category WHERE id = :id");
-    $this->db->bind(':id',$data['id']);
+    $this->db->bind(':id',$id);
 
     if ($this->db->execute()) {
       return true;

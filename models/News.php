@@ -104,7 +104,7 @@ class News{
     } 
 
 
-    public function deleteNew($data){
+    public function deleteArticle($data){
         $this->db->query("DELETE FROM tbl_article WHERE id = :id");
         $this->db->bind(':id', $data['id']);
 

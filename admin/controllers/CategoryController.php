@@ -198,4 +198,17 @@
  	  $this->view('footer','');
 
  	}
+
+  public function delete($id){
+
+    $this->categoryModel->deleteCategory(["id" => $id]); 
+
+     if(true){
+       $success .= "Categorie editee avec success !";
+        header('Location:'.adminUrl('category'));
+          exit;
+      }else{
+         $error .= "Echec d'editer la Categorie";
+      }
+  }
  }

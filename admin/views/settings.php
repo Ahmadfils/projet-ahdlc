@@ -36,10 +36,8 @@
                         <li><a href="#tab_2" data-toggle="tab">Favicon</a></li>
                         <li><a href="#tab_3" data-toggle="tab">Footer & Contact</a></li>
                         <li><a href="#tab_4" data-toggle="tab">Message Settings</a></li>
-                        <li><a href="#tab_5" data-toggle="tab">Products</a></li>
                         <li><a href="#tab_6" data-toggle="tab">Home Settings</a></li>
                         <li><a href="#tab_7" data-toggle="tab">Banner Settings</a></li>
-                        <li><a href="#tab_9" data-toggle="tab">Payment Settings</a></li>
                         <li><a href="#tab_10" data-toggle="tab">Head & Body Scripts</a></li>
                        <!--<li><a href="#tab_11" data-toggle="tab">Ads</a></li>-->
                     </ul>
