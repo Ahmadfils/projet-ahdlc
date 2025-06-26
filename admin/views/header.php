@@ -143,7 +143,7 @@
 			        </li>
 
 			        <li class="treeview">
-			          <a href="<?php echo adminUrl('page'); ?>">
+			          <a href="<?php echo adminUrl('pageSettings'); ?>">
 			            <i class="fa fa-window-restore" aria-hidden="true"></i> <span>Page Settings</span>
 			          </a>
 			        </li>
