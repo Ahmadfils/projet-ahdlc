@@ -7,9 +7,19 @@ class NewsController extends Controller {
         $this->newModel = $this->model('News');
     }
     public function index() {
-        $id = 1;
-        $news = $this->newModel->getNewsByCategory(["cat_id" => $id]);
-        $newRows = $this->newModel->getNewRows(["cat_id" => $id]);
+
+        $effectif = 5;
+        $page = 1;
+        $starting = ($page - 1)*5;
+
+        $news = $this->newModel->getNewsByCategory(
+                 [ "cat_id" => 1,
+                   "starting" => $starting, 
+                   "effectif" => $effectif
+                 ]
+               );
+
+        $newRows = $this->newModel->getNewRows(["cat_id" => 1]);
         
         $item_in_page = 5;
         $nombre_page = ceil($newRows/$item_in_page);
@@ -37,15 +47,19 @@ class NewsController extends Controller {
         $this->view('includes/footer', $data);
     }
 
-    /*public function page($page){
+   public function page($page){
        
-        $id = 1;
         $effectif = 5;
         $starting = ["page" => ($page - 1)*5];
 
-        $news = $this->newModel->getAllNews(["id" => $id, "starting" => $starting, "effectif" => $effectif]);
+        $news = $this->newModel->getAllNews(
+                   ["id" => 1, 
+                    "starting" => $starting, 
+                    "effectif" => $effectif
+                ]);
 
-        $data = [
+        $data = 
+           [
               'news'=> $news,
               
            ];
@@ -54,6 +68,6 @@ class NewsController extends Controller {
         $this->view('news', $data);
         $this->view('includes/footer', $data);
 
-    }*/
+    }
 
 }

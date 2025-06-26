@@ -21,8 +21,8 @@ class News{
     public function getNewsByCategory($data)
     {
       
-        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :id ORDER BY date_publication DESC LIMIT :starting,:effectif");
-        $this->db->bind(':id', $data['id']);
+        $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id ORDER BY date_publication DESC LIMIT :starting, :effectif");
+        $this->db->bind(':cat_id', $data['cat_id']);
         $this->db->bind(':starting', $data['starting']);
         $this->db->bind(':effectif', $data['effectif']);
         
@@ -31,7 +31,7 @@ class News{
 
     public function getNewRows($data){
         $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id ORDER BY date_publication DESC");
-        $this->db->bind(':cat_id', $data['id']);
+        $this->db->bind(':cat_id', $data['cat_id']);
 
         return $this->db->rowCount();
     }

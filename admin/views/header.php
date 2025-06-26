@@ -136,15 +136,15 @@
                         </ul>
                     </li>
 
-			      	<li class="treeview">
-			          <a href="<?php echo adminUrl('faq'); ?>">
-			            <i class="fa fa-question-circle"></i> <span>FAQ</span>
+			        <li class="treeview">
+			          <a href="<?php echo adminUrl('pageSettings'); ?>">
+			            <i class="fa fa-window-restore" aria-hidden="true"></i> <span>Parametres de Page</span>
 			          </a>
 			        </li>
 
-			        <li class="treeview">
-			          <a href="<?php echo adminUrl('pageSettings'); ?>">
-			            <i class="fa fa-window-restore" aria-hidden="true"></i> <span>Page Settings</span>
+			      	<li class="treeview">
+			          <a href="<?php echo adminUrl('faq'); ?>">
+			            <i class="fa fa-question-circle"></i> <span>FAQ</span>
 			          </a>
 			        </li>
 

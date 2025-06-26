@@ -15,8 +15,7 @@
 </div>
 
 <section class="news-grid">
-    <!-- Génération de 15 news -->
-    <!-- Tu peux répéter ce bloc en changeant le contenu -->
+
     <?php
     foreach ($data['news'] as $new):
     ?>
@@ -38,15 +37,19 @@
 
       $n = $data['nombre_page']; 
       $page = 1;
-      $i = 0;
-      while ( $i <= $n) {
+
+      while ( $page <= $n) {
      ?>
-       <a href="<?php //url('news?page='.$page + $i);?>" 
-          class="<?php// if($page > 1 && $i = $page - $i) echo "active"; ?>"><?php echo $page + $i; ?></a>
-    <?php 
-       $i++; 
-      }  
-    ?>
+       <a href="<?php echo url('news?page='.$page + $i);?>" 
+          class="<?php if($page) echo "active"; ?>">
+
+     <?php echo $page; 
+           $page++; 
+        }  
+     ?>
+              
+        </a>
+     
     <a href="#">&raquo;</a>
 </div>
 

@@ -174,13 +174,13 @@
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label">Contact Email Address</label>
                                         <div class="col-sm-4">
-                                            <input type="text" class="form-control" name="receive_email" value="<?php echo $receive_email; ?>">
+                                            <input type="text" class="form-control" name="receive_email" value="">
                                         </div>
                                     </div>                                  
                                     <div class="form-group">
                                         <label for="" class="col-sm-3 control-label">Contact Email Subject</label>
                                         <div class="col-sm-8">
-                                            <input type="text" class="form-control" name="receive_email_subject" value="<?php echo $receive_email_subject; ?>">
+                                            <input type="text" class="form-control" name="receive_email_subject" value="">
                                         </div>
                                     </div>
                                     <div class="form-group">
