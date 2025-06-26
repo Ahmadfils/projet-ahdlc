@@ -15,11 +15,11 @@ public function __construct(){
  }
 
  public function index(){
- 	$articles = $this->newModel->getNewRows(['id'=>1]);
- 	$development = $this->newModel->getNewRows(['id'=>2]);
- 	$action = $this->newModel->getNewRows(['id'=>3]);
- 	$tranversaux = $this->newModel->getNewRows(['id'=>4]);
- 	$integration = $this->newModel->getNewRows(['id'=>5]);
+ 	$articles = $this->newModel->getNewRows(['cat_id'=>1]);
+ 	$development = $this->newModel->getNewRows(['cat_id'=>2]);
+ 	$action = $this->newModel->getNewRows(['cat_id'=>3]);
+ 	$tranversaux = $this->newModel->getNewRows(['cat_id'=>4]);
+ 	$integration = $this->newModel->getNewRows(['cat_id'=>5]);
     $user = $this->userModel->getUserRows();
     $category = $this->categoryModel->getCategoryRows();
     $faq = $faq = $this->faqModel->getFaqRows();
