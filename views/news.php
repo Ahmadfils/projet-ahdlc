@@ -43,7 +43,7 @@
        <a href="<?php echo url('news?page='.$page + $i);?>" 
           class="<?php if($page) echo "active"; ?>">
 
-     <?php echo $page; 
+      <?php echo $page; 
            $page++; 
         }  
      ?>
