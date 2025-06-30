@@ -15,7 +15,7 @@ h3 {
 /* Header et Menu */
 header {
     background-color: #acc2cc;
-    padding: 10px 0;
+    padding: 4px 0;
     color: white;
 }
 
@@ -52,11 +52,18 @@ header nav ul li a::after {
     transition: width 0.5s ease-in-out;
 }
 
-header nav ul li a:hover::after {
+header nav ul li a:hover::after,
+header nav ul li a:focus::after {
     width: 100%;
 }
 
-.navbar-logo a{
+nav ul li a:hover,
+nav ul li a:focus {
+    color: white;
+    background: none;
+}
+
+.navbar-logo a {
     display: flex;
     align-items: center;
     margin-right: 50px;
@@ -64,16 +71,16 @@ header nav ul li a:hover::after {
     color: white;
 }
 
-.navbar-logo span{
-  font-size: 20px; 
-  font-weight: bold;
+.navbar-logo span {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .navbar-logo img {
     height: 40px;
     width: auto;
     display: block;
-  }
+}
 
 .banner {
     position: relative;
@@ -389,6 +396,21 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+    .dual-column-section {
+        flex-direction: column;
+        gap: 16px;
+        padding: 10px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        flex: unset;
+    }
+
+    .item {
+        margin-bottom: 16px;
+    }
 
     header nav ul li {
         display: block;
@@ -414,23 +436,32 @@ footer a:hover {
     .footer-content {
         flex-direction: column;
     }
+
+    .item img,
+    .presentation-img img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 350px;
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 /* Style du menu déroulant */
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropdown-menu {
     display: none;
-    /* Initialement caché */
     position: absolute;
     background-color: #00aaff;
     min-width: 160px;
     border-radius: 5px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    left: 0;
+    top: 100%;
 }
 
 .dropdown-menu li {
@@ -444,10 +475,33 @@ footer a:hover {
     display: block;
 }
 
+.dropdown.open>.dropdown-menu {
+    display: block !important;
+}
 
-/* Affichage du menu au survol */
-.dropdown:hover .dropdown-menu {
-    display: none;
+/* Sur mobile, le dropdown s'affiche seulement si .open est présent */
+@media (max-width: 900px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: #0099cc;
+        width: 100%;
+        border-radius: 0;
+        display: none !important;
+    }
+
+    .dropdown.open>.dropdown-menu {
+        display: block !important;
+    }
+
+    #nav-menu {
+        padding: 48px 0 0 0 !important;
+    }
+
+    #nav-menu ul li a::after {
+        display: none !important;
+        width: 0 !important;
+    }
 }
 
 /* Style du titre avec lignes de chaque côté */
@@ -476,15 +530,22 @@ footer a:hover {
 .menu-toggle {
     display: none;
     /* Caché par défaut */
-    font-size: 20px;
+    font-size: 22px;
+    /* réduit la taille */
     cursor: pointer;
-    padding: 2px 5px;
+    padding: 4px 8px;
+    /* réduit le padding */
     background: #00aaff;
     color: white;
     border-radius: 5px;
     position: absolute;
-    top: 5px;
-    right: 15px;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2001;
+    height: 32px;
+    /* optionnel, pour forcer une petite hauteur */
+    line-height: 22px;
 }
 
 nav.active {
@@ -494,8 +555,22 @@ nav.active {
 /* Styles du menu en version mobile */
 @media screen and (max-width: 768px) {
     .menu-toggle {
-        display: block;
-        /* Affiche le menu burger */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2001;
+        width: 40px;
+        height: 40px;
+        background: #00aaff;
+        color: white;
+        border-radius: 5px;
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
     }
 
     nav {
@@ -563,12 +638,10 @@ nav.active {
     nav {
         display: flex !important;
         justify-content: center;
-        /* Centre le menu */
         align-items: center;
         position: static;
         width: 100%;
         background: none;
-        /* Rétablir l'arrière-plan par défaut */
     }
 
     nav ul {
@@ -587,8 +660,7 @@ nav.active {
         display: none;
     }
 }
-  margin-right: 10px;
-}
+
 
 /* ----------  ABOUT CSS -----------*/
 
@@ -600,48 +672,50 @@ nav.active {
     flex-wrap: nowrap;
     align-items: center;
     padding: 10px 10px;
-    background-color: black;
     gap: 20px;
+}
+
+.presentation-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .presentation-img {
     flex: 1;
-    display: flex;
-    align-items: center;
+    width: 100%;
 }
 
 .presentation-img img {
-    width: 50%;
-    flex: 1;
-    max-width: 50%;
+    width: 100%;
+    max-width: 800px;
+    min-width: 500px;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
 }
 
 .presentation-text {
-    flex: 1;
-    min-width: 10px;
-    padding: 20px;
-    background-color: #e9ecef;
-    padding: 30px;
-    border-radius: 8px;
+    flex: 2;
 }
 
-
 .historique p,
+.presentation-text p,
 .item p,
 .a-propos p,
-.banner-text p
- {
+.banner-text p {
     font-size: 20px;
     line-height: 1.8;
     text-align: justify;
 }
 
-.vision p,.services p,
+.vision p,
+.services p,
 .actualites p,
-.domaines-intervention p{
+.domaines-intervention p {
     font-size: 20px;
     line-height: 1.8;
 }
@@ -655,6 +729,43 @@ nav.active {
     font-size: 40px;
     color: #005577;
     margin-bottom: 20px;
+}
+
+/* Responsivité pour petits écrans */
+@media (max-width: 900px) {
+    .presentation-row {
+        flex-direction: column !important;
+        gap: 1rem;
+        text-align: center;
+        align-items: stretch;
+        margin-bottom: 1rem;
+        padding: 0 5vw !important;
+    }
+
+    .presentation-img,
+    .presentation-text {
+        flex: unset !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .presentation-img img {
+        width: 100% !important;
+        max-width: 350px;
+        min-width: 0 !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .presentation-text h2 {
+        font-size: 28px;
+    }
+
+    .presentation-text p {
+        font-size: 16px;
+
+    }
 }
 
 /* Historique */
@@ -691,13 +802,7 @@ nav.active {
     margin: 20px;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.roadmap .icon {
-    font-size: 100px;
-    color: #00aaff;
-    margin-bottom: 10px;
 }
 
 .roadmap .arrow {
@@ -857,20 +962,6 @@ nav.active {
     line-height: 1.6;
     color: #555;
 }
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    .dual-column-section {
-        flex-direction: column;
-    }
-
-    .left-column,
-    .right-column {
-        flex: 1 1 100%;
-    }
-}
-
 
 
 /* ---------- CONTACT CSS -----------*/
@@ -1491,6 +1582,7 @@ nav.active {
     padding: 20px;
     margin-top: 40px;
 }
+
 /*-------------- ACTION----------*/
 
 /* Page article humanitaire */
@@ -1622,34 +1714,34 @@ nav.active {
     padding: 0 20px;
     background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .details-container img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.details-container img {
     width: 100%;
     max-height: 350px;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
-  }
-  
-  .details-container h2 {
+}
+
+.details-container h2 {
     font-size: 28px;
     margin: 20px 0 10px;
     color: #003366;
-  }
-  
-  .details-container .date {
+}
+
+.details-container .date {
     font-size: 14px;
     color: #888;
     margin-bottom: 20px;
-  }
-  
-  .details-container .content {
+}
+
+.details-container .content {
     font-size: 18px;
     line-height: 1.6;
-  }
-  
-  .retour-btn {
+}
+
+.retour-btn {
     display: inline-block;
     margin: 30px 0;
     padding: 10px 20px;
@@ -1658,9 +1750,192 @@ nav.active {
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s;
-  }
-  
-  .retour-btn:hover {
+}
+
+.retour-btn:hover {
     background-color: #0077cc;
-  }
- 
+}
+
+/* Affiche le menu burger sur mobile */
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 8px;
+    background: #00aaff;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2001;
+}
+
+/* Par défaut, le menu est visible sur desktop */
+#nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: none;
+}
+
+/* ----------- HEADER FLEX & BURGER ----------- */
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 12px;
+    min-height: 48px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 8px;
+    background: #00aaff;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2001;
+    height: 32px;
+    line-height: 22px;
+}
+
+/* ----------- MENU DESKTOP ----------- */
+@media (min-width: 901px) {
+    #nav-menu {
+        display: flex !important;
+        align-items: center;
+        justify-content: flex-end;
+        background: none;
+        position: static;
+        width: auto;
+        min-height: 0;
+        padding: 0;
+        padding-right: 32px;
+        /* espace à droite du menu */
+    }
+
+    #nav-menu ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-menu ul li {
+        display: inline-block;
+        padding: 0 18px;
+        /* espace horizontal entre les items */
+        text-align: center;
+        margin: 0;
+    }
+
+    #nav-menu ul li a {
+        display: inline-block;
+        color: white;
+        background: none;
+        font-size: 18px;
+        padding: 8px 0 8px 0;
+        text-decoration: none;
+        position: relative;
+        transition: none;
+    }
+
+    #nav-menu ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 3px;
+        background-color: white;
+        border-radius: 10px;
+        transition: width 0.4s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    #nav-menu ul li a:hover::after,
+    #nav-menu ul li a:focus::after {
+        width: 100%;
+    }
+
+    #nav-menu ul li a:hover,
+    #nav-menu ul li a:focus {
+        color: white;
+        background: none;
+    }
+
+    /* Dropdown au survol uniquement */
+    .dropdown:hover>.dropdown-menu,
+    .dropdown:focus-within>.dropdown-menu {
+        display: block;
+    }
+}
+
+/* ----------- MENU MOBILE ----------- */
+@media (max-width: 900px) {
+    .header-flex {
+        min-height: 48px;
+        padding: 0;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2001;
+        width: 40px;
+        height: 40px;
+        background: #00aaff;
+        color: white;
+        border-radius: 5px;
+        font-size: 22px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #nav-menu {
+        position: absolute;
+        top: 48px;
+        /* hauteur du header/burger */
+        left: 0;
+        right: 0;
+        width: 100vw;
+        min-height: calc(100vh - 48px);
+        background: #00aaff;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 2000;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #nav-menu.active {
+        display: flex !important;
+    }
+}
+
+/* Désactive le changement de couleur du texte au survol partout */
+nav ul li a:hover,
+nav ul li a:focus {
+    color: white !important;
+    background: none !important;
+}

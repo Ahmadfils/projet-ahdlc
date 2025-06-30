@@ -41,7 +41,7 @@
     <p class="copyright">&copy; 2025 Action Humanitaire - Tous droits réservés</p>
 </footer>
 <script src="<?php echo BASE_URL; ?>/public/js/contact.js"></script>
-<script src="<?php echo BASE_URL; ?>/public/js/script.js"></script>
+<script src="<?php echo BASE_URL; ?>/public/js/main.js"></script>
 <script src="<?php echo BASE_URL; ?>/public/js/about.js"></script>
 
 </body>

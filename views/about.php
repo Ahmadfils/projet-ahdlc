@@ -1,17 +1,18 @@
-
 <!-- Présentation -->
 <section class="presentation">
-    <div class="presentation-img">
-        <img src="<?php echo url('public/images/group.png') ?>" alt="">
-    </div>
-    <div class="presentation-text">
-        <h2>Action Humanitaire</h2>
-        <p>
-            Action Humanitaire est une organisation dédiée à apporter une aide essentielle aux populations
-            vulnérables.
-            Notre mission est d'améliorer la vie des personnes en détresse à travers des projets concrets et
-            durables.
-        </p>
+    <div class="presentation-row" style="display: flex; align-items: center; gap: 2rem; padding:5px 25px;">
+        <div class="presentation-img" style="flex: 1;">
+            <img src="<?php echo url('public/images/group.png') ?>" alt="" style="width: 100%; max-width: 350px; border-radius: 10px;">
+        </div>
+        <div class="presentation-text" style="flex: 2;">
+            <h2>Action Humanitaire</h2>
+            <p>
+                Action Humanitaire est une organisation dédiée à apporter une aide essentielle aux populations
+                vulnérables.
+                Notre mission est d'améliorer la vie des personnes en détresse à travers des projets concrets et
+                durables.
+            </p>
+        </div>
     </div>
 </section>
 
