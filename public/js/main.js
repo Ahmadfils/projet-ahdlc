@@ -11,32 +11,31 @@ document.querySelectorAll('.news-item').forEach(item => {
 });
 
 // Gestion du menu déroulant (dropdown)
-// document.addEventListener("DOMContentLoaded", function () {
-//     const dropdowns = document.querySelectorAll('.dropdown');
-//
-//     dropdowns.forEach(dropdown => {
-//         const menu = dropdown.querySelector('.dropdown-menu');
-//
-//         dropdown.addEventListener('click', (event) => {
-//             event.stopPropagation(); // Empêche la propagation pour éviter une fermeture immédiate
-//
-//             // Ferme tous les autres dropdowns avant d'ouvrir celui-ci
-//             document.querySelectorAll('.dropdown-menu').forEach(d => {
-//                 if (d !== menu) d.style.display = 'none';
-//             });
-//
-//             // Toggle l'affichage du dropdown sélectionné
-//             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-//         });
-//     });
-//
-//     // Ferme le dropdown si on clique n'importe où ailleurs
-//     document.addEventListener("click", function () {
-//         document.querySelectorAll('.dropdown-menu').forEach(menu => {
-//             menu.style.display = 'none';
-//         });
-//     });
-// });
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        dropdown.addEventListener('click', (event) => {
+            event.stopPropagation(); // Empêche la propagation pour éviter une fermeture immédiate
+
+            // Ferme tous les autres dropdowns avant d'ouvrir celui-ci
+            document.querySelectorAll('.dropdown-menu').forEach(d => {
+                if (d !== menu) d.style.display = 'none';
+            });
+
+            // Toggle l'affichage du dropdown sélectionné
+            menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+        });
+    });
+
+    document.addEventListener("click", function () {
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.style.display = 'none';
+        });
+    });
+});
 
 // Gestion du menu mobile (toggle menu)
 document.addEventListener("DOMContentLoaded", function () {
@@ -93,6 +92,35 @@ document.querySelectorAll(".grid-item").forEach(div => {
 document.querySelectorAll(".news-item").forEach(div => {
     div.addEventListener("click", function () {
         window.location.href = this.getAttribute("data-url");
+    });
+});
+
+// --- Dropdown menu ouverture au clic sur desktop ---
+document.addEventListener('DOMContentLoaded', function () {
+    // Pour chaque dropdown
+    document.querySelectorAll('.dropdown > a').forEach(function (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function (e) {
+            // Sur desktop uniquement (largeur > 900px)
+            if (window.innerWidth > 900) {
+                e.preventDefault();
+                // Ferme les autres dropdowns
+                document.querySelectorAll('.dropdown').forEach(function (drop) {
+                    if (drop !== dropdownToggle.parentElement) {
+                        drop.classList.remove('open');
+                    }
+                });
+                // Toggle le dropdown cliqué
+                dropdownToggle.parentElement.classList.toggle('open');
+            }
+        });
+    });
+    // Ferme le dropdown si on clique ailleurs (desktop)
+    document.addEventListener('click', function (e) {
+        if (window.innerWidth > 900 && !e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown').forEach(function (drop) {
+                drop.classList.remove('open');
+            });
+        }
     });
 });
 
