@@ -37,16 +37,18 @@
                 	$intro = $row->intro;
                 	$content  = $row->content;
                 	$image = $row->image_banner;
+                	$auteur = $row->auteur;
                 } ?>
 
                 
 				<div class="box box-info">
 					<div class="box-body">
-
+                         
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Titre de l'article <span>*</span></label>
 							<div class="col-sm-4">
 								<input type="text" name="titre" value="<?php echo $titre; ?>"class="form-control">
+								<input type="text" name="auteur" value="<?php echo $auteur; ?>" hidden>
 							</div>
 						</div>	
 						
@@ -68,6 +70,8 @@
 						<div class="form-group">
 							<label for="" class="col-sm-3 control-label">Image principale <span>*</span></label>
 							<div class="col-sm-4" style="padding-top:4px;">
+								<input type="text" name="existing_image" 
+								value="<?php echo url('public/images/'.$image); ?>" hidden>
 								<input type="file" name="image_principale">
 							</div>
 						</div>

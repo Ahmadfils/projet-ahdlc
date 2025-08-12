@@ -2,7 +2,7 @@
 
  require_once "../models/User.php";
 
- class UsersController extends Controller{
+ class AuthController extends Controller{
 
     private $userModel;
 
@@ -11,31 +11,23 @@
      $this->userModel = new User();
 
     }
+
  	public function index(){
 
- 	  $user = $this->userModel->getUsers();
-
- 	  $data = [
-                "user" => $user
- 	          ];
-
- 	  $this->view('header');
- 	  $this->view('users',$data);
- 	  $this->view('footer');
- 	}
-
-   public function login(){
-
+ 	  
       if($_SERVER['REQUEST_METHOD'] === 'POST'){
          $email = htmlspecialchars(strip_tags($_POST['email']));
          $password = htmlspecialchars(strip_tags($_POST['password']));
 
          $this->userModel->findUserByEmail(['email' => $email]);
       }
-       
-      $this->view('header');
+     
       $this->view('login');
-      $this->view('footer');
+
+ 	}
+
+   public function login(){
+
 
    }
  }

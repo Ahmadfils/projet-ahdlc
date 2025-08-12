@@ -177,8 +177,8 @@ require_once "../models/Categories.php";
             }
           }
         } else {
-           $valid = 0;
-           $error .= "Veuillez téléverser une image !<br>";
+           $valid = 1;
+           $nom_fichier .= basename($_POST['existing_image']);
          }
 
          if($valid == 1){
@@ -191,6 +191,7 @@ require_once "../models/Categories.php";
              "intro" => $_POST['intro'],
              "content" => $_POST['contenus'],
              "image_banner" => $nom_fichier,
+             "auteur" => $_POST['auteur']
             ];
 
             $this->articleModel->editArticle($row);
@@ -227,10 +228,10 @@ require_once "../models/Categories.php";
     $this->articleModel->deleteArticle(["id" => $id]);
 
     if(true){
-      $success .= "Nouveau Article ajoute avec success !";
+      $success .= "L'Article supprime avec success !";
       header('Location:'.adminUrl('articles'));
     }else{
-        $error .= "Echec d'ajouter un Nouveau Article";
+        $error .= "Echec de supprimer l'Article";
       }
 
   }

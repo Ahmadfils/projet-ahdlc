@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/_all-skins.min.css'); ?>">
 	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/on-off-switch.css'); ?>"/>
 	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/summernote.css'); ?>">
-	<link rel="stylesheet" href="<?php echo adminUrl('style.css'); ?>">
+	<link rel="stylesheet" href="<?php echo adminUrl('views/style.css'); ?>">
 
 </head>
 

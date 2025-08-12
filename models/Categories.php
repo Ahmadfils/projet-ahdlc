@@ -37,11 +37,7 @@ class Categories{
     $this->db->bind(':cat_name', $data['cat_name']);
     $this->db->bind(':image', $data['image']);
 
-    if ($this->db->execute()) {
-      return true;
-    }else{
-      return false;
-    }
+    $this->db->execute() ? true : false;
   }
 
   public function editCategory($data){
@@ -53,11 +49,7 @@ class Categories{
     $this->db->bind(':image', $data['image']);
     $this->db->bind(':id', $data['id']);
 
-    if ($this->db->execute()) {
-      return true;
-    }else{
-      return false;
-    }
+    $this->db->execute() ? true : false;
   }
 
   public function deleteCategory($id){
@@ -65,11 +57,7 @@ class Categories{
     $this->db->query("DELETE FROM tbl_category WHERE id = :id");
     $this->db->bind(':id',$id);
 
-    if ($this->db->execute()) {
-      return true;
-    }else{
-      return false;
-    }
+    $this->db->execute() ? true : false;
 
   }
 }

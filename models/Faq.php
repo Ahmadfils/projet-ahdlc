@@ -32,11 +32,7 @@ class Faq{
     $this->bind(':id', $data['id']);
 
 
-        if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+    $this->db->execute() ? true : false;
   }
 
   public function deleteFaq($data){
@@ -44,10 +40,6 @@ class Faq{
     $this->db->query("DELETE FROM tbl_faq WHERE id = :id");
     $this->db->bind(':id', $data['id']);
 
-    if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+    $this->db->execute() ? true : false;
   }
 }

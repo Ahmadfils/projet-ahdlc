@@ -1,3 +1,4 @@
+<?php  ?>
 <section class="faq-section">
     <h2>FAQ - Questions Fréquentes</h2>
     <?php foreach ($data['faq'] as $row): ?>
@@ -11,13 +12,6 @@
     <?php endforeach; ?>
 </section>
 
-<section class="infos-pro">
-    <h1>Nos coordonnées</h1>
-    <p>© 2025 Inzuex - Tous droits réservés.</p>
-    <p>Contact : info@inzuex.com | Tél : +257 123 456 789</p>
-    <p>Adresse : Bujumbura, Burundi</p>
-</section>
-
 
 <div class="contact-section">
     <div class="contact-image"></div>
@@ -26,13 +20,19 @@
         <h3>Envoyez-nous un message</h3>
         <form method="POST" action="">
 
-            <?php echo $data['$crsf_protect']; ?>
+            <?php  
+            $csrf = new CSRF_Protect();
+            $csrf->echoInputField(); 
+            ?>
 
             <div class="input-icon">
-                <input type="text" placeholder="Nom complet" name="nom" required>
+                <input type="text" placeholder="Nom complet" name="fullname" required>
             </div>
             <div class="input-icon">
                 <input type="email" placeholder="Adresse e-mail" name="email" required>
+            </div>
+            <div class="input-icon">
+                <input type="number" placeholder="Numero de telephone" name="tel" required>
             </div>
             <div class="input-icon">
                 <textarea placeholder="Votre message" name="message" required></textarea>

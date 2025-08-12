@@ -27,11 +27,7 @@ class User
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
 
-        if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->db->execute() ? true : false;
     }
 
     public function editUser($data)
@@ -45,11 +41,7 @@ class User
         $this->db->bind(':password', $data['password']);
         $this->db->bind(':id', $data['id']);
 
-        if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->db->execute() ? true : false;
     }
 
 
@@ -60,21 +52,13 @@ class User
 
         $row = $this->db->single();
 
-        if ($this->db->rowCount() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->db->execute() ? true : false;
     }
 
     public function deleteUser($data){
       $this->db->query('DELETE FROM tbl_user WHERE id = :id'); 
       $this->db->bind(':id', $data['id']); 
 
-       if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+      $this->db->execute() ? true : false;
     }
 }

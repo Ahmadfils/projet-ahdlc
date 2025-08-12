@@ -72,11 +72,7 @@ class News{
         $this->db->bind(':image_banner', $data['image_banner']);
         $this->db->bind(':auteur', $data['auteur']);
 
-        if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->db->execute() ? true : false;
     } 
 
      public function editArticle($data)
@@ -96,11 +92,7 @@ class News{
         $this->db->bind(':auteur', $data['auteur']);
         $this->db->bind(':id', $data['id']);
 
-        if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+       $this->db->execute() ? true : false;
     } 
 
 
@@ -108,10 +100,6 @@ class News{
         $this->db->query("DELETE FROM tbl_article WHERE id = :id");
         $this->db->bind(':id', $data['id']);
 
-        if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
+        $this->db->execute() ? true : false;
     }
 }
