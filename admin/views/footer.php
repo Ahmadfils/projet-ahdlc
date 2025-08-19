@@ -22,7 +22,6 @@
 	<script src="<?php echo adminUrl('assets/js/on-off-switch.js'); ?>"></script>
     <script src="<?php echo adminUrl('assets/js/on-off-switch-onload.js'); ?>"></script>
     <script src="<?php echo adminUrl('assets/js/clipboard.min.js'); ?>"></script>
-	<script src="<?php echo adminUrl('assets/js/demo.js'); ?>"></script>
 	<script src="<?php echo adminUrl('assets/js/summernote.js'); ?>"></script>
 
 	<script>
@@ -43,36 +42,6 @@
 	        	height: 300
 	        });
 	    });
-		$(".top-cat").on('change',function(){
-			var id=$(this).val();
-			var dataString = 'id='+ id;
-			$.ajax
-			({
-				type: "POST",
-				url: "get-mid-category.php",
-				data: dataString,
-				cache: false,
-				success: function(html)
-				{
-					$(".mid-cat").html(html);
-				}
-			});			
-		});
-		$(".mid-cat").on('change',function(){
-			var id=$(this).val();
-			var dataString = 'id='+ id;
-			$.ajax
-			({
-				type: "POST",
-				url: "get-end-category.php",
-				data: dataString,
-				cache: false,
-				success: function(html)
-				{
-					$(".end-cat").html(html);
-				}
-			});			
-		});
 	</script>
 
 	<script>

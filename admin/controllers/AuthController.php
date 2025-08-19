@@ -14,20 +14,45 @@
 
  	public function index(){
 
- 	  
-      if($_SERVER['REQUEST_METHOD'] === 'POST'){
+ 	  $valid = false;
+     $message = "";
+
+      if($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['login']){
+
          $email = htmlspecialchars(strip_tags($_POST['email']));
          $password = htmlspecialchars(strip_tags($_POST['password']));
 
-         $this->userModel->findUserByEmail(['email' => $email]);
-      }
-     
-      $this->view('login');
+         $row = $this->userModel->findUserByEmail(['email' => $email]);
 
+         if(empty($row)){
+
+          $valid = false;
+          $message .= "L'utilisateur n'existe pas !";
+
+         }else{
+
+            $user = $row;
+
+            if(!password_verify($password, $user->password)){
+
+              $valid = false;
+              $message .= "Mot de passe incorrect !";
+
+            }else{
+
+               $valid = true;
+            }
+
+            if($valid){
+               $_SESSION['user'] = $user;
+               header('location:dashboard');
+            }
+         }
+      }
+
+      $data = ['message' => $message];
+      $this->view('login', $data);
+        
  	}
 
-   public function login(){
-
-
-   }
  }

@@ -1,6 +1,7 @@
 <?php
 ob_clean();
 session_start();
+
 require_once 'core/Database.php';
 require_once 'core/Init.php';
 require_once 'core/Router.php';
@@ -15,7 +16,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-Init::loadSettings();
+Main::loadSettings();
 
 // Autoload classes
 spl_autoload_register(function ($class_name) {
@@ -48,6 +49,7 @@ if (isset($_GET['url'])) {
         array_shift($url);
     }
 }
+
 
 // Instantiate the controller and call the method
 $controller = new $controllerName();

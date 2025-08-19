@@ -1,6 +1,6 @@
 <?php
 
-class News{
+class Articles{
     private $db;
 
     public function __construct()
@@ -8,7 +8,7 @@ class News{
         $this->db = new Database;
     }
 
-    public function getAllNews($data)
+    public function getAllArticles($data)
     {
       
         $this->db->query("SELECT t1.id,titre,intro,t1.updated_at,auteur,cat_name,cat_domain,image_banner 
@@ -18,7 +18,7 @@ class News{
         return $this->db->resultSet();
     }
 
-    public function getNewsByCategory($data)
+    public function getArticlesByCategory($data)
     {
       
         $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id ORDER BY date_publication DESC LIMIT :starting, :effectif");
@@ -29,14 +29,14 @@ class News{
         return $this->db->resultSet();
     }
 
-    public function getNewRows($data){
+    public function getArticleRows($data){
         $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id ORDER BY date_publication DESC");
         $this->db->bind(':cat_id', $data['cat_id']);
 
         return $this->db->rowCount();
     }
 
-    public function getLatestNews($data){
+    public function getLatestArticles($data){
         $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id ORDER BY date_publication DESC LIMIT :limite");
         $this->db->bind(':cat_id', $data['cat_id']);
         $this->db->bind(':limite', $data['limite']);
@@ -44,13 +44,13 @@ class News{
         return $this->db->resultSet();
     }
 
-    public function getNewById($data){
+    public function getArticleById($data){
         $this->db->query("SELECT * FROM tbl_article WHERE id = :id");
         $this->db->bind(':id', $data['id']);
         return  $this->db->resultSet();
     }
 
-    public function getNewByCategory($data){
+    public function getArticleByCategory($data){
         $this->db->query("SELECT * FROM tbl_article WHERE cat_id = :cat_id");
         $this->db->bind(':cat_id', $data['cat_id']);
         return $this->db->single();

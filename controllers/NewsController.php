@@ -4,7 +4,7 @@ class NewsController extends Controller {
 
 	 public function __construct()
     {
-        $this->newModel = $this->model('News');
+        $this->newModel = $this->model('Articles');
     }
     public function index() {
 
@@ -12,14 +12,14 @@ class NewsController extends Controller {
         $page = 1;
         $starting = ($page - 1)*5;
 
-        $news = $this->newModel->getNewsByCategory(
+        $news = $this->newModel->getArticlesByCategory(
                  [ "cat_id" => 1,
                    "starting" => $starting, 
                    "effectif" => $effectif
                  ]
                );
 
-        $newRows = $this->newModel->getNewRows(["cat_id" => 1]);
+        $newRows = $this->newModel->getArticleRows(["cat_id" => 1]);
         
         $item_in_page = 5;
         $nombre_page = ceil($newRows/$item_in_page);
@@ -52,7 +52,7 @@ class NewsController extends Controller {
         $effectif = 5;
         $starting = ["page" => ($page - 1)*5];
 
-        $news = $this->newModel->getAllNews(
+        $news = $this->newModel->getAllArticles(
                    ["id" => 1, 
                     "starting" => $starting, 
                     "effectif" => $effectif

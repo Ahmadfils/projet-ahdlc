@@ -1,3 +1,10 @@
+<?php 
+
+if(empty($_SESSION['user'])){
+    header('location:auth');
+} 
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +28,6 @@
 	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/on-off-switch.css'); ?>"/>
 	<link rel="stylesheet" href="<?php echo adminUrl('assets/css/summernote.css'); ?>">
 	<link rel="stylesheet" href="<?php echo adminUrl('views/style.css'); ?>">
-
 </head>
 
 <body class="hold-transition fixed skin-blue sidebar-mini">

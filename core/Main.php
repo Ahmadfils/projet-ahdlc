@@ -1,5 +1,5 @@
 <?php
-class Init
+class Main
 {
     public static $settings = [];
 

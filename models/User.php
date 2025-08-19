@@ -50,9 +50,8 @@ class User
         $this->db->query('SELECT * FROM tbl_user WHERE email = :email');
         $this->db->bind(':email', $data['email']);
 
-        $row = $this->db->single();
+        return $this->db->single();
 
-        $this->db->execute() ? true : false;
     }
 
     public function deleteUser($data){

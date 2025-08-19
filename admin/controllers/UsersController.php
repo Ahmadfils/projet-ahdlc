@@ -24,18 +24,4 @@
  	  $this->view('footer');
  	}
 
-   public function login(){
-
-      if($_SERVER['REQUEST_METHOD'] === 'POST'){
-         $email = htmlspecialchars(strip_tags($_POST['email']));
-         $password = htmlspecialchars(strip_tags($_POST['password']));
-
-         $this->userModel->findUserByEmail(['email' => $email]);
-      }
-       
-      $this->view('header');
-      $this->view('login');
-      $this->view('footer');
-
-   }
  }

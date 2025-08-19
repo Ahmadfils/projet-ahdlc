@@ -18,7 +18,7 @@
 
     <div class="contact-form">
         <h3>Envoyez-nous un message</h3>
-        <form method="POST" action="">
+        <form method="POST">
 
             <?php  
             $csrf = new CSRF_Protect();

@@ -1,22 +1,22 @@
  <?php 
-require_once "../models/News.php";
+require_once "../models/Articles.php";
 require_once "../models/Categories.php";
 
  class ArticlesController extends Controller{
 
-   private $articleArticle;
+   private $articleModel ;
    private $categoryModel;
 
   public function __construct(){
 
-   	$this->articleModel = new News();
+   	$this->articleModel = new Articles();
    	$this->categoryModel = new Categories();
 
   }
 
  	public function index(){
     
-    $articles = $this->articleModel->getAllNews(["cat_id" => 1]);
+    $articles = $this->articleModel->getAllArticles(["cat_id" => 1]);
     $data =
       [
       "articles" => $articles
@@ -207,7 +207,7 @@ require_once "../models/Categories.php";
 
       }
        $parameter = ["id" => $id];
-       $articles = $this->articleModel->getNewById($parameter);
+       $articles = $this->articleModel->getArticleById($parameter);
        $category = $this->categoryModel->getCategory();
        $data =
               [
