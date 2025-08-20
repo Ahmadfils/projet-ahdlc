@@ -42,4 +42,6 @@
     </div>
 </div>
 
+<div class="alert success-alert"><?php if(!empty($data['message'])) echo $data['message']; ?></div>
+
 

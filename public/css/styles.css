@@ -2025,3 +2025,16 @@ nav ul li a:focus {
     color: white !important;
     background: none !important;
 }
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.success-alert {
+  color: #3c763d; /* Dark green text */
+  background-color: #dff0d8; /* Light green background */
+  border-color: #d6e9c6; /* Green border */
+}

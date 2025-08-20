@@ -1,5 +1,5 @@
 <footer>
-    <h2>ACTION HUMANITAIRE POUR LE DEVELOPPEMENT ET LA LUTTE CONTRE LE CHOMAGE </h2>
+    <h3>ACTION HUMANITAIRE POUR LE DEVELOPPEMENT ET LA LUTTE CONTRE LE CHOMAGE </h3>
     <div class="footer-content">
         <div class="footer-links">
             <h4>Navigation</h4>
@@ -24,17 +24,17 @@
         <div class="footer-links">
             <h4>Réseaux sociaux</h4>
             <ul>
-                <li><a href="<?php echo Init::$settings['linkedin_link']; ?>">Linkedin</a></li>
-                <li><a href="<?php echo Init::$settings['twitter_link']; ?>">Twitter</a></li>
-                <li><a href="<?php echo Init::$settings['instagram_link']; ?>">Instagram</a></li>
-                <li><a href="<?php echo Init::$settings['facebook_link']; ?>">Facebook</a></li>
+                <li><a href="<?php echo Main::$settings['linkedin_link']; ?>">Linkedin</a></li>
+                <li><a href="<?php echo Main::$settings['twitter_link']; ?>">Twitter</a></li>
+                <li><a href="<?php echo Main::$settings['instagram_link']; ?>">Instagram</a></li>
+                <li><a href="<?php echo Main::$settings['facebook_link']; ?>">Facebook</a></li>
             </ul>
         </div>
         <div class="footer-contact">
             <h4>Contact & Adresse</h4>
-            <p>Email : <?php echo Init::$settings['website_email']; ?></p>
-            <p>Téléphone : <?php echo Init::$settings['phone_number'] ?></p>
-            <p>Adresse : <?php echo Init::$settings['adresse_physique'] ?></p>
+            <p>Email : <?php echo Main::$settings['website_email']; ?></p>
+            <p>Téléphone : <?php echo Main::$settings['phone_number'] ?></p>
+            <p>Adresse : <?php echo Main::$settings['adresse_physique'] ?></p>
             <p>Gitega, Burundi</p>
         </div>
     </div>

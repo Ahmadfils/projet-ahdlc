@@ -72,18 +72,18 @@
             <img src="<?php url('public/images/logo.png'); ?> " alt="logo AHDLC">
         </div>
         <div class="email-body">
-            <h3>Merci pour votre message !</h3>
-            <p class="paragraphe">
+            <h2>Merci de vous être abonné !</h2>
+            <p>
                 Bonjour cher visiteur,
             </p>
             <p class="paragraphe">
-                Nous vous remercions chaleureusement de nous envoyer un message! Nous sommes ravis de vous compter parmi nos membres et nous espérons que vous apprécierez tout le contenu et les services que nous mettons à votre disposition.
+                Nous vous remercions chaleureusement de nous ecrire un message ! Nous sommes ravis de vous compter parmi nos membres et nous espérons que vous apprécierez tout le contenu et les services que nous mettons à votre disposition.
             </p>
             <p class="paragraphe">
                 Nous allons vous repondre au plus vite possible !
             </p>
-            <p class="paragraphe">
-                Merci encore et à très bientôt sur <a href="#">AHDLC</a>
+            <p>
+                Merci encore et à très bientôt sur <a href="">AHDLC</a>
             </p>
         </div>
         <div class="email-footer">

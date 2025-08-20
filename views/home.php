@@ -3,8 +3,8 @@
     <img src="<?php echo url('public/images/autism.png');?>" alt="Bannière">
     <div class="overlay"></div>
     <div class="banner-text">
-        <h1><?php echo Init::$settings['home_banner_intro']; ?></h1>
-        <p>Une initiative pour le développement et la lutte contre le chômage.</p>
+        <h1><?php echo Main::$settings['home_banner_intro']; ?></h1>
+        <p>Une Mainiative pour le développement et la lutte contre le chômage.</p>
     </div>
 </section>
 
@@ -13,20 +13,20 @@
     <p>Découvrez nos valeurs et engagements</p>
     <div class="qualities">
         <div class="quality">
-            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite1']); ?>" alt=""></i>
-            <h3><?php echo Init::$settings['home_quality_caption1']; ?></h3>
+            <i class="icon"><img src="<?php echo url('public/images/'.Main::$settings['image_qualite1']); ?>" alt=""></i>
+            <h3><?php echo Main::$settings['home_quality_caption1']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite2']); ?>" alt=""></i>
-            <h3><?php echo Init::$settings['home_quality_caption2']; ?></h3>
+            <i class="icon"><img src="<?php echo url('public/images/'.Main::$settings['image_qualite2']); ?>" alt=""></i>
+            <h3><?php echo Main::$settings['home_quality_caption2']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite3']); ?>" alt=""></i>
-            <h3><?php echo Init::$settings['home_quality_caption3']; ?></h3>
+            <i class="icon"><img src="<?php echo url('public/images/'.Main::$settings['image_qualite3']); ?>" alt=""></i>
+            <h3><?php echo Main::$settings['home_quality_caption3']; ?></h3>
         </div>
         <div class="quality">
-            <i class="icon"><img src="<?php echo url('public/images/'.Init::$settings['image_qualite4']); ?>" alt=""></i>
-            <h3><?php echo Init::$settings['home_quality_caption4']; ?></h3>
+            <i class="icon"><img src="<?php echo url('public/images/'.Main::$settings['image_qualite4']); ?>" alt=""></i>
+            <h3><?php echo Main::$settings['home_quality_caption4']; ?></h3>
         </div>
     </div>
 </section>
@@ -51,7 +51,7 @@
     <img src="<?php echo url('public/images/happy.png')?>" alt="À Propos">
     <div>
         <h1>À Propos de Nous</h1>
-        <p><?php echo Init::$settings['home_about_caption'] ?>
+        <p><?php echo Main::$settings['home_about_caption'] ?>
         </p>
     </div>
 </section>

@@ -22,7 +22,7 @@ class Mailer
         //$this->mail->SMTPSecure = 'tls';
         $this->mail->Port = 25;
 
-        $this->mail->setFrom('admin@bcc.bi', 'BCC');
+        $this->mail->setFrom('admin@bcc.bi', 'AHDLC');
         $this->mail->isHTML(true);
     }
 
@@ -38,6 +38,7 @@ class Mailer
             $this->mail->addAddress($to);
             $this->mail->Subject = $subject;
             $this->mail->Body = $body;
+            $this->mail->AltBody = $altBody;
             $this->mail->CharSet = 'UTF-8';
 
 
